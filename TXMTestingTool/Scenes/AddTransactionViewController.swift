@@ -53,8 +53,9 @@ class AddTransactionViewController: NSViewController {
 
     // MARK: - IBActions
     @IBAction func addButtonWasPressed(_ sender: Any) {
-        if let validationError = getValidationError() {
-            validationErrorsLabel.stringValue = validationError
+        let validationErrors = getValidationErrors()
+        if validationErrors.count > 0 {
+            validationErrorsLabel.stringValue = validationErrors
             validationErrorsLabel.isHidden = false
             return
         }
@@ -74,19 +75,31 @@ class AddTransactionViewController: NSViewController {
     }
     
     // MARK: - General
-    func validateAmount() -> String? {
-        if !amountField.stringValue.isNumber {
-            return "Amount \"\(amountField.stringValue)\" is not a number."
+    func validateAllFields() -> String? {
+        if !allFieldsHaveContent {
+            return "All fields must be present."
         }
 
         return nil
     }
 
-    func validateFirstSix() -> String? {
-        if !firstSixField.stringValue.isNumber {
-            return "First six \"\(firstSixField.stringValue)\" is not a number."
+    func validateAmount() -> String? {
+        if !amountField.stringValue.isNumeric {
+            return "Amount must be numeric."
         }
 
+        return nil
+    }
+
+    func validateFirstSixIsNumeric() -> String? {
+        if !firstSixField.stringValue.isNumeric {
+            return "First six must be numeric."
+        }
+
+        return nil
+    }
+
+    func validateFirstSixHasLengthSix() -> String? {
         if firstSixField.stringValue.count != 6 {
             return "First six must be exactly six digits."
         }
@@ -94,11 +107,15 @@ class AddTransactionViewController: NSViewController {
         return nil
     }
 
-    func validateLastFour() -> String? {
-        if !lastFourField.stringValue.isNumber {
-            return "Last four \"\(lastFourField.stringValue)\" is not a number."
+    func validateLastFourIsNumeric() -> String? {
+        if !lastFourField.stringValue.isNumeric {
+            return "Last four must be numeric."
         }
 
+        return nil
+    }
+
+    func validateLastFourHasLengthFour() -> String? {
         if lastFourField.stringValue.count != 4 {
             return "Last four must be exactly four digits."
         }
@@ -106,25 +123,25 @@ class AddTransactionViewController: NSViewController {
         return nil
     }
 
-    // TODO: return multiple and show all at once
-    func getValidationError() -> String? {
-        if !allFieldsHaveContent {
-            return "All fields must be present."
+    let allValidators: [(AddTransactionViewController) -> () -> String?] = [
+        validateAllFields,
+        validateAmount,
+        validateFirstSixIsNumeric,
+        validateFirstSixHasLengthSix,
+        validateLastFourIsNumeric,
+        validateLastFourHasLengthFour
+    ]
+
+    func getValidationErrors() -> String {
+        var errors = [String]()
+
+        for validator in allValidators {
+            if let error = validator(self)() {
+                errors.append("• \(error)")
+            }
         }
 
-        if let amountError = validateAmount() {
-            return amountError
-        }
-
-        if let firstSixError = validateFirstSix() {
-            return firstSixError
-        }
-
-        if let lastFourError = validateLastFour() {
-            return lastFourError
-        }
-
-        return nil
+        return errors.joined(separator: "\n")
     }
 }
 
@@ -134,7 +151,7 @@ protocol AddTransactionsViewControllerDelegate: AnyObject {
 
 // TODO: move this?
 extension String  {
-    var isNumber: Bool {
+    var isNumeric: Bool {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
 }
