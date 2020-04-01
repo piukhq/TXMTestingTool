@@ -1284,7 +1284,7 @@ Gw
         <!--Generated Files-->
         <scene sceneID="YUp-W3-AYa">
             <objects>
-                <viewController title="Generated Files" id="SGV-ys-913" sceneMemberID="viewController">
+                <viewController title="Generated Files" id="SGV-ys-913" customClass="GenerateOutputViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="RIv-DU-4TA">
                         <rect key="frame" x="0.0" y="0.0" width="744" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1302,6 +1302,15 @@ Gw
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="348" height="301"/>
                                             <size key="maxSize" width="348" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment content="Merchant file content here">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="fixedUser" size="11"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -1343,6 +1352,15 @@ Gw
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="348" height="301"/>
                                             <size key="maxSize" width="348" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment content="Payment provider file here">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="fixedUser" size="11"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -1389,12 +1407,12 @@ Gw
                             <constraint firstItem="5tT-cT-8h8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ra3-vH-pnd" secondAttribute="trailing" constant="8" symbolic="YES" id="0wL-Kh-RZx"/>
                             <constraint firstAttribute="bottom" secondItem="vN3-7Y-16z" secondAttribute="bottom" constant="20" symbolic="YES" id="2J8-fA-yb5"/>
                             <constraint firstAttribute="trailing" secondItem="fgt-zS-XG1" secondAttribute="trailing" constant="20" symbolic="YES" id="2xJ-GF-P0k"/>
+                            <constraint firstItem="5UZ-HO-qHQ" firstAttribute="height" secondItem="Ovr-Wp-UZl" secondAttribute="height" id="9UV-Up-Aaq"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="top" secondItem="Ovr-Wp-UZl" secondAttribute="bottom" constant="8" symbolic="YES" id="FP0-Yb-D9e"/>
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="we7-aV-7ep" secondAttribute="trailing" constant="8" symbolic="YES" id="I4g-nN-oeI"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="leading" secondItem="Ovr-Wp-UZl" secondAttribute="trailing" constant="8" symbolic="YES" id="Iig-gw-93K"/>
                             <constraint firstItem="Ovr-Wp-UZl" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="JO6-6y-7Kk"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="NYc-JF-acz"/>
-                            <constraint firstItem="5UZ-HO-qHQ" firstAttribute="height" secondItem="5rW-Za-qHx" secondAttribute="height" id="QMk-jT-UYh"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="V8p-2m-yHa"/>
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="trailing" secondItem="5rW-Za-qHx" secondAttribute="trailing" id="Yi0-1z-vtY"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="width" secondItem="5rW-Za-qHx" secondAttribute="width" id="dSv-4M-1Ai"/>
@@ -1411,6 +1429,10 @@ Gw
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="yX0-Y5-xvS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="merchantOutput" destination="5rW-Za-qHx" id="vKg-GN-DBT"/>
+                        <outlet property="paymentProviderOutput" destination="zAf-Tv-NCD" id="Y9S-AI-JgZ"/>
+                    </connections>
                 </viewController>
                 <customObject id="4l4-ZL-8GQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

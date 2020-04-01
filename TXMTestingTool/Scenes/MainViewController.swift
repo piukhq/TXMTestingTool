@@ -18,7 +18,13 @@ class MainViewController: NSViewController {
     @IBOutlet weak var paymentProviderPicker: NSPopUpButton!
 
     // MARK: - Properties
-    var transactions = [Transaction]()
+    //var transactions = [Transaction]()
+    var transactions = [
+        Transaction(mid: "abc123", date: Date(), amount: 1699, cardToken: "token-123", firstSix: "123456", lastFour: "7890"),
+        Transaction(mid: "def456", date: Date(), amount: 1799, cardToken: "token-234", firstSix: "123456", lastFour: "7890"),
+        Transaction(mid: "ghi789", date: Date(), amount: 1899, cardToken: "token-345", firstSix: "123456", lastFour: "7890"),
+        Transaction(mid: "jkl012", date: Date(), amount: 1999, cardToken: "token-456", firstSix: "123456", lastFour: "7890"),
+    ]
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -43,8 +49,16 @@ class MainViewController: NSViewController {
 
     // MARK: - General
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        let vc = segue.destinationController as? AddTransactionViewController
-        vc?.delegate = self
+        switch segue.identifier {
+        case "createTransaction":
+            let vc = segue.destinationController as? AddTransactionViewController
+            vc?.delegate = self
+        case "generateOutput":
+            let vc = segue.destinationController as? GenerateOutputViewController
+            vc?.transactions = transactions
+        default:
+            break
+        }
     }
 }
 
