@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */; };
 		83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C89243355DD00C948B4 /* AppDelegate.swift */; };
 		83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C8B243355DD00C948B4 /* MainViewController.swift */; };
 		83FF8C8E243355DE00C948B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FF8C8D243355DE00C948B4 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateOutputViewController.swift; sourceTree = "<group>"; };
 		83FF8C86243355DD00C948B4 /* TXMTestingTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXMTestingTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF8C89243355DD00C948B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83FF8C8B243355DD00C948B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
 				83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */,
+				83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */,
 				83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
 				83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */,
