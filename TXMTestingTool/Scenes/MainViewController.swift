@@ -14,18 +14,26 @@ class MainViewController: NSViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var footerSegment: NSSegmentedControl!
+    @IBOutlet weak var merchantPicker: NSPopUpButton!
+    @IBOutlet weak var paymentProviderPicker: NSPopUpButton!
 
     // MARK: - Properties
-    var transactions: [Transaction] = [
-        Transaction(mid: "abc123", date: Date(), amount: 1699, cardToken: "token123", firstSix: "000000", lastFour: "0000"),
-        Transaction(mid: "def123", date: Date(), amount: 1799, cardToken: "token456", firstSix: "000000", lastFour: "0000"),
-        Transaction(mid: "ghi123", date: Date(), amount: 1899, cardToken: "token789", firstSix: "000000", lastFour: "0000")
-    ]
+    var transactions = [Transaction]()
 
     // MARK: - View Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        merchantPicker.addItems(withTitles: [
+            "Harvey Nichols",
+            "Iceland",
+            "Burger King"
+        ])
+
+        paymentProviderPicker.addItems(withTitles: [
+            "Amex",
+            "MasterCard"
+        ])
     }
 
     // MARK: - IBActions
