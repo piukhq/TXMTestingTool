@@ -9,6 +9,12 @@
 import Foundation
 
 struct Transaction {
+    static var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD hh:mm:ss"
+        return dateFormatter
+    }
+
     let mid: String
     let date: Date
     let amount: Int

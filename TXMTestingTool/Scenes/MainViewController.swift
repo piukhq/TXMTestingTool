@@ -61,17 +61,13 @@ extension MainViewController: NSTableViewDelegate {
             return nil
         }
 
-        // TODO: move this elsewhere :)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD hh:mm:ss"
-
         let transaction = transactions[row]
 
         switch tableColumn?.identifier.rawValue {
         case "mid":
             cell.textField?.stringValue = transaction.mid
         case "date":
-            cell.textField?.stringValue = dateFormatter.string(from: transaction.date)
+            cell.textField?.stringValue = Transaction.dateFormatter.string(from: transaction.date)
         case "amount":
             cell.textField?.stringValue = "\(transaction.amount)"
         case "cardToken":
