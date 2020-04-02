@@ -978,7 +978,7 @@ Gw
                                             <tableColumns>
                                                 <tableColumn identifier="mid" width="120" minWidth="40" maxWidth="1000" id="ers-m8-6Za">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="MID">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1015,7 +1015,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="date" width="160" minWidth="40" maxWidth="1000" id="T3Q-DI-sjf">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Date">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1052,7 +1052,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="amount" width="100" minWidth="40" maxWidth="1000" id="YfT-9o-g0f">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Amount">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1089,7 +1089,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="cardToken" width="120" minWidth="40" maxWidth="1000" id="X8o-ME-H8E">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Card Token">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1126,7 +1126,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="firstSix" width="120" minWidth="40" maxWidth="1000" id="2Jm-N5-13X">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="First Six">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1163,7 +1163,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="lastFour" width="120" minWidth="40" maxWidth="1000" id="dM4-BW-LTB">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Last Four">
-                                                        <font key="font" metaFont="message" size="11"/>
+                                                        <font key="font" metaFont="label" size="11"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1243,7 +1243,7 @@ Gw
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="SGV-ys-913" kind="modal" identifier="generateOutput" id="Vx5-WL-2K7"/>
+                                    <action selector="generateWasPressed:" target="XfG-lQ-9wD" id="K4l-3X-L5u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1284,7 +1284,7 @@ Gw
         <!--Generated Files-->
         <scene sceneID="YUp-W3-AYa">
             <objects>
-                <viewController title="Generated Files" id="SGV-ys-913" customClass="GenerateOutputViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Generated Files" storyboardIdentifier="GenerateOutputViewController" id="SGV-ys-913" customClass="GenerateOutputViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="RIv-DU-4TA">
                         <rect key="frame" x="0.0" y="0.0" width="744" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1338,6 +1338,9 @@ Gw
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="saveMerchantFileWasPressed:" target="SGV-ys-913" id="6Km-F1-TFw"/>
+                                </connections>
                             </button>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-HO-qHQ">
                                 <rect key="frame" x="376" y="94" width="348" height="301"/>
@@ -1388,6 +1391,9 @@ Gw
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="savePaymentProviderFileWasPressed:" target="SGV-ys-913" id="BrO-Mr-ePv"/>
+                                </connections>
                             </button>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-zS-XG1">
                                 <rect key="frame" x="20" y="59" width="704" height="5"/>
@@ -1430,7 +1436,9 @@ Gw
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="merchantNameLabel" destination="we7-aV-7ep" id="FWx-xc-wjb"/>
                         <outlet property="merchantOutput" destination="5rW-Za-qHx" id="vKg-GN-DBT"/>
+                        <outlet property="paymentProviderNameLabel" destination="ra3-vH-pnd" id="uil-aN-Ewx"/>
                         <outlet property="paymentProviderOutput" destination="zAf-Tv-NCD" id="Y9S-AI-JgZ"/>
                     </connections>
                 </viewController>

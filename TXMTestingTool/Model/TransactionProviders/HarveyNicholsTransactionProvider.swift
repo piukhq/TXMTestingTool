@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// TODO: look into nesting all these structs
 struct HNCard: Codable {
     var first6: String
     var last4: String
