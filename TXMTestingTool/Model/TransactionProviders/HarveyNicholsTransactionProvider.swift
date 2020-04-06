@@ -9,17 +9,34 @@
 import Foundation
 
 
-// TODO: look into nesting all these structs
+// TODO: nest all these structs?
 struct HNCard: Codable {
     var first6: String
     var last4: String
     var expiry: String
     var scheme: String
+
+    private enum CodingKeys: String, CodingKey {
+        case first6 = "first_6"
+        case last4 = "last_4"
+        case expiry
+        case scheme
+    }
+}
+
+struct HNAmount: Codable {
+    var value: Decimal
+    var unit: String
 }
 
 struct HNTransaction: Codable {
     var altId: String
     var card: HNCard
+    var amount: HNAmount
+    var storeId: String
+    var timestamp: String
+    var id: String
+    var authCode: String
 }
 
 struct HNRootObject: Codable {
@@ -27,7 +44,9 @@ struct HNRootObject: Codable {
 }
 
 struct HarveyNicholsTransactionProvider: TransactionProvider {
-    func provide(_ transactions: [Transaction]) throws -> String {
+    let dateFormatter = ISO8601DateFormatter()
+
+    func provide(_ transactions: [Transaction], merchant: Provider, paymentProvider: Provider) throws -> String {
         var rootObject = HNRootObject(transactions: [])
 
         for transaction in transactions {
@@ -39,14 +58,22 @@ struct HarveyNicholsTransactionProvider: TransactionProvider {
                         last4: transaction.lastFour,
                         expiry: "0",
                         scheme: "AMEX"
-                    )
+                    ),
+                    amount: HNAmount(
+                        value: Decimal(transaction.amount) / 100,
+                        unit: "GBP"
+                    ),
+                    storeId: transaction.mid,   // TODO: can we simulate HN store IDs properly?
+                    timestamp: dateFormatter.string(from: transaction.date),
+                    id: UUID().uuidString,
+                    authCode: "00000000"
                 )
             )
         }
 
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
-        encoder.outputFormatting = .prettyPrinted
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
 
         let data = try encoder.encode(rootObject)
         return String(data: data, encoding: .utf8)!

@@ -76,7 +76,7 @@ class GenerateOutputViewController: NSViewController {
 
     func provideContent(provider: Provider, into textView: NSTextView) {
         do {
-            let content = try provider.transactionProvider.provide(transactions)
+            let content = try provider.transactionProvider.provide(transactions, merchant: merchant, paymentProvider: paymentProvider)
             textView.string = content
         } catch {
             textView.string = "Failed to generate output: \(error)"

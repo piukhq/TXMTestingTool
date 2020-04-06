@@ -10,7 +10,7 @@ import Foundation
 
 
 struct MastercardTransactionProvider: TransactionProvider {
-    func provide(_ transactions: [Transaction]) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Provider, paymentProvider: Provider) throws -> String {
         return "<\(transactions.count) mastercard transactions go here>"
     }
 }

@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8302B6C9243634BF009CDE8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8302B6C8243634BF009CDE8D /* Constants.swift */; };
+		830C7F11243B70EE00689718 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 830C7F10243B70EE00689718 /* CSV */; };
 		837659FD24361DF900B71BC2 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* Provider.swift */; };
 		837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */; };
 		83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexTransactionProvider.swift */; };
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830C7F11243B70EE00689718 /* CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +199,9 @@
 			dependencies = (
 			);
 			name = TXMTestingTool;
+			packageProductDependencies = (
+				830C7F10243B70EE00689718 /* CSV */,
+			);
 			productName = TXMTestingTool;
 			productReference = 83FF8C86243355DD00C948B4 /* TXMTestingTool.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 83FF8C7D243355DD00C948B4;
+			packageReferences = (
+				830C7F0F243B70EE00689718 /* XCRemoteSwiftPackageReference "CSV.swift" */,
+			);
 			productRefGroup = 83FF8C87243355DD00C948B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -550,6 +558,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		830C7F0F243B70EE00689718 /* XCRemoteSwiftPackageReference "CSV.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		830C7F10243B70EE00689718 /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 830C7F0F243B70EE00689718 /* XCRemoteSwiftPackageReference "CSV.swift" */;
+			productName = CSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83FF8C7E243355DD00C948B4 /* Project object */;
 }
