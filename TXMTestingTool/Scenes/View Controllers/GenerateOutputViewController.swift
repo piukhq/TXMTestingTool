@@ -9,7 +9,6 @@
 import Cocoa
 
 class GenerateOutputViewController: NSViewController {
-    // MARK: - Helpers
 
     // MARK: - IBOutlets
     
@@ -20,21 +19,22 @@ class GenerateOutputViewController: NSViewController {
 
     // MARK: - Properties
     
-    let merchant: Agent
-    let paymentProvider: Agent
-    let transactions: [Transaction]
+    /*
+     Typically this is bad form, but, taking a leaf out of the IBOutlet book above, by declaring these with a ! we are
+     stating that these will always have a value when we read from them. Creating view controllers from storyboards
+     limit us with how we can initialise values we need to pass in. If we ensure we call prepareViewControllerWith:
+     we effectively get the same result but can workaround the limiations.
+     */
+    var merchant: Agent!
+    var paymentProvider: Agent!
+    var transactions: [Transaction]!
 
     // MARK: - Initialisation
     
-    init?(coder: NSCoder, merchant: Agent, paymentProvider: Agent, transactions: [Transaction]) {
+    func prepareViewControllerWith(merchant: Agent, paymentScheme: Agent, transactions: [Transaction]) {
         self.merchant = merchant
-        self.paymentProvider = paymentProvider
+        self.paymentProvider = paymentScheme
         self.transactions = transactions
-        super.init(coder: coder)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - View Lifecycle

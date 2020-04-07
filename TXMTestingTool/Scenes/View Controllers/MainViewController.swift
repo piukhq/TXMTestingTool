@@ -21,8 +21,6 @@ class MainViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var footerSegment: NSSegmentedControl!
-    @IBOutlet weak var merchantPicker: NSPopUpButton!
-    @IBOutlet weak var paymentProviderPicker: NSPopUpButton!
 
     // MARK: - Properties
     
@@ -38,20 +36,10 @@ class MainViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        merchantPicker.addItems(withTitles: ProviderController.shared.merchants.map { $0.prettyName })
-        paymentProviderPicker.addItems(withTitles: ProviderController.shared.paymentProviders.map { $0.prettyName })
+        tableView.intercellSpacing = NSSize(width: 10, height: 2)
     }
 
     // MARK: - IBActions
-    
-    @IBAction func generateWasPressed(_ sender: Any) {
-        if #available(OSX 10.15, *) {
-            showGenerateOutputForCatalina()
-        } else {
-            showGenerateOutput()
-        }
-    }
 
     @IBAction func footerSegmentWasPressed(_ sender: Any) {
         guard let selectedSegment = SegmentButtons(rawValue: footerSegment.selectedSegment) else {
@@ -68,22 +56,28 @@ class MainViewController: NSViewController {
 
     // MARK: - General
     
-    private func getSelectedMerchant() -> Agent {
-        let selection = merchantPicker.indexOfSelectedItem
-        return ProviderController.shared.merchants[selection]
-    }
-
-    private func getSelectedPaymentProvider() -> Agent {
-        let selection = paymentProviderPicker.indexOfSelectedItem
-        return ProviderController.shared.paymentProviders[selection]
+    func generateFilesFor(merchant: Agent, paymentScheme: Agent) {
+        guard let destination = NSStoryboard.main?.instantiateController(withIdentifier: Constants.StoryboardIDs.generateOutputViewController) as? GenerateOutputViewController else {
+            fatalError("Unable to load our view controller from the storyboard")
+        }
+        
+        destination.prepareViewControllerWith(
+            merchant: merchant,
+            paymentScheme: paymentScheme,
+            transactions: transactions
+        )
+        
+        presentAsModalWindow(destination)
     }
 
     private func addNewTransaction() {
-        if #available(OSX 10.15, *) {
-            showAddNewTransactionForCatalina()
-        } else {
-            showAddNewTransaction()
+        guard let destination = NSStoryboard.main?.instantiateController(withIdentifier: Constants.StoryboardIDs.addTransactionViewController) as? AddTransactionViewController else {
+            fatalError("Unable to load our view controller from the storyboard")
         }
+        
+        destination.delegate = self
+        
+        presentAsSheet(destination)
     }
 
     private func removeTransaction() {
@@ -140,56 +134,5 @@ extension MainViewController: AddTransactionsViewControllerDelegate {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
-    }
-}
-
-// MARK: - Navigation
-
-extension MainViewController {
-    fileprivate func showGenerateOutput() {
-        // TODO: Navigate on Mojave
-    }
-    
-    @available(OSX 10.15, *)
-    fileprivate func showGenerateOutputForCatalina() {
-        guard let generateOutputViewController = NSStoryboard.main?.instantiateController(
-            identifier: Constants.StoryboardIDs.generateOutputViewController,
-            creator: { [weak self] (coder) -> GenerateOutputViewController? in
-                guard let self = self else {
-                    return nil
-                }
-                return GenerateOutputViewController(
-                    coder: coder,
-                    merchant: self.getSelectedMerchant(),
-                    paymentProvider: self.getSelectedPaymentProvider(),
-                    transactions: self.transactions
-                )
-            }
-            ) else {
-                return
-        }
-        
-        presentAsModalWindow(generateOutputViewController)
-    }
-    
-    fileprivate func showAddNewTransaction() {
-        // TODO: Navigate on Mojave
-    }
-    
-    @available(OSX 10.15, *)
-    fileprivate func showAddNewTransactionForCatalina() {
-        guard let vc = NSStoryboard.main?.instantiateController(
-            identifier: Constants.StoryboardIDs.addTransactionViewController,
-            creator: { (coder) -> AddTransactionViewController? in
-                return AddTransactionViewController(
-                    coder: coder,
-                    delegate: self
-                )
-            }
-        ) else {
-                return
-        }
-
-        presentAsSheet(vc)
     }
 }

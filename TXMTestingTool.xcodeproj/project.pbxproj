@@ -28,6 +28,7 @@
 		83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */; };
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
+		E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
+		E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +156,9 @@
 		83FF8CAA243356FC00C948B4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E293F005243D0AE300BA83E6 /* View Controllers */,
 				E293F002243CE5ED00BA83E6 /* Views */,
-				83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */,
-				83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */,
-				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
+				E293F006243D0AEB00BA83E6 /* Window Controllers */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -214,6 +215,24 @@
 				E293F003243CE62100BA83E6 /* ValidatableTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E293F005243D0AE300BA83E6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */,
+				83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */,
+				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E293F006243D0AEB00BA83E6 /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */,
+			);
+			path = "Window Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +345,7 @@
 				83765A0724362D0E00B71BC2 /* ProviderController.swift in Sources */,
 				83C9A6672434E77C0085278A /* Provider.swift in Sources */,
 				83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */,
+				E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
 				83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */,
 				837659FD24361DF900B71BC2 /* Agent.swift in Sources */,
