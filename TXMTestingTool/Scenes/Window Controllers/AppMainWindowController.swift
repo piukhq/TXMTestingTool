@@ -22,26 +22,19 @@ class AppMainWindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        prepareMenuContents()
+        buildMenu(merchantMenu, from: ProviderController.shared.merchants)
+        buildMenu(paymentMenu, from: ProviderController.shared.paymentProviders)
     }
     
     // MARK: - Menu
     
-    private func prepareMenuContents() {
-        merchantMenu.removeAllItems()
+    private func buildMenu(_ menu: NSMenu, from agents: [Agent]) {
+        menu.removeAllItems()
         
-        for merchant in ProviderController.shared.merchants {
-            let item = NSMenuItem(title: merchant.prettyName, action: nil, keyEquivalent: "")
-            item.representedObject = merchant
-            merchantMenu.items.append(item)
-        }
-        
-        paymentMenu.removeAllItems()
-        
-        for payment in ProviderController.shared.paymentProviders {
-            let item = NSMenuItem(title: payment.prettyName, action: nil, keyEquivalent: "")
-            item.representedObject = payment
-            paymentMenu.items.append(item)
+        for agent in agents {
+            let item = NSMenuItem(title: agent.prettyName, action: nil, keyEquivalent: "")
+            item.representedObject = agent
+            menu.items.append(item)
         }
     }
     
