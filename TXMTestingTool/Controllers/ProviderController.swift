@@ -46,5 +46,11 @@ class ProviderController {
             defaultFileName: "mastercard.txt",
             transactionProvider: MastercardTransactionProvider()
         ),
+        Provider(
+            slug: "visa",
+            prettyName: "Visa",
+            defaultFileName: "visa.txt",
+            transactionProvider: VisaTransactionProvider()
+        ),
     ]
 }
