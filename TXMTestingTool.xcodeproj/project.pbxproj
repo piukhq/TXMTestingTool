@@ -27,6 +27,7 @@
 		83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CAF243373F500C948B4 /* Transaction.swift */; };
 		83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */; };
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
+		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		83FF8CAF243373F500C948B4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = SOURCE_ROOT; };
+		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +154,10 @@
 		83FF8CAA243356FC00C948B4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
+				E293F002243CE5ED00BA83E6 /* Views */,
 				83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */,
 				83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */,
+				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -203,6 +206,14 @@
 				83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */,
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		E293F002243CE5ED00BA83E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E293F003243CE62100BA83E6 /* ValidatableTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaTransactionProvider.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
+				E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */,
 				83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

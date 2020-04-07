@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -707,11 +708,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddTransactionViewController" id="36D-qQ-G80" customClass="AddTransactionViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="T0h-cI-ena">
-                        <rect key="frame" x="0.0" y="0.0" width="419" height="292"/>
+                        <rect key="frame" x="0.0" y="0.0" width="419" height="291"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tqu-UL-6ph">
-                                <rect key="frame" x="18" y="256" width="383" height="16"/>
+                                <rect key="frame" x="18" y="255" width="383" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Add a new transaction." id="3oS-o0-gLs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -719,15 +720,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-63-ScO">
-                                <rect key="frame" x="18" y="230" width="82" height="16"/>
+                                <rect key="frame" x="18" y="229" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Merchant ID:" id="l50-bd-iR7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-B6-47J">
-                                <rect key="frame" x="106" y="227" width="293" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-B6-47J" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="106" y="226" width="293" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9aF-vg-S51"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="kEN-qw-RJu"/>
@@ -747,7 +748,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-go-BwS">
-                                <rect key="frame" x="106" y="195" width="296" height="28"/>
+                                <rect key="frame" x="106" y="195" width="296" height="27"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="oQS-ed-G1w">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -766,7 +767,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rso-4G-ezS">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rso-4G-ezS" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
                                 <rect key="frame" x="106" y="166" width="293" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="4k0-V3-v6f">
                                     <font key="font" metaFont="system"/>
@@ -782,7 +783,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-AG-1QC">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-AG-1QC" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
                                 <rect key="frame" x="106" y="135" width="293" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="gNd-rB-cQG">
                                     <font key="font" metaFont="system"/>
@@ -798,7 +799,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-66-jwd">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-66-jwd" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
                                 <rect key="frame" x="106" y="104" width="293" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="XiX-Ey-Xk4">
                                     <font key="font" metaFont="system"/>
@@ -814,7 +815,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-ck-ouB">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-ck-ouB" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
                                 <rect key="frame" x="106" y="73" width="293" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="7bo-sa-lfs">
                                     <font key="font" metaFont="system"/>
@@ -943,7 +944,7 @@ Gw
                                 <rect key="frame" x="88" y="301" width="38" height="25"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="fZG-4y-f2M">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="BXB-W8-Lq8"/>
                                 </popUpButtonCell>
                             </popUpButton>
@@ -959,7 +960,7 @@ Gw
                                 <rect key="frame" x="248" y="301" width="38" height="25"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="lPJ-6f-D5Q">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="5Xq-3M-PUg"/>
                                 </popUpButtonCell>
                             </popUpButton>
@@ -978,6 +979,7 @@ Gw
                                             <tableColumns>
                                                 <tableColumn identifier="mid" width="120" minWidth="40" maxWidth="1000" id="ers-m8-6Za">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="MID">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1014,6 +1016,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="date" width="160" minWidth="40" maxWidth="1000" id="T3Q-DI-sjf">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Date">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1050,6 +1053,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="amount" width="100" minWidth="40" maxWidth="1000" id="YfT-9o-g0f">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Amount">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1086,6 +1090,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="cardToken" width="120" minWidth="40" maxWidth="1000" id="X8o-ME-H8E">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Card Token">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1122,6 +1127,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="firstSix" width="120" minWidth="40" maxWidth="1000" id="2Jm-N5-13X">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="First Six">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1158,6 +1164,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="lastFour" width="120" minWidth="40" maxWidth="1000" id="dM4-BW-LTB">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Last Four">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>

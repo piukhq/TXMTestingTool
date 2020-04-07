@@ -147,7 +147,7 @@ extension MainViewController: AddTransactionsViewControllerDelegate {
 
 extension MainViewController {
     fileprivate func showGenerateOutput() {
-        
+        // TODO: Navigate on Mojave
     }
     
     @available(OSX 10.15, *)
@@ -173,7 +173,7 @@ extension MainViewController {
     }
     
     fileprivate func showAddNewTransaction() {
-        
+        // TODO: Navigate on Mojave
     }
     
     @available(OSX 10.15, *)
