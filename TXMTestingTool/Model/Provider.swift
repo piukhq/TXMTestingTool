@@ -12,5 +12,6 @@ import Foundation
 struct Provider {
     var slug: String
     var prettyName: String
+    var defaultFileName: String
     var transactionProvider: TransactionProvider
 }

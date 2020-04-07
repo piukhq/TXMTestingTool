@@ -47,17 +47,21 @@ class GenerateOutputViewController: NSViewController {
 
     // MARK: - IBActions
     @IBAction func saveMerchantFileWasPressed(_ sender: Any) {
-        saveFile(merchantOutput.string)
+        saveFile(merchantOutput.string, provider: merchant)
     }
 
     @IBAction func savePaymentProviderFileWasPressed(_ sender: Any) {
-        saveFile(paymentProviderOutput.string)
+        saveFile(paymentProviderOutput.string, provider: paymentProvider)
     }
 
     // MARK: - General
-    func saveFile(_ content: String) {
+    func saveFile(_ content: String, provider: Provider) {
+        guard let window = view.window else {
+            fatalError("failed to get view window when saving transactions file")
+        }
         let panel = NSSavePanel()
-        panel.begin() { result in
+        panel.nameFieldStringValue = provider.defaultFileName
+        panel.beginSheetModal(for: window) { result in
             if result == .OK {
                 guard let url = panel.url else {
                     // TODO: potentially surface some sort of error
