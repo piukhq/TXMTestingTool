@@ -44,6 +44,16 @@ class AddTransactionViewController: NSViewController {
         return true
     }
 
+    // MARK: - Initialisation
+    init?(coder: NSCoder, delegate: AddTransactionsViewControllerDelegate) {
+        self.delegate = delegate
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -57,15 +57,22 @@ class MainViewController: NSViewController {
     }
 
     @IBAction func footerSegmentWasPressed(_ sender: Any) {
-        performSegue(withIdentifier: "createTransaction", sender: sender)
+        guard let vc = NSStoryboard.main?.instantiateController(
+            identifier: Constants.StoryboardIDs.addTransactionViewController,
+            creator: { (coder) -> AddTransactionViewController? in
+                return AddTransactionViewController(
+                    coder: coder,
+                    delegate: self
+                )
+            }
+        ) else {
+            return
+        }
+
+        presentAsSheet(vc)
     }
 
     // MARK: - General
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        let vc = segue.destinationController as? AddTransactionViewController
-        vc?.delegate = self
-    }
-
     func getSelectedMerchant() -> Provider {
         let selection = merchantPicker.indexOfSelectedItem
         return ProviderController.shared.merchants[selection]

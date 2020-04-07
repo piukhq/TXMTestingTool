@@ -11,6 +11,7 @@ import Foundation
 
 struct Constants {
     struct StoryboardIDs {
+        static let addTransactionViewController = "AddTransactionViewController"
         static let generateOutputViewController = "GenerateOutputViewController"
     }
 }
