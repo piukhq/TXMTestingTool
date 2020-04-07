@@ -12,8 +12,12 @@ protocol Provider {
     func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String
 }
 
+// MARK: - Helpers
+
 enum ProviderError: Error {
     case unsupportedPaymentProvider(Agent)
     case memoryStreamReadError
     case csvDecodeError
 }
+
+typealias WidthField = (String, Int)

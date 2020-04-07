@@ -22,8 +22,8 @@ class AppMainWindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        buildMenu(merchantMenu, from: ProviderController.shared.merchants)
-        buildMenu(paymentMenu, from: ProviderController.shared.paymentProviders)
+        buildMenu(merchantMenu, from: AgentController.shared.merchants)
+        buildMenu(paymentMenu, from: AgentController.shared.paymentProviders)
     }
     
     // MARK: - Menu
