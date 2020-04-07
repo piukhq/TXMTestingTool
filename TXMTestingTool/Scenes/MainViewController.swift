@@ -10,6 +10,10 @@ import Cocoa
 
 class MainViewController: NSViewController {
     // MARK: - Helpers
+    enum SegmentButtons: Int {
+        case add
+        case remove
+    }
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: NSTableView!
@@ -57,19 +61,16 @@ class MainViewController: NSViewController {
     }
 
     @IBAction func footerSegmentWasPressed(_ sender: Any) {
-        guard let vc = NSStoryboard.main?.instantiateController(
-            identifier: Constants.StoryboardIDs.addTransactionViewController,
-            creator: { (coder) -> AddTransactionViewController? in
-                return AddTransactionViewController(
-                    coder: coder,
-                    delegate: self
-                )
-            }
-        ) else {
-            return
+        guard let selectedSegment = SegmentButtons(rawValue: footerSegment.selectedSegment) else {
+            fatalError("footer segment has more buttons than expected - missing value from SegmentButtons")
         }
 
-        presentAsSheet(vc)
+        switch selectedSegment {
+        case .add:
+            addNewTransaction()
+        case .remove:
+            removeTransaction()
+        }
     }
 
     // MARK: - General
@@ -81,6 +82,31 @@ class MainViewController: NSViewController {
     func getSelectedPaymentProvider() -> Provider {
         let selection = paymentProviderPicker.indexOfSelectedItem
         return ProviderController.shared.paymentProviders[selection]
+    }
+
+    func addNewTransaction() {
+        guard let vc = NSStoryboard.main?.instantiateController(
+            identifier: Constants.StoryboardIDs.addTransactionViewController,
+            creator: { (coder) -> AddTransactionViewController? in
+                return AddTransactionViewController(
+                    coder: coder,
+                    delegate: self
+                )
+            }
+        ) else {
+                return
+        }
+
+        presentAsSheet(vc)
+    }
+
+    func removeTransaction() {
+        let selectedTransaction = tableView.selectedRow
+        if selectedTransaction < 0 {
+            return
+        }
+        transactions.remove(at: selectedTransaction)
+        tableView.reloadData()
     }
 }
 
