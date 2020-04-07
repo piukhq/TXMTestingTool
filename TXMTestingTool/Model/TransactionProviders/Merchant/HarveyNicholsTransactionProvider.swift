@@ -8,45 +8,10 @@
 
 import Foundation
 
-
-// TODO: nest all these structs?
-struct HNCard: Codable {
-    var first6: String
-    var last4: String
-    var expiry: String
-    var scheme: String
-
-    private enum CodingKeys: String, CodingKey {
-        case first6 = "first_6"
-        case last4 = "last_4"
-        case expiry
-        case scheme
-    }
-}
-
-struct HNAmount: Codable {
-    var value: Decimal
-    var unit: String
-}
-
-struct HNTransaction: Codable {
-    var altId: String
-    var card: HNCard
-    var amount: HNAmount
-    var storeId: String
-    var timestamp: String
-    var id: String
-    var authCode: String
-}
-
-struct HNRootObject: Codable {
-    var transactions: [HNTransaction]
-}
-
-struct HarveyNicholsTransactionProvider: TransactionProvider {
+struct HarveyNicholsTransactionProvider: Provider {
     let dateFormatter = ISO8601DateFormatter()
 
-    func provide(_ transactions: [Transaction], merchant: Provider, paymentProvider: Provider) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
         var rootObject = HNRootObject(transactions: [])
 
         for transaction in transactions {
@@ -78,4 +43,40 @@ struct HarveyNicholsTransactionProvider: TransactionProvider {
         let data = try encoder.encode(rootObject)
         return String(data: data, encoding: .utf8)!
     }
+}
+
+
+// MARK: - JSON Codables
+
+struct HNRootObject: Codable {
+    var transactions: [HNTransaction]
+}
+
+struct HNTransaction: Codable {
+    var altId: String
+    var card: HNCard
+    var amount: HNAmount
+    var storeId: String
+    var timestamp: String
+    var id: String
+    var authCode: String
+}
+
+struct HNCard: Codable {
+    var first6: String
+    var last4: String
+    var expiry: String
+    var scheme: String
+
+    private enum CodingKeys: String, CodingKey {
+        case first6 = "first_6"
+        case last4 = "last_4"
+        case expiry
+        case scheme
+    }
+}
+
+struct HNAmount: Codable {
+    var value: Decimal
+    var unit: String
 }

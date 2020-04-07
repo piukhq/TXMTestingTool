@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /*
 Example output:
 
@@ -20,20 +19,35 @@ D|AADP0050|EEF28D98-5AB8-49B4-9AAD-40F417A90400|2020-04-98|00000000000019.99|tok
 T|03|000000000004|
 */
 
-struct AmexTransactionProvider: TransactionProvider {
-    var dateFormatter: DateFormatter {
+struct AmexTransactionProvider: Provider {
+    
+    // MARK: - Protocol Implementation
+    
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
+        var lines = [String]()
+        lines.append(makeHeader())
+        lines.append(contentsOf: transactions.map { makeTransactionRow(from: $0) })
+        lines.append(makeTrailer(transactionCount: transactions.count))
+        return lines.joined(separator: "\n")
+    }
+    
+    // MARK: - Properties
+    
+    private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-DD"
         return formatter
-    }
+    }()
 
-    var dateTimeFormatter: DateFormatter {
+    private let dateTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-DD-hh.mm.ss"
         return formatter
-    }
+    }()
+    
+    // MARK: - Supporting Functions
 
-    func pipe(_ items: String...) -> String {
+    private func pipe(_ items: String...) -> String {
         items.joined(separator: "|")
     }
 
@@ -48,16 +62,7 @@ struct AmexTransactionProvider: TransactionProvider {
             String(repeating: " ", count: 209)  // filler
         )
     }
-
-    func makeTrailer(transactionCount: Int) -> String {
-        pipe(
-            "T",  // trailer identifier
-            "03",  // file type (03 = tlog)
-            String(format: "%012d", transactionCount),    // record count
-            String(repeating: " ", count: 263)  // filler
-        )
-    }
-
+    
     func makeTransactionRow(from transaction: Transaction) -> String {
         pipe(
             "D",  // detail identifier
@@ -72,11 +77,12 @@ struct AmexTransactionProvider: TransactionProvider {
         )
     }
 
-    func provide(_ transactions: [Transaction], merchant: Provider, paymentProvider: Provider) throws -> String {
-        var lines = [String]()
-        lines.append(makeHeader())
-        lines.append(contentsOf: transactions.map { makeTransactionRow(from: $0) })
-        lines.append(makeTrailer(transactionCount: transactions.count))
-        return lines.joined(separator: "\n")
+    func makeTrailer(transactionCount: Int) -> String {
+        pipe(
+            "T",  // trailer identifier
+            "03",  // file type (03 = tlog)
+            String(format: "%012d", transactionCount),    // record count
+            String(repeating: " ", count: 263)  // filler
+        )
     }
 }

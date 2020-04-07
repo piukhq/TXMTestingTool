@@ -9,7 +9,7 @@
 import Foundation
 
 
-class VisaTransactionProvider: TransactionProvider {
+class VisaTransactionProvider: Provider {
     typealias WidthField = (String, Int)
 
     var dateFormatter: DateFormatter {
@@ -22,11 +22,6 @@ class VisaTransactionProvider: TransactionProvider {
         let formatter = DateFormatter()
         formatter.dateFormat = "hhmm"
         return formatter
-    }
-
-    func randomDigitString(length: Int) -> String {
-        let digits = "0123456789"
-        return String((0..<length).map { _ in digits.randomElement() ?? "0" })
     }
 
     func join(_ parts: WidthField...) -> String {
@@ -63,7 +58,7 @@ class VisaTransactionProvider: TransactionProvider {
         )
     }
 
-    func makeTransactionRow(_ transaction: Transaction, merchant: Provider) -> String {
+    func makeTransactionRow(_ transaction: Transaction, merchant: Agent) -> String {
         let date = dateFormatter.string(from: transaction.date)
         let timestamp = timeFormatter.string(from: transaction.date)
         return join(
@@ -96,9 +91,9 @@ class VisaTransactionProvider: TransactionProvider {
             (String(format: "%015d", transaction.amount), 15),
             ("GBP", 3),  // acquirer currency code
             ("", 44),  // filler
-            (randomDigitString(length: 15), 15),  // transaction ID
+            (String.randomDigits(length: 15), 15),  // transaction ID
             ("", 22),  // filler
-            (randomDigitString(length: 6), 6),  // auth code
+            (String.randomDigits(length: 6), 6),  // auth code
             ("", 89),  // filler
             (transaction.cardToken, 25),
             (timestamp, 4),
@@ -106,7 +101,7 @@ class VisaTransactionProvider: TransactionProvider {
         )
     }
 
-    func provide(_ transactions: [Transaction], merchant: Provider, paymentProvider: Provider) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
         var lines = [String]()
         lines.append(makeHeader())
         lines.append(contentsOf: transactions.map { makeTransactionRow($0, merchant: merchant) })

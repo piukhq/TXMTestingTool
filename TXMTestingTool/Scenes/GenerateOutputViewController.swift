@@ -12,18 +12,21 @@ class GenerateOutputViewController: NSViewController {
     // MARK: - Helpers
 
     // MARK: - IBOutlets
+    
     @IBOutlet weak var merchantOutput: NSTextView!
     @IBOutlet weak var paymentProviderOutput: NSTextView!
     @IBOutlet weak var merchantNameLabel: NSTextField!
     @IBOutlet weak var paymentProviderNameLabel: NSTextField!
 
     // MARK: - Properties
-    let merchant: Provider
-    let paymentProvider: Provider
+    
+    let merchant: Agent
+    let paymentProvider: Agent
     let transactions: [Transaction]
 
     // MARK: - Initialisation
-    init?(coder: NSCoder, merchant: Provider, paymentProvider: Provider, transactions: [Transaction]) {
+    
+    init?(coder: NSCoder, merchant: Agent, paymentProvider: Agent, transactions: [Transaction]) {
         self.merchant = merchant
         self.paymentProvider = paymentProvider
         self.transactions = transactions
@@ -35,6 +38,7 @@ class GenerateOutputViewController: NSViewController {
     }
 
     // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +50,7 @@ class GenerateOutputViewController: NSViewController {
     }
 
     // MARK: - IBActions
+    
     @IBAction func saveMerchantFileWasPressed(_ sender: Any) {
         saveFile(merchantOutput.string, provider: merchant)
     }
@@ -55,7 +60,8 @@ class GenerateOutputViewController: NSViewController {
     }
 
     // MARK: - General
-    func saveFile(_ content: String, provider: Provider) {
+    
+    func saveFile(_ content: String, provider: Agent) {
         guard let window = view.window else {
             fatalError("failed to get view window when saving transactions file")
         }
@@ -78,7 +84,7 @@ class GenerateOutputViewController: NSViewController {
         }
     }
 
-    func provideContent(provider: Provider, into textView: NSTextView) {
+    func provideContent(provider: Agent, into textView: NSTextView) {
         do {
             let content = try provider.transactionProvider.provide(transactions, merchant: merchant, paymentProvider: paymentProvider)
             textView.string = content

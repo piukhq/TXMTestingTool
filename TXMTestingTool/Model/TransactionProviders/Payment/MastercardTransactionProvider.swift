@@ -21,7 +21,7 @@ import Foundation
  */
 
 
-struct MastercardTransactionProvider: TransactionProvider {
+struct MastercardTransactionProvider: Provider {
     typealias WidthField = (String, Int)
 
     var dateFormatter: DateFormatter {
@@ -61,7 +61,7 @@ struct MastercardTransactionProvider: TransactionProvider {
         )
     }
 
-    func makeTransactionRow(_ transaction: Transaction, merchant: Provider) -> String {
+    func makeTransactionRow(_ transaction: Transaction, merchant: Agent) -> String {
         join(
             ("D", 1),  // data record
             (String(format: "%013d", 1), 13),  // tx sequence number
@@ -80,7 +80,7 @@ struct MastercardTransactionProvider: TransactionProvider {
         )
     }
 
-    func provide(_ transactions: [Transaction], merchant: Provider, paymentProvider: Provider) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
         var lines = [String]()
         lines.append(makeHeader())
         lines.append(contentsOf: transactions.map { makeTransactionRow($0, merchant: merchant) })

@@ -9,9 +9,11 @@
 import Cocoa
 
 class AddTransactionViewController: NSViewController {
+    
     // MARK: - Helpers
 
     // MARK: - IBOutlets
+    
     @IBOutlet weak var midField: NSTextField!
     @IBOutlet weak var dateField: NSDatePicker!
     @IBOutlet weak var amountField: NSTextField!
@@ -24,6 +26,7 @@ class AddTransactionViewController: NSViewController {
     @IBOutlet weak var addButton: NSButton!
 
     // MARK: - Properties
+    
     weak var delegate: AddTransactionsViewControllerDelegate?
 
     lazy var allFields = [
@@ -157,11 +160,4 @@ class AddTransactionViewController: NSViewController {
 
 protocol AddTransactionsViewControllerDelegate: AnyObject {
     func didAddTransaction(_ transaction: Transaction)
-}
-
-// TODO: move this?
-extension String  {
-    var isNumeric: Bool {
-        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
-    }
 }

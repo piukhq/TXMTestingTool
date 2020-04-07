@@ -13,19 +13,19 @@ class ProviderController {
     static let shared = ProviderController()
 
     let merchants = [
-        Provider(
+        Agent(
             slug: "harvey-nichols-rewards",
             prettyName: "Harvey Nichols",
             defaultFileName: "harvey-nichols-rewards.json",
             transactionProvider: HarveyNicholsTransactionProvider()
         ),
-        Provider(
+        Agent(
             slug: "iceland-bonus-card",
             prettyName: "Iceland",
             defaultFileName: "iceland-bonus-card.csv",
             transactionProvider: IcelandTransactionProvider()
         ),
-        Provider(
+        Agent(
             slug: "burger-king-rewards",
             prettyName: "Burger King",
             defaultFileName: "",
@@ -34,19 +34,19 @@ class ProviderController {
     ]
 
     let paymentProviders = [
-        Provider(
+        Agent(
             slug: "amex",
             prettyName: "Amex",
             defaultFileName: "amex.csv",
             transactionProvider: AmexTransactionProvider()
         ),
-        Provider(
+        Agent(
             slug: "mastercard",
             prettyName: "Mastercard",
             defaultFileName: "mastercard.txt",
             transactionProvider: MastercardTransactionProvider()
         ),
-        Provider(
+        Agent(
             slug: "visa",
             prettyName: "Visa",
             defaultFileName: "visa.txt",
