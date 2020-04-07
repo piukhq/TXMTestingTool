@@ -57,7 +57,7 @@ class MainViewController: NSViewController {
     // MARK: - General
     
     func generateFilesFor(merchant: Agent, paymentScheme: Agent) {
-        guard let destination = NSStoryboard.main?.instantiateController(withIdentifier: Constants.StoryboardIDs.generateOutputViewController) as? GenerateOutputViewController else {
+        guard let destination = NSStoryboard.fromMain(loadController: GenerateOutputViewController.self) else {
             fatalError("Unable to load our view controller from the storyboard")
         }
         
@@ -71,12 +71,11 @@ class MainViewController: NSViewController {
     }
 
     private func addNewTransaction() {
-        guard let destination = NSStoryboard.main?.instantiateController(withIdentifier: Constants.StoryboardIDs.addTransactionViewController) as? AddTransactionViewController else {
+        guard let destination = NSStoryboard.fromMain(loadController: AddTransactionViewController.self) else {
             fatalError("Unable to load our view controller from the storyboard")
         }
         
         destination.delegate = self
-        
         presentAsSheet(destination)
     }
 
