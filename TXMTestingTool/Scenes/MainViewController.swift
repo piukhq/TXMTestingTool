@@ -87,7 +87,7 @@ class MainViewController: NSViewController {
     }
 
     private func removeTransaction() {
-        guard case let row = tableView.selectedRow, row > 0 else { return }
+        guard case let row = tableView.selectedRow, row >= 0 else { return }
         transactions.remove(at: row)
         tableView.reloadData()
     }
