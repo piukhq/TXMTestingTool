@@ -67,7 +67,7 @@ class MainViewController: NSViewController {
             transactions: transactions
         )
         
-        presentAsModalWindow(destination)
+        presentAsSheet(destination)
     }
 
     private func addNewTransaction() {

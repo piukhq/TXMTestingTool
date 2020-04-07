@@ -691,7 +691,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="552" y="348" width="800" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="760" height="350"/>
+                        <value key="minSize" type="size" width="850" height="350"/>
                         <toolbar key="toolbar" implicitIdentifier="B0B5CDFB-A2D5-4C1D-A43F-0310701AE7D2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="GSN-O2-iXA">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="hHQ-zA-TPo"/>
