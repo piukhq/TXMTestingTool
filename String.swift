@@ -17,4 +17,12 @@ extension String  {
         let digits = "0123456789"
         return String((0..<length).map { _ in digits.randomElement() ?? "0" })
     }
+
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
 }

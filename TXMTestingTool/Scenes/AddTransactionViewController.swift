@@ -54,20 +54,26 @@ class AddTransactionViewController: NSViewController {
     
     func prepareValidators() {
         midField.setup("MID", validation: [.hasContent])
-        amountField.setup("Amount", validation: [.hasContent, .isNumeric])
-        cardTokenField.setup("Card Token", validation: [.hasContent])
-        firstSixField.setup("First six", validation: [.hasContent, .isNumeric, .lengthEquals(6)])
-        lastFourField.setup("Last four", validation: [.hasContent, .isNumeric, .lengthEquals(4)])
+        amountField.setup("amount", validation: [.hasContent, .isNumeric])
+        cardTokenField.setup("card token", validation: [.hasContent])
+        firstSixField.setup("first six", validation: [.hasContent, .isNumeric, .lengthEquals(6)])
+        lastFourField.setup("last four", validation: [.hasContent, .isNumeric, .lengthEquals(4)])
     }
 
     // MARK: - IBActions
     
     @IBAction func addButtonWasPressed(_ sender: Any) {
-        let validationErrors = validationFields.map { $0?.isValid }.filter { $0?.error != nil }
+        let failedValidation = validationFields.map { $0?.isValid }.filter { !($0?.passedValidation ?? true) }
         
-        if validationErrors.count > 0 {
-            validationErrorsLabel.stringValue = validationErrors.map { $0?.error ?? "" }.joined(separator: "\n")
-            
+        if failedValidation.count > 0 {
+            var errorLines = [String]()
+            for result in failedValidation {
+                guard let result = result else { continue }
+                for error in result.errors {
+                    errorLines.append("• \(error)")
+                }
+            }
+            validationErrorsLabel.stringValue = errorLines.joined(separator: "\n")
             validationErrorsLabel.isHidden = false
             return
         }

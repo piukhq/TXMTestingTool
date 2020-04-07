@@ -18,7 +18,7 @@ class ValidatableTextField: NSTextField {
         case lengthEquals(Int)
     }
     
-    typealias ValidationResult = (isValid: Bool, error: String?)
+    typealias ValidationResult = (passedValidation: Bool, errors: [String])
     
     // MARK: - Properties
     
@@ -27,26 +27,28 @@ class ValidatableTextField: NSTextField {
     var fieldID: String?
     
     var isValid: ValidationResult {
-        guard let validators = validators, let fieldID = fieldID else { return (true, nil) }
-        
+        var errors = [String]()
+
+        guard let validators = validators, let fieldID = fieldID else { return (true, errors) }
+
         for validator in validators {
             switch validator {
             case .hasContent:
                 if stringValue.count == 0 {
-                    return (false, "You must provide a value for \(fieldID)")
+                    errors.append("You must provide a value for \(fieldID).")
                 }
             case .isNumeric:
                 if !stringValue.isNumeric {
-                    return (false, "\(fieldID) must be a number")
+                    errors.append("\(fieldID.capitalizingFirstLetter()) must be a number.")
                 }
             case let .lengthEquals(length):
                 if stringValue.count != length {
-                    return (false, "\(fieldID) must have a length of \(length)")
+                    errors.append("\(fieldID.capitalizingFirstLetter()) must have a length of \(length).")
                 }
             }
         }
-        
-        return (true, nil)
+
+        return (errors.count == 0, errors)
     }
     
     // MARK: - General
