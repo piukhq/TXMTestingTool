@@ -9,6 +9,18 @@
 import Foundation
 
 
+/*
+ Example output:
+
+ H2020049803512700000017597
+ D0000000000001                   0000000016.9920200498HARVEY-NICHOLS-REWARDS                                      abc123                0000000010000010000         token-123                     000001
+ D0000000000001                   0000000017.9920200498HARVEY-NICHOLS-REWARDS                                      def456                0000000010000010000         token-234                     000001
+ D0000000000001                   0000000018.9920200498HARVEY-NICHOLS-REWARDS                                      ghi789                0000000010000010000         token-345                     000001
+ D0000000000001                   0000000019.9920200498HARVEY-NICHOLS-REWARDS                                      jkl012                0000000010000010000         token-456                     000001
+ T00000000000400000017597
+ */
+
+
 struct MastercardTransactionProvider: TransactionProvider {
     typealias WidthField = (String, Int)
 
