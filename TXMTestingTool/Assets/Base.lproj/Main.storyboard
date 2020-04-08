@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -689,7 +689,7 @@
                     <window key="window" title="TXM Import File Generator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="552" y="348" width="800" height="600"/>
+                        <rect key="contentRect" x="552" y="348" width="850" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="850" height="350"/>
                         <toolbar key="toolbar" implicitIdentifier="B0B5CDFB-A2D5-4C1D-A43F-0310701AE7D2" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="GSN-O2-iXA">
@@ -705,7 +705,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <popUpButtonCell key="cell" type="roundTextured" title="Select Merchant" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="drA-fJ-jNv" id="NVE-Y7-7g6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
+                                            <font key="font" metaFont="system"/>
                                             <menu key="menu" id="w6f-fP-RTZ">
                                                 <items>
                                                     <menuItem title="Select Merchant" state="on" id="drA-fJ-jNv"/>
@@ -721,7 +721,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <popUpButtonCell key="cell" type="roundTextured" title="Select Payment Scheme" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Sy2-Hi-AIZ" id="d1p-u8-Rvo">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
+                                            <font key="font" metaFont="system"/>
                                             <menu key="menu" id="baL-cf-c8O">
                                                 <items>
                                                     <menuItem title="Select Payment Scheme" state="on" id="Sy2-Hi-AIZ"/>
@@ -774,11 +774,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddTransactionViewController" id="36D-qQ-G80" customClass="AddTransactionViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="T0h-cI-ena">
-                        <rect key="frame" x="0.0" y="0.0" width="419" height="291"/>
+                        <rect key="frame" x="0.0" y="0.0" width="419" height="292"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tqu-UL-6ph">
-                                <rect key="frame" x="18" y="255" width="383" height="16"/>
+                                <rect key="frame" x="18" y="256" width="383" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Add a new transaction." id="3oS-o0-gLs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -786,7 +786,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-63-ScO">
-                                <rect key="frame" x="18" y="229" width="82" height="16"/>
+                                <rect key="frame" x="18" y="230" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Merchant ID:" id="l50-bd-iR7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -794,7 +794,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-B6-47J" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="106" y="226" width="293" height="21"/>
+                                <rect key="frame" x="106" y="227" width="293" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9aF-vg-S51"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="kEN-qw-RJu"/>
@@ -814,7 +814,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-go-BwS">
-                                <rect key="frame" x="106" y="195" width="296" height="27"/>
+                                <rect key="frame" x="106" y="195" width="296" height="28"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="oQS-ed-G1w">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -1029,7 +1029,6 @@ Gw
                                             <tableColumns>
                                                 <tableColumn identifier="mid" width="120" minWidth="40" maxWidth="1000" id="ers-m8-6Za">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="MID">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1066,7 +1065,6 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="date" width="160" minWidth="40" maxWidth="1000" id="T3Q-DI-sjf">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Date">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1103,7 +1101,6 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="amount" width="100" minWidth="40" maxWidth="1000" id="YfT-9o-g0f">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Amount">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1140,7 +1137,6 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="cardToken" width="120" minWidth="40" maxWidth="1000" id="X8o-ME-H8E">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Card Token">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1177,7 +1173,6 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="firstSix" width="120" minWidth="40" maxWidth="1000" id="2Jm-N5-13X">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="First Six">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1214,7 +1209,6 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="lastFour" width="122" minWidth="40" maxWidth="1000" id="dM4-BW-LTB">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Last Four">
-                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
