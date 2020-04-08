@@ -24,13 +24,7 @@ class MainViewController: NSViewController {
 
     // MARK: - Properties
     
-    //var transactions = [Transaction]()
-    var transactions = [
-        Transaction(mid: "abc123", date: Date(), amount: 1699, cardToken: "token-123", firstSix: "123456", lastFour: "7890"),
-        Transaction(mid: "def456", date: Date(), amount: 1799, cardToken: "token-234", firstSix: "234567", lastFour: "8901"),
-        Transaction(mid: "ghi789", date: Date(), amount: 1899, cardToken: "token-345", firstSix: "345678", lastFour: "9012"),
-        Transaction(mid: "jkl012", date: Date(), amount: 1999, cardToken: "token-456", firstSix: "456789", lastFour: "0123"),
-    ]
+    var transactions = [Transaction]()
 
     // MARK: - View Lifecycle
     

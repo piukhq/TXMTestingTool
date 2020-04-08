@@ -38,6 +38,7 @@ class AddTransactionViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareValidators()
+        dateField.dateValue = Date()
         addButton.becomeFirstResponder()
     }
     

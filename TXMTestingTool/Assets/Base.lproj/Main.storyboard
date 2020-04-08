@@ -692,7 +692,7 @@
                         <rect key="contentRect" x="552" y="348" width="800" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="850" height="350"/>
-                        <toolbar key="toolbar" implicitIdentifier="B0B5CDFB-A2D5-4C1D-A43F-0310701AE7D2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="GSN-O2-iXA">
+                        <toolbar key="toolbar" implicitIdentifier="B0B5CDFB-A2D5-4C1D-A43F-0310701AE7D2" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="GSN-O2-iXA">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="hHQ-zA-TPo"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="zK7-J0-4Ob"/>
@@ -709,8 +709,6 @@
                                             <menu key="menu" id="w6f-fP-RTZ">
                                                 <items>
                                                     <menuItem title="Select Merchant" state="on" id="drA-fJ-jNv"/>
-                                                    <menuItem title="Item 2" id="m2k-Ko-Kd1"/>
-                                                    <menuItem title="Item 3" id="6C0-9d-8Ov"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
@@ -727,8 +725,6 @@
                                             <menu key="menu" id="baL-cf-c8O">
                                                 <items>
                                                     <menuItem title="Select Payment Scheme" state="on" id="Sy2-Hi-AIZ"/>
-                                                    <menuItem title="Item 2" id="02C-ay-eiW"/>
-                                                    <menuItem title="Item 3" id="nV5-IN-86r"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
@@ -992,7 +988,7 @@ Gw
                 </viewController>
                 <customObject id="lfO-38-XGg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="1037"/>
+            <point key="canvasLocation" x="712" y="1250"/>
         </scene>
         <!--Transactions List-->
         <scene sceneID="hIz-AP-VOD">
@@ -1472,7 +1468,7 @@ Gw
                 </viewController>
                 <customObject id="4l4-ZL-8GQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.5" y="1608.5"/>
+            <point key="canvasLocation" x="66" y="1444"/>
         </scene>
     </scenes>
     <resources>
