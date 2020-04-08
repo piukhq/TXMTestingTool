@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8302B6C9243634BF009CDE8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8302B6C8243634BF009CDE8D /* Constants.swift */; };
 		830C7F11243B70EE00689718 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 830C7F10243B70EE00689718 /* CSV */; };
 		83564B4B243CCCFB00B718AA /* VisaTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */; };
 		837659FD24361DF900B71BC2 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* Agent.swift */; };
@@ -15,7 +14,7 @@
 		83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexTransactionProvider.swift */; };
 		83765A0324361F8100B71BC2 /* MastercardTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0224361F8100B71BC2 /* MastercardTransactionProvider.swift */; };
 		83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */; };
-		83765A0724362D0E00B71BC2 /* ProviderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0624362D0E00B71BC2 /* ProviderController.swift */; };
+		83765A0724362D0E00B71BC2 /* AgentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0624362D0E00B71BC2 /* AgentController.swift */; };
 		83C9A6672434E77C0085278A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6662434E77C0085278A /* Provider.swift */; };
 		83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */; };
 		83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */; };
@@ -26,8 +25,10 @@
 		83FF8C9D243355DE00C948B4 /* TXMTestingToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C9C243355DE00C948B4 /* TXMTestingToolTests.swift */; };
 		83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CAF243373F500C948B4 /* Transaction.swift */; };
 		83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */; };
+		E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27EE958243D249200D2EF58 /* NSStoryboard.swift */; };
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
+		E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8302B6C8243634BF009CDE8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaTransactionProvider.swift; sourceTree = "<group>"; };
 		837659FC24361DF900B71BC2 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullTransactionProvider.swift; sourceTree = "<group>"; };
 		83765A0024361F7000B71BC2 /* AmexTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexTransactionProvider.swift; sourceTree = "<group>"; };
 		83765A0224361F8100B71BC2 /* MastercardTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardTransactionProvider.swift; sourceTree = "<group>"; };
 		83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcelandTransactionProvider.swift; sourceTree = "<group>"; };
-		83765A0624362D0E00B71BC2 /* ProviderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderController.swift; sourceTree = "<group>"; };
+		83765A0624362D0E00B71BC2 /* AgentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentController.swift; sourceTree = "<group>"; };
 		83C9A6662434E77C0085278A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarveyNicholsTransactionProvider.swift; sourceTree = "<group>"; };
 		83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateOutputViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +65,11 @@
 		83FF8CAE24335AFE00C948B4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83FF8CAF243373F500C948B4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		E262D27E243D2D380096D47A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E27EE958243D249200D2EF58 /* NSStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSStoryboard.swift; path = "TXMTestingTool/Scenes/Window Controllers/NSStoryboard.swift"; sourceTree = SOURCE_ROOT; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
+		E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				83FF8C89243355DD00C948B4 /* AppDelegate.swift */,
-				8302B6C8243634BF009CDE8D /* Constants.swift */,
 				83FF8CA72433561E00C948B4 /* Assets */,
 				83FF8CAB2433574F00C948B4 /* Controllers */,
 				83FF8CAC2433575400C948B4 /* Extensions */,
@@ -154,10 +156,9 @@
 		83FF8CAA243356FC00C948B4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E293F005243D0AE300BA83E6 /* View Controllers */,
 				E293F002243CE5ED00BA83E6 /* Views */,
-				83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */,
-				83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */,
-				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
+				E293F006243D0AEB00BA83E6 /* Window Controllers */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -165,7 +166,7 @@
 		83FF8CAB2433574F00C948B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83765A0624362D0E00B71BC2 /* ProviderController.swift */,
+				83765A0624362D0E00B71BC2 /* AgentController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +174,7 @@
 		83FF8CAC2433575400C948B4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E27EE958243D249200D2EF58 /* NSStoryboard.swift */,
 				E293EFFE243CDECA00BA83E6 /* String.swift */,
 			);
 			path = Extensions;
@@ -204,6 +206,7 @@
 				83765A0024361F7000B71BC2 /* AmexTransactionProvider.swift */,
 				83765A0224361F8100B71BC2 /* MastercardTransactionProvider.swift */,
 				83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */,
+				E262D27E243D2D380096D47A /* README.md */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -214,6 +217,24 @@
 				E293F003243CE62100BA83E6 /* ValidatableTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E293F005243D0AE300BA83E6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */,
+				83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */,
+				83FF8C8B243355DD00C948B4 /* MainViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E293F006243D0AEB00BA83E6 /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */,
+			);
+			path = "Window Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,17 +344,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */,
-				83765A0724362D0E00B71BC2 /* ProviderController.swift in Sources */,
+				83765A0724362D0E00B71BC2 /* AgentController.swift in Sources */,
 				83C9A6672434E77C0085278A /* Provider.swift in Sources */,
 				83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */,
+				E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
 				83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */,
 				837659FD24361DF900B71BC2 /* Agent.swift in Sources */,
 				837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */,
 				83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */,
+				E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */,
 				83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */,
 				83765A0324361F8100B71BC2 /* MastercardTransactionProvider.swift in Sources */,
-				8302B6C9243634BF009CDE8D /* Constants.swift in Sources */,
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaTransactionProvider.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,

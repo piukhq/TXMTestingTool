@@ -1,5 +1,5 @@
 //
-//  ProviderController.swift
+//  AgentController.swift
 //  TXMTestingTool
 //
 //  Created by Chris Latham on 02/04/2020.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-
-class ProviderController {
-    static let shared = ProviderController()
+class AgentController {
+    static let shared = AgentController()
 
     let merchants = [
         Agent(
