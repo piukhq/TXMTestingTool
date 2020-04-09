@@ -11,7 +11,7 @@ import Foundation
 struct Transaction {
     static var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD hh:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         return dateFormatter
     }
 

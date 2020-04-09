@@ -24,13 +24,13 @@ struct AmexTransactionProvider: Provider {
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-DD"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
 
     private let dateTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-DD-hh.mm.ss"
+        formatter.dateFormat = "yyyy-MM-dd-hh.mm.ss"
         return formatter
     }()
     
