@@ -24,7 +24,7 @@ struct MastercardTransactionProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYYMMDD"
+        formatter.dateFormat = "yyyyMMdd"
         return formatter
     }()
 

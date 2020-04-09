@@ -52,7 +52,7 @@ struct IcelandTransactionProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-DD hh:mm:ss"
+        formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         return formatter
     }()
     
