@@ -67,14 +67,20 @@ class AddTransactionViewController: NSViewController {
             validationErrorsLabel.isHidden = false
             return
         }
-        
+
+        guard let settlementKey = UUID().uuidString.data(using: .utf8)?.base64EncodedString() else {
+            // This should never happen as we trust .uuidString to always return a valid utf8 string.
+            fatalError("Failed to generate base64-encoded UUID string for settlement key.")
+        }
+
         let transaction = Transaction(
             mid: midField.stringValue,
             date: dateField.dateValue,
             amount: Int(amountField.stringValue)!,
             cardToken: cardTokenField.stringValue,
             firstSix: firstSixField.stringValue,
-            lastFour: lastFourField.stringValue
+            lastFour: lastFourField.stringValue,
+            settlementKey: settlementKey
         )
 
         delegate?.didAddTransaction(transaction)

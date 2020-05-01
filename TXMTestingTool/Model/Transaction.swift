@@ -21,4 +21,7 @@ struct Transaction {
     let cardToken: String
     let firstSix: String
     let lastFour: String
+
+    // Settlement key is generated on export rather than being entered by the user.
+    let settlementKey: String
 }

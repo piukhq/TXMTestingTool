@@ -33,23 +33,29 @@ class AgentController {
     ]
 
     let paymentProviders = [
-        Agent(
+        PaymentProvider(
             slug: "amex",
             prettyName: "Amex",
-            defaultFileName: "amex.csv",
-            transactionProvider: AmexTransactionProvider()
+            defaultSettledFileName: "amex-settled.csv",
+            defaultAuthFilename: "amex-auth.json",
+            settledTransactionProvider: AmexTransactionProvider(),
+            authTransactionProvider: NullTransactionProvider()
         ),
-        Agent(
+        PaymentProvider(
             slug: "mastercard",
             prettyName: "Mastercard",
-            defaultFileName: "mastercard.txt",
-            transactionProvider: MastercardTransactionProvider()
+            defaultSettledFileName: "mastercard-settled.txt",
+            defaultAuthFilename: "mastercard-auth.json",
+            settledTransactionProvider: MastercardTransactionProvider(),
+            authTransactionProvider: MastercardAuthTransactionProvider()
         ),
-        Agent(
+        PaymentProvider(
             slug: "visa",
             prettyName: "Visa",
-            defaultFileName: "visa.txt",
-            transactionProvider: VisaTransactionProvider()
-        ),
+            defaultSettledFileName: "visa-settled.txt",
+            defaultAuthFilename: "visa-auth.json",
+            settledTransactionProvider: VisaTransactionProvider(),
+            authTransactionProvider: NullTransactionProvider()
+        )
     ]
 }

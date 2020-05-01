@@ -10,7 +10,7 @@ import Foundation
 
 
 struct NullTransactionProvider: Provider {
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentProvider) throws -> String {
         return ""
     }
 }

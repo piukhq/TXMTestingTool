@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		830C7F11243B70EE00689718 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 830C7F10243B70EE00689718 /* CSV */; };
+		833845F02459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845EF2459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift */; };
+		833845F22459BFCD0040BBB5 /* PaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845F12459BFCD0040BBB5 /* PaymentProvider.swift */; };
 		83564B4B243CCCFB00B718AA /* VisaTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */; };
 		837659FD24361DF900B71BC2 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* Agent.swift */; };
 		837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		833845EF2459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardAuthTransactionProvider.swift; sourceTree = "<group>"; };
+		833845F12459BFCD0040BBB5 /* PaymentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProvider.swift; sourceTree = "<group>"; };
 		83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaTransactionProvider.swift; sourceTree = "<group>"; };
 		837659FC24361DF900B71BC2 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullTransactionProvider.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				837659FC24361DF900B71BC2 /* Agent.swift */,
+				833845F12459BFCD0040BBB5 /* PaymentProvider.swift */,
 				83C9A6662434E77C0085278A /* Provider.swift */,
 				83FF8CAF243373F500C948B4 /* Transaction.swift */,
 				83765A0824362E4000B71BC2 /* TransactionProviders */,
@@ -203,10 +208,11 @@
 		E293F001243CE0F900BA83E6 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				E262D27E243D2D380096D47A /* README.md */,
 				83765A0024361F7000B71BC2 /* AmexTransactionProvider.swift */,
+				833845EF2459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift */,
 				83765A0224361F8100B71BC2 /* MastercardTransactionProvider.swift */,
 				83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */,
-				E262D27E243D2D380096D47A /* README.md */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				83C9A6672434E77C0085278A /* Provider.swift in Sources */,
 				83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */,
 				E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */,
+				833845F22459BFCD0040BBB5 /* PaymentProvider.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
 				83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */,
 				837659FD24361DF900B71BC2 /* Agent.swift in Sources */,
@@ -357,6 +364,7 @@
 				83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */,
 				83765A0324361F8100B71BC2 /* MastercardTransactionProvider.swift in Sources */,
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
+				833845F02459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaTransactionProvider.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
 				E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */,

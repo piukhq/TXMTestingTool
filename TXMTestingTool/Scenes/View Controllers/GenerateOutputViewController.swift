@@ -14,8 +14,10 @@ class GenerateOutputViewController: NSViewController {
     
     @IBOutlet weak var merchantOutput: NSTextView!
     @IBOutlet weak var paymentProviderOutput: NSTextView!
+    @IBOutlet weak var paymentAuthProviderOutput: NSTextView!
     @IBOutlet weak var merchantNameLabel: NSTextField!
     @IBOutlet weak var paymentProviderNameLabel: NSTextField!
+    @IBOutlet weak var paymentAuthProviderNameLabel: NSTextField!
 
     // MARK: - Properties
     
@@ -26,14 +28,14 @@ class GenerateOutputViewController: NSViewController {
      we effectively get the same result but can workaround the limiations.
      */
     var merchant: Agent!
-    var paymentProvider: Agent!
+    var paymentProvider: PaymentProvider!
     var transactions: [Transaction]!
 
     // MARK: - Initialisation
     
-    func prepareViewControllerWith(merchant: Agent, paymentScheme: Agent, transactions: [Transaction]) {
+    func prepareViewControllerWith(merchant: Agent, paymentProvider: PaymentProvider, transactions: [Transaction]) {
         self.merchant = merchant
-        self.paymentProvider = paymentScheme
+        self.paymentProvider = paymentProvider
         self.transactions = transactions
     }
 
@@ -43,30 +45,36 @@ class GenerateOutputViewController: NSViewController {
         super.viewDidLoad()
 
         provideContent(provider: merchant, into: merchantOutput)
-        provideContent(provider: paymentProvider, into: paymentProviderOutput)
+        provideContent(provider: paymentProvider.settledAgent, into: paymentProviderOutput)
+        provideContent(provider: paymentProvider.authAgent, into: paymentAuthProviderOutput)
 
         merchantNameLabel.stringValue = merchant.prettyName
-        paymentProviderNameLabel.stringValue = paymentProvider.prettyName
+        paymentProviderNameLabel.stringValue = "\(paymentProvider.settledAgent.prettyName) settled transactions"
+        paymentAuthProviderNameLabel.stringValue = "\(paymentProvider.authAgent.prettyName) auth transactions"
     }
 
     // MARK: - IBActions
     
     @IBAction func saveMerchantFileWasPressed(_ sender: Any) {
-        saveFile(merchantOutput.string, provider: merchant)
+        saveFile(merchantOutput.string, agent: merchant)
     }
 
     @IBAction func savePaymentProviderFileWasPressed(_ sender: Any) {
-        saveFile(paymentProviderOutput.string, provider: paymentProvider)
+        saveFile(paymentProviderOutput.string, agent: paymentProvider.settledAgent)
+    }
+
+    @IBAction func savePaymentAuthProviderFileWasPressed(_ sender: Any) {
+        saveFile(paymentAuthProviderOutput.string, agent: paymentProvider.authAgent)
     }
 
     // MARK: - General
     
-    func saveFile(_ content: String, provider: Agent) {
+    func saveFile(_ content: String, agent: Agent) {
         guard let window = view.window else {
             fatalError("failed to get view window when saving transactions file")
         }
         let panel = NSSavePanel()
-        panel.nameFieldStringValue = provider.defaultFileName
+        panel.nameFieldStringValue = agent.defaultFileName
         panel.beginSheetModal(for: window) { result in
             if result == .OK {
                 guard let url = panel.url else {

@@ -37,13 +37,23 @@ class AppMainWindowController: NSWindowController {
             menu.items.append(item)
         }
     }
+
+    private func buildMenu(_ menu: NSMenu, from paymentProviders: [PaymentProvider]) {
+        menu.removeAllItems()
+
+        for paymentProvider in paymentProviders {
+            let item = NSMenuItem(title: paymentProvider.settledAgent.prettyName, action: nil, keyEquivalent: "")
+            item.representedObject = paymentProvider
+            menu.items.append(item)
+        }
+    }
     
     // MARK: - IBActions
     
     @IBAction func generateButtonWasPressed(_ sender: Any) {
         guard let appVC = window?.contentViewController as? MainViewController else { return }
         guard let merchant = merchantPopUp.selectedItem?.representedObject as? Agent else { return }
-        guard let payment = paymentPopUp.selectedItem?.representedObject as? Agent else { return }
-        appVC.generateFilesFor(merchant: merchant, paymentScheme: payment)
+        guard let paymentProvider = paymentPopUp.selectedItem?.representedObject as? PaymentProvider else { return }
+        appVC.generateFilesFor(merchant: merchant, paymentProvider: paymentProvider)
     }
 }

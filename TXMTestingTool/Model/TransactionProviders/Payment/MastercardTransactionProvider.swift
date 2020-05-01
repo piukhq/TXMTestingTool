@@ -12,7 +12,7 @@ struct MastercardTransactionProvider: Provider {
     
     // MARK: - Protocol Implementation
     
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentProvider) throws -> String {
         var lines = [String]()
         lines.append(makeHeader())
         lines.append(contentsOf: transactions.map { makeTransactionRow($0, merchant: merchant) })
@@ -65,7 +65,7 @@ struct MastercardTransactionProvider: Provider {
             (String(format: "%06d", 1), 6),                                     // issuer ICA code
             ("0000", 4),                                                        // transaction time
             // TODO: settlement key goes here
-            ("", 9),                                                            // banknet ref number
+            (String(transaction.settlementKey.prefix(9)), 9),                   // banknet ref number
             (transaction.cardToken, 30),                                        // bank customer number
             (String(format: "%06d", 1), 6)                                      // aggregate merchant ID
         )
