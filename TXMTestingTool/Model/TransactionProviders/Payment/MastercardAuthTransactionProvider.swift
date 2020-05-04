@@ -17,7 +17,7 @@ struct MastercardAuthTransactionProvider: Provider {
             MCATransaction(
                 thirdPartyID: String($0.settlementKey.prefix(9)),
                 time: dateFormatter.string(from: $0.date),
-                amount: Float($0.amount) / 100.0,
+                amount: Decimal($0.amount) / 100,
                 currencyCode: "GBP",
                 paymentCardToken: $0.cardToken,
                 mid: $0.mid
@@ -50,7 +50,7 @@ struct MastercardAuthTransactionProvider: Provider {
 struct MCATransaction: Codable {
     var thirdPartyID: String
     var time: String
-    var amount: Float
+    var amount: Decimal
     var currencyCode: String
     var paymentCardToken: String
     var mid: String
