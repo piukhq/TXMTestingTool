@@ -33,13 +33,13 @@ class AgentController {
     ]
 
     let paymentProviders = [
-        PaymentProvider(
+        PaymentAgent(
             slug: "amex",
             prettyName: "Amex",
             defaultSettledFileName: "amex-settled.csv",
             settledTransactionProvider: AmexTransactionProvider()
         ),
-        PaymentProvider(
+        PaymentAgent(
             slug: "mastercard",
             prettyName: "Mastercard",
             defaultSettledFileName: "mastercard-settled.txt",
@@ -47,7 +47,7 @@ class AgentController {
             defaultAuthFilename: "mastercard-auth.json",
             authTransactionProvider: MastercardAuthTransactionProvider()
         ),
-        PaymentProvider(
+        PaymentAgent(
             slug: "visa",
             prettyName: "Visa",
             defaultSettledFileName: "visa-settled.txt",

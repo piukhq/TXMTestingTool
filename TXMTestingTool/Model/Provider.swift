@@ -9,13 +9,13 @@
 import Foundation
 
 protocol Provider {
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentProvider) throws -> String
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String
 }
 
 // MARK: - Helpers
 
 enum ProviderError: Error {
-    case unsupportedPaymentProvider(Agent)
+    case unsupportedPaymentProvider(PaymentAgent)
     case memoryStreamReadError
     case csvDecodeError
 }

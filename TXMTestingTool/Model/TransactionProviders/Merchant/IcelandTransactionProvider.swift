@@ -13,7 +13,7 @@ struct IcelandTransactionProvider: Provider {
     
     // MARK: - Protocol Implementation
     
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentProvider) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
         let csv = try CSVWriter(stream: .toMemory())
         try csv.write(row: columnHeadings)
         for transaction in transactions {
@@ -70,7 +70,7 @@ struct IcelandTransactionProvider: Provider {
         return csvString
     }
 
-    func getCardSchemeId(for paymentProvider: Agent) throws -> String {
+    func getCardSchemeId(for paymentProvider: PaymentAgent) throws -> String {
         if let cardSchemeId = cardSchemeIds[paymentProvider.slug] {
             return cardSchemeId
         } else {
@@ -78,13 +78,13 @@ struct IcelandTransactionProvider: Provider {
         }
     }
 
-    func transactionToColumns(_ transaction: Transaction, paymentProvider: PaymentProvider) throws -> [String] {
+    func transactionToColumns(_ transaction: Transaction, paymentProvider: PaymentAgent) throws -> [String] {
         [
             transaction.firstSix,
             transaction.lastFour,
             "01/80",
-            try getCardSchemeId(for: paymentProvider.settledAgent),
-            paymentProvider.settledAgent.slug.capitalized,
+            try getCardSchemeId(for: paymentProvider),
+            paymentProvider.slug.capitalized,
             transaction.mid,
             dateFormatter.string(from: transaction.date),
             String(format: "%.2f", Double(transaction.amount) / 100),

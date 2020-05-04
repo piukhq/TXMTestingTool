@@ -11,7 +11,7 @@ import Foundation
 struct HarveyNicholsTransactionProvider: Provider {
     let dateFormatter = ISO8601DateFormatter()
 
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentProvider) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
         var rootObject = HNRootObject(transactions: [])
 
         for transaction in transactions {

@@ -7,6 +7,8 @@
 //
 
 struct PaymentAgent {
+    let slug: String
+    let prettyName: String
     let settled: Agent
     let auth: Agent?
 
@@ -16,6 +18,8 @@ struct PaymentAgent {
         defaultSettledFileName: String,
         settledTransactionProvider: Provider
     ) {
+        self.slug = slug
+        self.prettyName = prettyName
         settled = Agent(
             slug: slug,
             prettyName: prettyName,
@@ -33,6 +37,8 @@ struct PaymentAgent {
         defaultAuthFilename: String,
         authTransactionProvider: Provider
     ) {
+        self.slug = slug
+        self.prettyName = prettyName
         settled = Agent(
             slug: slug,
             prettyName: prettyName,

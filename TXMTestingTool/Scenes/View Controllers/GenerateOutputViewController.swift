@@ -28,12 +28,12 @@ class GenerateOutputViewController: NSViewController {
      we effectively get the same result but can workaround the limiations.
      */
     var merchant: Agent!
-    var paymentProvider: PaymentProvider!
+    var paymentProvider: PaymentAgent!
     var transactions: [Transaction]!
 
     // MARK: - Initialisation
     
-    func prepareViewControllerWith(merchant: Agent, paymentProvider: PaymentProvider, transactions: [Transaction]) {
+    func prepareViewControllerWith(merchant: Agent, paymentProvider: PaymentAgent, transactions: [Transaction]) {
         self.merchant = merchant
         self.paymentProvider = paymentProvider
         self.transactions = transactions
@@ -45,12 +45,12 @@ class GenerateOutputViewController: NSViewController {
         super.viewDidLoad()
 
         provideContent(provider: merchant, into: merchantOutput)
-        provideContent(provider: paymentProvider.settledAgent, into: paymentProviderOutput)
+        provideContent(provider: paymentProvider.settled, into: paymentProviderOutput)
 
         merchantNameLabel.stringValue = merchant.prettyName
-        paymentProviderNameLabel.stringValue = "\(paymentProvider.settledAgent.prettyName) settled transactions"
+        paymentProviderNameLabel.stringValue = "\(paymentProvider.prettyName) settled transactions"
 
-        if let authAgent = paymentProvider.authAgent {
+        if let authAgent = paymentProvider.auth {
             provideContent(provider: authAgent, into: paymentAuthProviderOutput)
             paymentAuthProviderNameLabel.stringValue = "\(authAgent.prettyName) auth transactions"
         }
@@ -63,11 +63,11 @@ class GenerateOutputViewController: NSViewController {
     }
 
     @IBAction func savePaymentProviderFileWasPressed(_ sender: Any) {
-        saveFile(paymentProviderOutput.string, agent: paymentProvider.settledAgent)
+        saveFile(paymentProviderOutput.string, agent: paymentProvider.settled)
     }
 
     @IBAction func savePaymentAuthProviderFileWasPressed(_ sender: Any) {
-        if let authAgent = paymentProvider.authAgent {
+        if let authAgent = paymentProvider.auth {
             saveFile(paymentAuthProviderOutput.string, agent: authAgent)
         }
     }
