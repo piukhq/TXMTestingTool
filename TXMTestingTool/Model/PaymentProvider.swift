@@ -8,14 +8,29 @@
 
 struct PaymentProvider {
     let settledAgent: Agent
-    let authAgent: Agent
+    let authAgent: Agent?
 
     init(
         slug: String,
         prettyName: String,
         defaultSettledFileName: String,
-        defaultAuthFilename: String,
+        settledTransactionProvider: Provider
+    ) {
+        settledAgent = Agent(
+            slug: slug,
+            prettyName: prettyName,
+            defaultFileName: defaultSettledFileName,
+            transactionProvider: settledTransactionProvider
+        )
+        authAgent = nil
+    }
+
+    init(
+        slug: String,
+        prettyName: String,
+        defaultSettledFileName: String,
         settledTransactionProvider: Provider,
+        defaultAuthFilename: String,
         authTransactionProvider: Provider
     ) {
         settledAgent = Agent(

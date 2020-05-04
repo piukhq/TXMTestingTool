@@ -46,11 +46,14 @@ class GenerateOutputViewController: NSViewController {
 
         provideContent(provider: merchant, into: merchantOutput)
         provideContent(provider: paymentProvider.settledAgent, into: paymentProviderOutput)
-        provideContent(provider: paymentProvider.authAgent, into: paymentAuthProviderOutput)
 
         merchantNameLabel.stringValue = merchant.prettyName
         paymentProviderNameLabel.stringValue = "\(paymentProvider.settledAgent.prettyName) settled transactions"
-        paymentAuthProviderNameLabel.stringValue = "\(paymentProvider.authAgent.prettyName) auth transactions"
+
+        if let authAgent = paymentProvider.authAgent {
+            provideContent(provider: authAgent, into: paymentAuthProviderOutput)
+            paymentAuthProviderNameLabel.stringValue = "\(authAgent.prettyName) auth transactions"
+        }
     }
 
     // MARK: - IBActions
@@ -64,7 +67,9 @@ class GenerateOutputViewController: NSViewController {
     }
 
     @IBAction func savePaymentAuthProviderFileWasPressed(_ sender: Any) {
-        saveFile(paymentAuthProviderOutput.string, agent: paymentProvider.authAgent)
+        if let authAgent = paymentProvider.authAgent {
+            saveFile(paymentAuthProviderOutput.string, agent: authAgent)
+        }
     }
 
     // MARK: - General

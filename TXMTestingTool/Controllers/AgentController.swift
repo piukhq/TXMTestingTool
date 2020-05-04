@@ -37,25 +37,21 @@ class AgentController {
             slug: "amex",
             prettyName: "Amex",
             defaultSettledFileName: "amex-settled.csv",
-            defaultAuthFilename: "amex-auth.json",
-            settledTransactionProvider: AmexTransactionProvider(),
-            authTransactionProvider: NullTransactionProvider()
+            settledTransactionProvider: AmexTransactionProvider()
         ),
         PaymentProvider(
             slug: "mastercard",
             prettyName: "Mastercard",
             defaultSettledFileName: "mastercard-settled.txt",
-            defaultAuthFilename: "mastercard-auth.json",
             settledTransactionProvider: MastercardTransactionProvider(),
+            defaultAuthFilename: "mastercard-auth.json",
             authTransactionProvider: MastercardAuthTransactionProvider()
         ),
         PaymentProvider(
             slug: "visa",
             prettyName: "Visa",
             defaultSettledFileName: "visa-settled.txt",
-            defaultAuthFilename: "visa-auth.json",
-            settledTransactionProvider: VisaTransactionProvider(),
-            authTransactionProvider: NullTransactionProvider()
+            settledTransactionProvider: VisaTransactionProvider()
         )
     ]
 }
