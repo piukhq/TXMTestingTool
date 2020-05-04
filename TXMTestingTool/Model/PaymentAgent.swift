@@ -6,7 +6,7 @@
 //  Copyright © 2020 Bink. All rights reserved.
 //
 
-struct PaymentAgent {
+struct PaymentAgent: PrettyNamedObject {
     let slug: String
     let prettyName: String
     let settled: Agent

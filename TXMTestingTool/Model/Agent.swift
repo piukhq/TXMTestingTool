@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Agent {
+struct Agent: PrettyNamedObject {
     var slug: String
     var prettyName: String
     var defaultFileName: String

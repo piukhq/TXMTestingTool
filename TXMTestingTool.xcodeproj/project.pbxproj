@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		830C7F11243B70EE00689718 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 830C7F10243B70EE00689718 /* CSV */; };
+		83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357D28246050440092E240 /* PrettyNamedObject.swift */; };
 		833845F02459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845EF2459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift */; };
 		833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845F12459BFCD0040BBB5 /* PaymentAgent.swift */; };
 		83564B4B243CCCFB00B718AA /* VisaTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83357D28246050440092E240 /* PrettyNamedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyNamedObject.swift; sourceTree = "<group>"; };
 		833845EF2459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardAuthTransactionProvider.swift; sourceTree = "<group>"; };
 		833845F12459BFCD0040BBB5 /* PaymentAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAgent.swift; sourceTree = "<group>"; };
 		83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaTransactionProvider.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83357D27246050310092E240 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				83357D28246050440092E240 /* PrettyNamedObject.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		83765A0824362E4000B71BC2 /* TransactionProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		83FF8C88243355DD00C948B4 /* TXMTestingTool */ = {
 			isa = PBXGroup;
 			children = (
+				83357D27246050310092E240 /* Protocols */,
 				83FF8C89243355DD00C948B4 /* AppDelegate.swift */,
 				83FF8CA72433561E00C948B4 /* Assets */,
 				83FF8CAB2433574F00C948B4 /* Controllers */,
@@ -358,6 +369,7 @@
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
 				83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */,
 				837659FD24361DF900B71BC2 /* Agent.swift in Sources */,
+				83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */,
 				837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */,
 				83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */,
 				E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */,

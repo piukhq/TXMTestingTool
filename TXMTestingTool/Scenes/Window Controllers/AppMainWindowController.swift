@@ -28,22 +28,12 @@ class AppMainWindowController: NSWindowController {
     
     // MARK: - Menu
     
-    private func buildMenu(_ menu: NSMenu, from agents: [Agent]) {
+    private func buildMenu(_ menu: NSMenu, from objects: [PrettyNamedObject]) {
         menu.removeAllItems()
         
-        for agent in agents {
-            let item = NSMenuItem(title: agent.prettyName, action: nil, keyEquivalent: "")
-            item.representedObject = agent
-            menu.items.append(item)
-        }
-    }
-
-    private func buildMenu(_ menu: NSMenu, from paymentProviders: [PaymentAgent]) {
-        menu.removeAllItems()
-
-        for paymentProvider in paymentProviders {
-            let item = NSMenuItem(title: paymentProvider.prettyName, action: nil, keyEquivalent: "")
-            item.representedObject = paymentProvider
+        for object in objects {
+            let item = NSMenuItem(title: object.prettyName, action: nil, keyEquivalent: "")
+            item.representedObject = object
             menu.items.append(item)
         }
     }
