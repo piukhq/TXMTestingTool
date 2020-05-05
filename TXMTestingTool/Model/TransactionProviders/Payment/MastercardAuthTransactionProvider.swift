@@ -40,9 +40,6 @@ struct MastercardAuthTransactionProvider: Provider {
         return formatter
     }()
 
-
-    // MARK: - Supporting Functions
-
 }
 
 // MARK: - JSON Codables
