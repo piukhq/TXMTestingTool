@@ -9,6 +9,8 @@
 import Foundation
 
 protocol Provider {
+    var defaultFileName: String { get }
+
     func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String
 }
 

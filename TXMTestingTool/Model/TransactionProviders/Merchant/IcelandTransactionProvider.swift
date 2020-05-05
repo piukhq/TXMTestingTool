@@ -26,6 +26,8 @@ struct IcelandTransactionProvider: Provider {
     }
     
     // MARK: - Properties
+
+    var defaultFileName = "iceland-bonus-card.csv"
     
     private let cardSchemeIds = [
         "amex": "1",

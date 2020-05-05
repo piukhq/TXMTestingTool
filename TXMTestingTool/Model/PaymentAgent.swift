@@ -15,40 +15,24 @@ struct PaymentAgent: PrettyNamedObject {
     init(
         slug: String,
         prettyName: String,
-        defaultSettledFileName: String,
-        settledTransactionProvider: Provider
-    ) {
-        self.slug = slug
-        self.prettyName = prettyName
-        settled = Agent(
-            slug: slug,
-            prettyName: prettyName,
-            defaultFileName: defaultSettledFileName,
-            transactionProvider: settledTransactionProvider
-        )
-        auth = nil
-    }
-
-    init(
-        slug: String,
-        prettyName: String,
-        defaultSettledFileName: String,
         settledTransactionProvider: Provider,
-        defaultAuthFilename: String,
-        authTransactionProvider: Provider
+        authTransactionProvider: Provider? = nil
     ) {
         self.slug = slug
         self.prettyName = prettyName
         settled = Agent(
             slug: slug,
             prettyName: prettyName,
-            defaultFileName: defaultSettledFileName,
             transactionProvider: settledTransactionProvider
         )
-        auth = Agent(
-            slug: slug, prettyName: prettyName,
-            defaultFileName: defaultAuthFilename,
-            transactionProvider: authTransactionProvider
-        )
+        if let authTransactionProvider = authTransactionProvider {
+            auth = Agent(
+                slug: slug,
+                prettyName: prettyName,
+                transactionProvider: authTransactionProvider
+            )
+        } else {
+            auth = nil
+        }
     }
 }

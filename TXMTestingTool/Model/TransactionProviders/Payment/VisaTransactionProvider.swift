@@ -21,6 +21,8 @@ struct VisaTransactionProvider: Provider {
     }
     
     // MARK: - Properties
+
+    var defaultFileName = "visa-settled.txt"
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

@@ -21,6 +21,8 @@ struct AmexTransactionProvider: Provider {
     }
     
     // MARK: - Properties
+
+    var defaultFileName = "amex-settled.csv"
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

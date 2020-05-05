@@ -22,6 +22,8 @@ struct MastercardTransactionProvider: Provider {
     
     // MARK: - Properties
 
+    var defaultFileName = "mastercard-settled.txt"
+
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"

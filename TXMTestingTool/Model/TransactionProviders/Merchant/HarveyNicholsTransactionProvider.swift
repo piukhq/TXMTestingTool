@@ -9,6 +9,8 @@
 import Foundation
 
 struct HarveyNicholsTransactionProvider: Provider {
+    var defaultFileName = "harvey-nichols-rewards.json"
+
     let dateFormatter = ISO8601DateFormatter()
 
     func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {

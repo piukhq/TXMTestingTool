@@ -11,6 +11,5 @@ import Foundation
 struct Agent: PrettyNamedObject {
     var slug: String
     var prettyName: String
-    var defaultFileName: String
-    var transactionProvider: Provider
+    var transactionProvider: Provider?
 }

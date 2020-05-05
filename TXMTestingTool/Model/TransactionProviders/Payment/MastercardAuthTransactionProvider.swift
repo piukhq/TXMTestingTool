@@ -34,6 +34,8 @@ struct MastercardAuthTransactionProvider: Provider {
 
     // MARK: - Properties
 
+    var defaultFileName = "mastercard-auth.json"
+
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
