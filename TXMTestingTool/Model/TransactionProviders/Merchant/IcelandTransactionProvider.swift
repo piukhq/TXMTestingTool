@@ -36,6 +36,13 @@ struct IcelandTransactionProvider: Provider {
         "bink-payment": "6"
     ]
 
+    private let cardSchemes = [
+        "amex": "Amex",
+        "visa": "Visa",
+        "mastercard": "MasterCard/MasterCard One",
+        "bink-payment": "Bink-Payment"
+    ]
+
     private let columnHeadings = [
         "TransactionCardFirst6",
         "TransactionCardLast4",
@@ -80,13 +87,21 @@ struct IcelandTransactionProvider: Provider {
         }
     }
 
+    func getCardScheme(for paymentProvider: PaymentAgent) throws -> String {
+        if let cardScheme = cardSchemes[paymentProvider.slug] {
+            return cardScheme
+        } else {
+            throw ProviderError.unsupportedPaymentProvider(paymentProvider)
+        }
+    }
+
     func transactionToColumns(_ transaction: Transaction, paymentProvider: PaymentAgent) throws -> [String] {
         [
             transaction.firstSix,
             transaction.lastFour,
             "01/80",
             try getCardSchemeId(for: paymentProvider),
-            paymentProvider.slug.capitalized,
+            try getCardScheme(for: paymentProvider),
             transaction.mid,
             dateFormatter.string(from: transaction.date),
             String(format: "%.2f", Double(transaction.amount) / 100),
