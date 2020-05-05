@@ -67,7 +67,7 @@ class AddTransactionViewController: NSViewController {
             validationErrorsLabel.isHidden = false
             return
         }
-        
+
         let transaction = Transaction(
             mid: midField.stringValue,
             date: dateField.dateValue,

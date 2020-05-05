@@ -14,8 +14,12 @@ class GenerateOutputViewController: NSViewController {
     
     @IBOutlet weak var merchantOutput: NSTextView!
     @IBOutlet weak var paymentProviderOutput: NSTextView!
+    @IBOutlet weak var paymentAuthProviderOutput: NSTextView!
     @IBOutlet weak var merchantNameLabel: NSTextField!
     @IBOutlet weak var paymentProviderNameLabel: NSTextField!
+    @IBOutlet weak var paymentAuthProviderNameLabel: NSTextField!
+    @IBOutlet weak var saveMerchantFileButton: NSButton!
+    @IBOutlet weak var saveAuthFileButton: NSButton!
 
     // MARK: - Properties
     
@@ -26,47 +30,65 @@ class GenerateOutputViewController: NSViewController {
      we effectively get the same result but can workaround the limiations.
      */
     var merchant: Agent!
-    var paymentProvider: Agent!
+    var paymentProvider: PaymentAgent!
     var transactions: [Transaction]!
 
     // MARK: - Initialisation
     
-    func prepareViewControllerWith(merchant: Agent, paymentScheme: Agent, transactions: [Transaction]) {
+    func prepareViewControllerWith(merchant: Agent, paymentProvider: PaymentAgent, transactions: [Transaction]) {
         self.merchant = merchant
-        self.paymentProvider = paymentScheme
+        self.paymentProvider = paymentProvider
         self.transactions = transactions
     }
 
     // MARK: - View Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         provideContent(provider: merchant, into: merchantOutput)
-        provideContent(provider: paymentProvider, into: paymentProviderOutput)
+        provideContent(provider: paymentProvider.settled, into: paymentProviderOutput)
 
-        merchantNameLabel.stringValue = merchant.prettyName
-        paymentProviderNameLabel.stringValue = paymentProvider.prettyName
+        if merchant.transactionProvider != nil {
+            merchantNameLabel.stringValue = merchant.prettyName
+        } else {
+            disableElements(label: merchantNameLabel, outputBox: merchantOutput, button: saveMerchantFileButton)
+        }
+
+        paymentProviderNameLabel.stringValue = "\(paymentProvider.prettyName) settled transactions"
+
+        if let authAgent = paymentProvider.auth {
+            provideContent(provider: authAgent, into: paymentAuthProviderOutput)
+            paymentAuthProviderNameLabel.stringValue = "\(authAgent.prettyName) auth transactions"
+        } else {
+            disableElements(label: paymentAuthProviderNameLabel, outputBox: paymentAuthProviderOutput, button: saveAuthFileButton)
+        }
     }
 
     // MARK: - IBActions
     
     @IBAction func saveMerchantFileWasPressed(_ sender: Any) {
-        saveFile(merchantOutput.string, provider: merchant)
+        saveFile(merchantOutput.string, agent: merchant)
     }
 
     @IBAction func savePaymentProviderFileWasPressed(_ sender: Any) {
-        saveFile(paymentProviderOutput.string, provider: paymentProvider)
+        saveFile(paymentProviderOutput.string, agent: paymentProvider.settled)
+    }
+
+    @IBAction func savePaymentAuthProviderFileWasPressed(_ sender: Any) {
+        if let authAgent = paymentProvider.auth {
+            saveFile(paymentAuthProviderOutput.string, agent: authAgent)
+        }
     }
 
     // MARK: - General
     
-    func saveFile(_ content: String, provider: Agent) {
+    func saveFile(_ content: String, agent: Agent) {
         guard let window = view.window else {
             fatalError("failed to get view window when saving transactions file")
         }
         let panel = NSSavePanel()
-        panel.nameFieldStringValue = provider.defaultFileName
+        panel.nameFieldStringValue = agent.transactionProvider?.defaultFileName ?? ""
         panel.beginSheetModal(for: window) { result in
             if result == .OK {
                 guard let url = panel.url else {
@@ -85,11 +107,22 @@ class GenerateOutputViewController: NSViewController {
     }
 
     func provideContent(provider: Agent, into textView: NSTextView) {
+        guard let provider = provider.transactionProvider else {
+            return  // no provider, nothing to do
+        }
         do {
-            let content = try provider.transactionProvider.provide(transactions, merchant: merchant, paymentProvider: paymentProvider)
+            let content = try provider.provide(transactions, merchant: merchant, paymentProvider: paymentProvider)
             textView.string = content
         } catch {
             textView.string = "Failed to generate output: \(error)"
         }
+    }
+
+    func disableElements(label: NSTextField, outputBox: NSTextView, button: NSButton) {
+        label.textColor = .tertiaryLabelColor
+        outputBox.isEditable = false
+        outputBox.alphaValue = 0.5
+        outputBox.string = ""
+        button.isEnabled = false
     }
 }

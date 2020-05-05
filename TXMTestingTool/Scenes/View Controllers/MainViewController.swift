@@ -50,14 +50,14 @@ class MainViewController: NSViewController {
 
     // MARK: - General
     
-    func generateFilesFor(merchant: Agent, paymentScheme: Agent) {
+    func generateFilesFor(merchant: Agent, paymentProvider: PaymentAgent) {
         guard let destination = NSStoryboard.fromMain(loadController: GenerateOutputViewController.self) else {
             fatalError("Unable to load our view controller from the storyboard")
         }
         
         destination.prepareViewControllerWith(
             merchant: merchant,
-            paymentScheme: paymentScheme,
+            paymentProvider: paymentProvider,
             transactions: transactions
         )
         
