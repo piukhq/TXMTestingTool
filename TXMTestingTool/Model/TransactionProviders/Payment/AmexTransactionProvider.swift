@@ -12,7 +12,7 @@ struct AmexTransactionProvider: Provider {
     
     // MARK: - Protocol Implementation
     
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
         var lines = [String]()
         lines.append(makeHeader())
         lines.append(contentsOf: transactions.map { makeTransactionRow(from: $0) })
@@ -21,6 +21,8 @@ struct AmexTransactionProvider: Provider {
     }
     
     // MARK: - Properties
+
+    var defaultFileName = "amex-settled.csv"
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

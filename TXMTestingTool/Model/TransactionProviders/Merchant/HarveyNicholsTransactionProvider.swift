@@ -9,9 +9,11 @@
 import Foundation
 
 struct HarveyNicholsTransactionProvider: Provider {
+    var defaultFileName = "harvey-nichols-rewards.json"
+
     let dateFormatter = ISO8601DateFormatter()
 
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
         var rootObject = HNRootObject(transactions: [])
 
         for transaction in transactions {

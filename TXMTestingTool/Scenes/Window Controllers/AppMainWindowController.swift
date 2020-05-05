@@ -28,12 +28,12 @@ class AppMainWindowController: NSWindowController {
     
     // MARK: - Menu
     
-    private func buildMenu(_ menu: NSMenu, from agents: [Agent]) {
+    private func buildMenu(_ menu: NSMenu, from objects: [PrettyNamedObject]) {
         menu.removeAllItems()
         
-        for agent in agents {
-            let item = NSMenuItem(title: agent.prettyName, action: nil, keyEquivalent: "")
-            item.representedObject = agent
+        for object in objects {
+            let item = NSMenuItem(title: object.prettyName, action: nil, keyEquivalent: "")
+            item.representedObject = object
             menu.items.append(item)
         }
     }
@@ -43,7 +43,7 @@ class AppMainWindowController: NSWindowController {
     @IBAction func generateButtonWasPressed(_ sender: Any) {
         guard let appVC = window?.contentViewController as? MainViewController else { return }
         guard let merchant = merchantPopUp.selectedItem?.representedObject as? Agent else { return }
-        guard let payment = paymentPopUp.selectedItem?.representedObject as? Agent else { return }
-        appVC.generateFilesFor(merchant: merchant, paymentScheme: payment)
+        guard let paymentProvider = paymentPopUp.selectedItem?.representedObject as? PaymentAgent else { return }
+        appVC.generateFilesFor(merchant: merchant, paymentProvider: paymentProvider)
     }
 }

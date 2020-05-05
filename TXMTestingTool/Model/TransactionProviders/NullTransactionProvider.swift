@@ -10,7 +10,9 @@ import Foundation
 
 
 struct NullTransactionProvider: Provider {
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: Agent) throws -> String {
+    var defaultFileName = ""
+
+    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
         return ""
     }
 }
