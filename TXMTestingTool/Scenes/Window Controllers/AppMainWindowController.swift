@@ -42,7 +42,7 @@ class AppMainWindowController: NSWindowController {
     
     @IBAction func generateButtonWasPressed(_ sender: Any) {
         guard let appVC = window?.contentViewController as? MainViewController else { return }
-        guard let merchant = merchantPopUp.selectedItem?.representedObject as? Agent else { return }
+        guard let merchant = merchantPopUp.selectedItem?.representedObject as? MerchantAgent else { return }
         guard let paymentProvider = paymentPopUp.selectedItem?.representedObject as? PaymentAgent else { return }
         appVC.generateFilesFor(merchant: merchant, paymentProvider: paymentProvider)
     }

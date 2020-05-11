@@ -12,7 +12,7 @@ struct MastercardSettlementProvider: Provider {
     
     // MARK: - Protocol Implementation
     
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         var lines = [String]()
         lines.append(makeHeader())
         lines.append(contentsOf: transactions.map { makeTransactionRow($0, merchant: merchant) })

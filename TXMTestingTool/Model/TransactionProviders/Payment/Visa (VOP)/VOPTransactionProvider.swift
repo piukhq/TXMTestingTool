@@ -12,7 +12,7 @@ struct VOPTransactionProvider: Provider {
 
     // MARK: - Protocol Implementation
 
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         let visaTransactions = transactions.map {
             VOPTransaction(
                 withTransaction: $0,

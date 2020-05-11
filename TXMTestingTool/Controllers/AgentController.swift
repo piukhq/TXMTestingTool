@@ -12,24 +12,10 @@ class AgentController {
     static let shared = AgentController()
 
     let merchants = [
-        Agent(
-            slug: "burger-king-rewards",
-            prettyName: "Burger King"
-        ),
-        Agent(
-            slug: "fatface",
-            prettyName: "FatFace"
-        ),
-        Agent(
-            slug: "harvey-nichols-rewards",
-            prettyName: "Harvey Nichols",
-            transactionProvider: HarveyNicholsTransactionProvider()
-        ),
-        Agent(
-            slug: "iceland-bonus-card",
-            prettyName: "Iceland",
-            transactionProvider: IcelandTransactionProvider()
-        )
+        MerchantAgent("Burger King", slug: "burger-king-rewards", type: .plr),
+        MerchantAgent("FatFace", slug: "fatface", type: .plr),
+        MerchantAgent("Harvey Nichols", slug: "harvey-nichols-rewards", type: .pll, provider: HarveyNicholsTransactionProvider()),
+        MerchantAgent("Iceland", slug: "iceland-bonus-card", type: .pll, provider: IcelandTransactionProvider()),
     ]
 
     let paymentProviders = [

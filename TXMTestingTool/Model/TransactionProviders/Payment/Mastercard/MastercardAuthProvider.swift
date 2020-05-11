@@ -12,7 +12,7 @@ struct MastercardAuthProvider: Provider {
 
     // MARK: - Protocol Implementation
 
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         let mcaTransactions = transactions.map {
             MCATransaction(
                 thirdPartyID: String($0.settlementKey.prefix(9)),

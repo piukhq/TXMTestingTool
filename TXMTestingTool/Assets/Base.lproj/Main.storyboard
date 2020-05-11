@@ -1534,6 +1534,7 @@ Gw
                         <outlet property="paymentProviderOutput" destination="zAf-Tv-NCD" id="Y9S-AI-JgZ"/>
                         <outlet property="saveAuthFileButton" destination="8vN-aO-b93" id="jDn-s9-eKD"/>
                         <outlet property="saveMerchantFileButton" destination="RlI-8S-ubM" id="pYn-rZ-wJy"/>
+                        <outlet property="saveSettleFileButton" destination="5tT-cT-8h8" id="Hrj-JG-EQI"/>
                     </connections>
                 </viewController>
                 <customObject id="4l4-ZL-8GQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

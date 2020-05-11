@@ -12,8 +12,7 @@
 		833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */; };
 		833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845F12459BFCD0040BBB5 /* PaymentAgent.swift */; };
 		83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83564B4A243CCCFB00B718AA /* VisaClassicSettlementProvider.swift */; };
-		837659FD24361DF900B71BC2 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* Agent.swift */; };
-		837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */; };
+		837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* MerchantAgent.swift */; };
 		83765A0124361F7000B71BC2 /* AmexSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexSettlementProvider.swift */; };
 		83765A0324361F8100B71BC2 /* MastercardSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */; };
 		83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */; };
@@ -31,6 +30,7 @@
 		E26E1A8124693EDA00AE1255 /* AmexAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */; };
 		E26E1A832469584200AE1255 /* VOPTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A822469584200AE1255 /* VOPTransactionProvider.swift */; };
 		E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A882469797100AE1255 /* VOPTransaction.swift */; };
+		E26E1A8C2469E26700AE1255 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A8B2469E26700AE1255 /* Agent.swift */; };
 		E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27EE958243D249200D2EF58 /* NSStoryboard.swift */; };
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
@@ -52,8 +52,7 @@
 		833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardAuthProvider.swift; sourceTree = "<group>"; };
 		833845F12459BFCD0040BBB5 /* PaymentAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAgent.swift; sourceTree = "<group>"; };
 		83564B4A243CCCFB00B718AA /* VisaClassicSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaClassicSettlementProvider.swift; sourceTree = "<group>"; };
-		837659FC24361DF900B71BC2 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
-		837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullTransactionProvider.swift; sourceTree = "<group>"; };
+		837659FC24361DF900B71BC2 /* MerchantAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantAgent.swift; sourceTree = "<group>"; };
 		83765A0024361F7000B71BC2 /* AmexSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexSettlementProvider.swift; sourceTree = "<group>"; };
 		83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardSettlementProvider.swift; sourceTree = "<group>"; };
 		83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcelandTransactionProvider.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexAuthProvider.swift; sourceTree = "<group>"; };
 		E26E1A822469584200AE1255 /* VOPTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPTransactionProvider.swift; sourceTree = "<group>"; };
 		E26E1A882469797100AE1255 /* VOPTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPTransaction.swift; sourceTree = "<group>"; };
+		E26E1A8B2469E26700AE1255 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		E27EE958243D249200D2EF58 /* NSStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSStoryboard.swift; path = TXMTestingTool/Extensions/NSStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = TXMTestingTool/Extensions/String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 		83357D27246050310092E240 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E26E1A8B2469E26700AE1255 /* Agent.swift */,
 				83357D28246050440092E240 /* PrettyNamedObject.swift */,
 			);
 			path = Protocols;
@@ -114,7 +115,6 @@
 		83765A0824362E4000B71BC2 /* TransactionProviders */ = {
 			isa = PBXGroup;
 			children = (
-				837659FE24361F1800B71BC2 /* NullTransactionProvider.swift */,
 				E293F000243CE0F400BA83E6 /* Merchant */,
 				E293F001243CE0F900BA83E6 /* Payment */,
 			);
@@ -204,7 +204,7 @@
 		83FF8CAD2433575F00C948B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				837659FC24361DF900B71BC2 /* Agent.swift */,
+				837659FC24361DF900B71BC2 /* MerchantAgent.swift */,
 				833845F12459BFCD0040BBB5 /* PaymentAgent.swift */,
 				83C9A6662434E77C0085278A /* Provider.swift */,
 				83FF8CAF243373F500C948B4 /* Transaction.swift */,
@@ -410,10 +410,9 @@
 				833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
 				83765A0124361F7000B71BC2 /* AmexSettlementProvider.swift in Sources */,
-				837659FD24361DF900B71BC2 /* Agent.swift in Sources */,
+				837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */,
 				83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */,
 				E26E1A8124693EDA00AE1255 /* AmexAuthProvider.swift in Sources */,
-				837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */,
 				83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */,
 				E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */,
 				83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */,
@@ -423,6 +422,7 @@
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
+				E26E1A8C2469E26700AE1255 /* Agent.swift in Sources */,
 				E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */,
 				83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */,
 			);
