@@ -1,5 +1,5 @@
 //
-//  VisaTransactionProvider.swift
+//  VisaClassicSettlementProvider.swift
 //  TXMTestingTool
 //
 //  Created by Chris Latham on 07/04/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VisaTransactionProvider: Provider {
+struct VisaClassicSettlementProvider: Provider {
     
     // MARK: - Protocol Implementation
     
@@ -22,7 +22,7 @@ struct VisaTransactionProvider: Provider {
     
     // MARK: - Properties
 
-    var defaultFileName = "visa-settled.txt"
+    var defaultFileName = "visa-classic-settled.txt"
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

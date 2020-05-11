@@ -1,5 +1,5 @@
 //
-//  MastercardAuthTransactionProvider.swift
+//  MastercardAuthProvider.swift
 //  TXMTestingTool
 //
 //  Created by Chris Latham on 02/04/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MastercardAuthTransactionProvider: Provider {
+struct MastercardAuthProvider: Provider {
 
     // MARK: - Protocol Implementation
 

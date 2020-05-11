@@ -1,5 +1,5 @@
 //
-//  AmexTransactionProvider.swift
+//  AmexSettlementProvider.swift
 //  TXMTestingTool
 //
 //  Created by Chris Latham on 02/04/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AmexTransactionProvider: Provider {
+struct AmexSettlementProvider: Provider {
     
     // MARK: - Protocol Implementation
     

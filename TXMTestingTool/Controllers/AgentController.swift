@@ -36,19 +36,24 @@ class AgentController {
         PaymentAgent(
             slug: "amex",
             prettyName: "Amex",
-            settledTransactionProvider: AmexTransactionProvider(),
-            authTransactionProvider: AmexAuthTransactionProvider()
+            settledTransactionProvider: AmexSettlementProvider(),
+            authTransactionProvider: AmexAuthProvider()
         ),
         PaymentAgent(
             slug: "mastercard",
             prettyName: "Mastercard",
-            settledTransactionProvider: MastercardTransactionProvider(),
-            authTransactionProvider: MastercardAuthTransactionProvider()
+            settledTransactionProvider: MastercardSettlementProvider(),
+            authTransactionProvider: MastercardAuthProvider()
         ),
         PaymentAgent(
             slug: "visa",
-            prettyName: "Visa",
-            settledTransactionProvider: VisaTransactionProvider()
+            prettyName: "Visa (Classic)",
+            settledTransactionProvider: VisaClassicSettlementProvider()
+        ),
+        PaymentAgent(
+            slug: "visa",
+            prettyName: "Visa (VOP)",
+            settledTransactionProvider: VisaClassicSettlementProvider()
         )
     ]
 }

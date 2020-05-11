@@ -55,11 +55,11 @@ class GenerateOutputViewController: NSViewController {
             disableElements(label: merchantNameLabel, outputBox: merchantOutput, button: saveMerchantFileButton)
         }
 
-        paymentProviderNameLabel.stringValue = "\(paymentProvider.prettyName) settled transactions"
+        paymentProviderNameLabel.stringValue = "\(paymentProvider.prettyName) Settled Transactions"
 
         if let authAgent = paymentProvider.auth {
             provideContent(provider: authAgent, into: paymentAuthProviderOutput)
-            paymentAuthProviderNameLabel.stringValue = "\(authAgent.prettyName) auth transactions"
+            paymentAuthProviderNameLabel.stringValue = "\(authAgent.prettyName) Auth Transactions"
         } else {
             disableElements(label: paymentAuthProviderNameLabel, outputBox: paymentAuthProviderOutput, button: saveAuthFileButton)
         }

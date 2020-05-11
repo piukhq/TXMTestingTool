@@ -1,5 +1,5 @@
 //
-//  AmexAuthTransactionProvider.swift
+//  AmexAuthProvider.swift
 //  TXMTestingTool
 //
 //  Created by Jack Rostron on 11/05/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AmexAuthTransactionProvider: Provider {
+struct AmexAuthProvider: Provider {
 
     // MARK: - Protocol Implementation
 
