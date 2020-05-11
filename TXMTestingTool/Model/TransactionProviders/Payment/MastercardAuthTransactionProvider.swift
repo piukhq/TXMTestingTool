@@ -24,11 +24,7 @@ struct MastercardAuthTransactionProvider: Provider {
             )
         }
 
-        let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
-        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-
-        let data = try encoder.encode(mcaTransactions)
+        let data = try jsonEncoder.encode(mcaTransactions)
         return String(data: data, encoding: .utf8)!
     }
 
@@ -41,7 +37,13 @@ struct MastercardAuthTransactionProvider: Provider {
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         return formatter
     }()
-
+    
+    private let jsonEncoder: JSONEncoder = {
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        return encoder
+    }()
 }
 
 // MARK: - JSON Codables

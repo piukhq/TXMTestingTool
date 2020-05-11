@@ -32,7 +32,8 @@ class AgentController {
         PaymentAgent(
             slug: "amex",
             prettyName: "Amex",
-            settledTransactionProvider: AmexTransactionProvider()
+            settledTransactionProvider: AmexTransactionProvider(),
+            authTransactionProvider: AmexAuthTransactionProvider()
         ),
         PaymentAgent(
             slug: "mastercard",
