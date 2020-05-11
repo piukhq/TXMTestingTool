@@ -76,6 +76,7 @@
 		E262D27E243D2D380096D47A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexAuthProvider.swift; sourceTree = "<group>"; };
 		E26E1A822469584200AE1255 /* VOPSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPSettlementProvider.swift; sourceTree = "<group>"; };
+		E26E1A882469797100AE1255 /* VOPTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPTransaction.swift; sourceTree = "<group>"; };
 		E27EE958243D249200D2EF58 /* NSStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSStoryboard.swift; path = TXMTestingTool/Extensions/NSStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = TXMTestingTool/Extensions/String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
@@ -233,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				E26E1A822469584200AE1255 /* VOPSettlementProvider.swift */,
+				E26E1A882469797100AE1255 /* VOPTransaction.swift */,
 			);
 			path = "Visa (VOP)";
 			sourceTree = "<group>";
