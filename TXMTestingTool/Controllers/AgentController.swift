@@ -53,7 +53,8 @@ class AgentController {
         PaymentAgent(
             slug: "visa",
             prettyName: "Visa (VOP)",
-            settledTransactionProvider: VisaClassicSettlementProvider()
+            settledTransactionProvider: VOPTransactionProvider(transactionType: .settlement),
+            authTransactionProvider: VOPTransactionProvider(transactionType: .auth)
         )
     ]
 }

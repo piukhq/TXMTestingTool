@@ -29,7 +29,8 @@
 		83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CAF243373F500C948B4 /* Transaction.swift */; };
 		83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */; };
 		E26E1A8124693EDA00AE1255 /* AmexAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */; };
-		E26E1A832469584200AE1255 /* VOPSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A822469584200AE1255 /* VOPSettlementProvider.swift */; };
+		E26E1A832469584200AE1255 /* VOPTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A822469584200AE1255 /* VOPTransactionProvider.swift */; };
+		E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A882469797100AE1255 /* VOPTransaction.swift */; };
 		E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27EE958243D249200D2EF58 /* NSStoryboard.swift */; };
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
@@ -75,7 +76,7 @@
 		83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		E262D27E243D2D380096D47A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexAuthProvider.swift; sourceTree = "<group>"; };
-		E26E1A822469584200AE1255 /* VOPSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPSettlementProvider.swift; sourceTree = "<group>"; };
+		E26E1A822469584200AE1255 /* VOPTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPTransactionProvider.swift; sourceTree = "<group>"; };
 		E26E1A882469797100AE1255 /* VOPTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOPTransaction.swift; sourceTree = "<group>"; };
 		E27EE958243D249200D2EF58 /* NSStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSStoryboard.swift; path = TXMTestingTool/Extensions/NSStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = TXMTestingTool/Extensions/String.swift; sourceTree = SOURCE_ROOT; };
@@ -233,8 +234,8 @@
 		E26E1A862469585600AE1255 /* Visa (VOP) */ = {
 			isa = PBXGroup;
 			children = (
-				E26E1A822469584200AE1255 /* VOPSettlementProvider.swift */,
 				E26E1A882469797100AE1255 /* VOPTransaction.swift */,
+				E26E1A822469584200AE1255 /* VOPTransactionProvider.swift */,
 			);
 			path = "Visa (VOP)";
 			sourceTree = "<group>";
@@ -401,7 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */,
-				E26E1A832469584200AE1255 /* VOPSettlementProvider.swift in Sources */,
+				E26E1A832469584200AE1255 /* VOPTransactionProvider.swift in Sources */,
 				83765A0724362D0E00B71BC2 /* AgentController.swift in Sources */,
 				83C9A6672434E77C0085278A /* Provider.swift in Sources */,
 				83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */,
@@ -418,6 +419,7 @@
 				83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */,
 				83765A0324361F8100B71BC2 /* MastercardSettlementProvider.swift in Sources */,
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
+				E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */,
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
