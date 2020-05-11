@@ -25,6 +25,10 @@ class AgentController {
         Agent(
             slug: "burger-king-rewards",
             prettyName: "Burger King"
+        ),
+        Agent(
+            slug: "fatface",
+            prettyName: "FatFace"
         )
     ]
 
