@@ -15,12 +15,14 @@ struct AmexAuthTransactionProvider: Provider {
     func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
         let amexTransactions = transactions.map {
             AmexAuthTransaction(
-                transactionId: UUID().uuidString,  // Generate UUID
-                offerId: $0.settlementKey,         // settlement_key - not sure if correct but use
-                transactionTime: dateFormatter.string(from: $0.date),
-                transactionAmount: Decimal($0.amount) / 100,
+                approvalCode: randomApprovalCode,
                 cmAlias: $0.cardToken,
-                mid: $0.mid
+                merchantNumber: $0.mid,
+                offerID: "0",
+                transactionAmount: String(format: "%.02f", Double($0.amount) / 100.0),
+                transactionCurrency: "UKL",
+                transactionID: UUID().uuidString,
+                transactionTime: dateFormatter.string(from: $0.date)
             )
         }
         
@@ -44,15 +46,22 @@ struct AmexAuthTransactionProvider: Provider {
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         return encoder
     }()
+    
+    private var randomApprovalCode: String {
+        let randomInt = Int.random(in: 100000..<900000)
+        return "\(randomInt)"
+    }
 }
 
 // MARK: - JSON Codables
 
 struct AmexAuthTransaction: Codable {
-    var transactionId: String
-    var offerId: String
-    var transactionTime: String
-    var transactionAmount: Decimal
-    var cmAlias: String
-    var mid: String
+    var approvalCode: String            // 6 digit number
+    var cmAlias: String                 // Card token
+    var merchantNumber: String          // MID
+    var offerID: String                 // Offer for a merchant if applicable, 0 if not
+    var transactionAmount: String       // 2 decimal place pound value (65.52)
+    var transactionCurrency: String     // UKL = GBP, strange outdated currency, hardcode for now
+    var transactionID: String           // UUID
+    var transactionTime: String         // Timestamp of transaction e.g. 2020-05-10 09:22:11
 }
