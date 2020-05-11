@@ -13,6 +13,14 @@ class AgentController {
 
     let merchants = [
         Agent(
+            slug: "burger-king-rewards",
+            prettyName: "Burger King"
+        ),
+        Agent(
+            slug: "fatface",
+            prettyName: "FatFace"
+        ),
+        Agent(
             slug: "harvey-nichols-rewards",
             prettyName: "Harvey Nichols",
             transactionProvider: HarveyNicholsTransactionProvider()
@@ -21,14 +29,6 @@ class AgentController {
             slug: "iceland-bonus-card",
             prettyName: "Iceland",
             transactionProvider: IcelandTransactionProvider()
-        ),
-        Agent(
-            slug: "burger-king-rewards",
-            prettyName: "Burger King"
-        ),
-        Agent(
-            slug: "fatface",
-            prettyName: "FatFace"
         )
     ]
 
