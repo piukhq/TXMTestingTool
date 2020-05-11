@@ -1,36 +1,36 @@
 //
-//  MastercardAuthTransactionProvider.swift
+//  AmexAuthTransactionProvider.swift
 //  TXMTestingTool
 //
-//  Created by Chris Latham on 02/04/2020.
+//  Created by Jack Rostron on 11/05/2020.
 //  Copyright © 2020 Bink. All rights reserved.
 //
 
 import Foundation
 
-struct MastercardAuthTransactionProvider: Provider {
+struct AmexAuthTransactionProvider: Provider {
 
     // MARK: - Protocol Implementation
 
     func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
-        let mcaTransactions = transactions.map {
-            MCATransaction(
-                thirdPartyID: String($0.settlementKey.prefix(9)),
-                time: dateFormatter.string(from: $0.date),
-                amount: Decimal($0.amount) / 100,
-                currencyCode: "GBP",
-                paymentCardToken: $0.cardToken,
+        let amexTransactions = transactions.map {
+            AmexAuthTransaction(
+                transactionId: UUID().uuidString,  // Generate UUID
+                offerId: $0.settlementKey,         // settlement_key - not sure if correct but use
+                transactionTime: dateFormatter.string(from: $0.date),
+                transactionAmount: Decimal($0.amount) / 100,
+                cmAlias: $0.cardToken,
                 mid: $0.mid
             )
         }
-
-        let data = try jsonEncoder.encode(mcaTransactions)
+        
+        let data = try jsonEncoder.encode(amexTransactions)
         return String(data: data, encoding: .utf8)!
     }
 
     // MARK: - Properties
 
-    var defaultFileName = "mastercard-auth.json"
+    var defaultFileName = "amex-auth.json"
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -48,11 +48,11 @@ struct MastercardAuthTransactionProvider: Provider {
 
 // MARK: - JSON Codables
 
-struct MCATransaction: Codable {
-    var thirdPartyID: String
-    var time: String
-    var amount: Decimal
-    var currencyCode: String
-    var paymentCardToken: String
+struct AmexAuthTransaction: Codable {
+    var transactionId: String
+    var offerId: String
+    var transactionTime: String
+    var transactionAmount: Decimal
+    var cmAlias: String
     var mid: String
 }

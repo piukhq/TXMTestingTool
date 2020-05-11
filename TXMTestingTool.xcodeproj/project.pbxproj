@@ -28,6 +28,7 @@
 		83FF8C9D243355DE00C948B4 /* TXMTestingToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C9C243355DE00C948B4 /* TXMTestingToolTests.swift */; };
 		83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CAF243373F500C948B4 /* Transaction.swift */; };
 		83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */; };
+		E26E1A8124693EDA00AE1255 /* AmexAuthTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E1A8024693EDA00AE1255 /* AmexAuthTransactionProvider.swift */; };
 		E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27EE958243D249200D2EF58 /* NSStoryboard.swift */; };
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
@@ -72,6 +73,7 @@
 		83FF8CAF243373F500C948B4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		83FF8CB12433953B00C948B4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		E262D27E243D2D380096D47A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E26E1A8024693EDA00AE1255 /* AmexAuthTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexAuthTransactionProvider.swift; sourceTree = "<group>"; };
 		E27EE958243D249200D2EF58 /* NSStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSStoryboard.swift; path = TXMTestingTool/Extensions/NSStoryboard.swift; sourceTree = SOURCE_ROOT; };
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = TXMTestingTool/Extensions/String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				E262D27E243D2D380096D47A /* README.md */,
 				83765A0024361F7000B71BC2 /* AmexTransactionProvider.swift */,
+				E26E1A8024693EDA00AE1255 /* AmexAuthTransactionProvider.swift */,
 				833845EF2459B1BE0040BBB5 /* MastercardAuthTransactionProvider.swift */,
 				83765A0224361F8100B71BC2 /* MastercardTransactionProvider.swift */,
 				83564B4A243CCCFB00B718AA /* VisaTransactionProvider.swift */,
@@ -370,6 +373,7 @@
 				83765A0124361F7000B71BC2 /* AmexTransactionProvider.swift in Sources */,
 				837659FD24361DF900B71BC2 /* Agent.swift in Sources */,
 				83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */,
+				E26E1A8124693EDA00AE1255 /* AmexAuthTransactionProvider.swift in Sources */,
 				837659FF24361F1800B71BC2 /* NullTransactionProvider.swift in Sources */,
 				83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */,
 				E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */,
