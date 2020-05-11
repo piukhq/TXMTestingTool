@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -705,7 +705,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <popUpButtonCell key="cell" type="roundTextured" title="Select Merchant" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="drA-fJ-jNv" id="NVE-Y7-7g6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="w6f-fP-RTZ">
                                                 <items>
                                                     <menuItem title="Select Merchant" state="on" id="drA-fJ-jNv"/>
@@ -721,7 +721,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <popUpButtonCell key="cell" type="roundTextured" title="Select Payment Scheme" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Sy2-Hi-AIZ" id="d1p-u8-Rvo">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="baL-cf-c8O">
                                                 <items>
                                                     <menuItem title="Select Payment Scheme" state="on" id="Sy2-Hi-AIZ"/>
@@ -774,11 +774,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddTransactionViewController" id="36D-qQ-G80" customClass="AddTransactionViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="T0h-cI-ena">
-                        <rect key="frame" x="0.0" y="0.0" width="419" height="292"/>
+                        <rect key="frame" x="0.0" y="0.0" width="419" height="291"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tqu-UL-6ph">
-                                <rect key="frame" x="18" y="256" width="383" height="16"/>
+                                <rect key="frame" x="18" y="255" width="383" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Add a new transaction." id="3oS-o0-gLs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -786,7 +786,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-63-ScO">
-                                <rect key="frame" x="18" y="230" width="82" height="16"/>
+                                <rect key="frame" x="18" y="229" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Merchant ID:" id="l50-bd-iR7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -794,7 +794,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-B6-47J" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="106" y="227" width="293" height="21"/>
+                                <rect key="frame" x="106" y="226" width="293" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9aF-vg-S51"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="kEN-qw-RJu"/>
@@ -814,7 +814,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-go-BwS">
-                                <rect key="frame" x="106" y="195" width="296" height="28"/>
+                                <rect key="frame" x="106" y="195" width="296" height="27"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="oQS-ed-G1w">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -1029,6 +1029,7 @@ Gw
                                             <tableColumns>
                                                 <tableColumn identifier="mid" width="120" minWidth="40" maxWidth="1000" id="ers-m8-6Za">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="MID">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1065,6 +1066,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="date" width="160" minWidth="40" maxWidth="1000" id="T3Q-DI-sjf">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Date">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1101,6 +1103,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="amount" width="100" minWidth="40" maxWidth="1000" id="YfT-9o-g0f">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Amount">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1137,6 +1140,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="cardToken" width="120" minWidth="40" maxWidth="1000" id="X8o-ME-H8E">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Card Token">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1173,6 +1177,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="firstSix" width="120" minWidth="40" maxWidth="1000" id="2Jm-N5-13X">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="First Six">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1209,6 +1214,7 @@ Gw
                                                 </tableColumn>
                                                 <tableColumn identifier="lastFour" width="122" minWidth="40" maxWidth="1000" id="dM4-BW-LTB">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Last Four">
+                                                        <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -1486,9 +1492,8 @@ Gw
                             <constraint firstAttribute="trailing" secondItem="Luz-Dt-gPy" secondAttribute="trailing" constant="20" symbolic="YES" id="2Dq-I5-Mhk"/>
                             <constraint firstAttribute="bottom" secondItem="vN3-7Y-16z" secondAttribute="bottom" constant="20" symbolic="YES" id="2J8-fA-yb5"/>
                             <constraint firstAttribute="trailing" secondItem="fgt-zS-XG1" secondAttribute="trailing" constant="20" symbolic="YES" id="2xJ-GF-P0k"/>
-                            <constraint firstItem="5UZ-HO-qHQ" firstAttribute="height" secondItem="Ovr-Wp-UZl" secondAttribute="height" id="9UV-Up-Aaq"/>
+                            <constraint firstItem="ra3-vH-pnd" firstAttribute="top" secondItem="5UZ-HO-qHQ" secondAttribute="bottom" constant="8" id="7n4-5g-RCN"/>
                             <constraint firstItem="8vN-aO-b93" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="ANO-jh-9LD"/>
-                            <constraint firstItem="Luz-Dt-gPy" firstAttribute="height" secondItem="5rW-Za-qHx" secondAttribute="height" id="Aga-ji-QMb"/>
                             <constraint firstItem="8vN-aO-b93" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jNc-zF-Opb" secondAttribute="trailing" constant="8" symbolic="YES" id="Etb-N0-Z6D"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="top" secondItem="Ovr-Wp-UZl" secondAttribute="bottom" constant="8" symbolic="YES" id="FP0-Yb-D9e"/>
                             <constraint firstItem="Luz-Dt-gPy" firstAttribute="width" secondItem="Ovr-Wp-UZl" secondAttribute="width" id="Gke-SW-Jwo"/>
@@ -1497,6 +1502,7 @@ Gw
                             <constraint firstItem="Ovr-Wp-UZl" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="JO6-6y-7Kk"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="NYc-JF-acz"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="V8p-2m-yHa"/>
+                            <constraint firstItem="jNc-zF-Opb" firstAttribute="top" secondItem="Luz-Dt-gPy" secondAttribute="bottom" constant="8" id="YSC-Hl-ehY"/>
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="trailing" secondItem="5rW-Za-qHx" secondAttribute="trailing" id="Yi0-1z-vtY"/>
                             <constraint firstItem="Luz-Dt-gPy" firstAttribute="leading" secondItem="5UZ-HO-qHQ" secondAttribute="trailing" constant="8" symbolic="YES" id="cat-K6-GOy"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="width" secondItem="5rW-Za-qHx" secondAttribute="width" id="dSv-4M-1Ai"/>
