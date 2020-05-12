@@ -23,6 +23,7 @@ struct Transaction {
     let lastFour: String
     let settlementKey: String
     let id: String // UUID that allows us to uniquely identify a transaction
+    let authCode: String // Currently unique to VOP, 6 digit code that is the same for auth and settle
 
     init(mid: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String) {
         self.mid = mid
@@ -33,6 +34,7 @@ struct Transaction {
         self.lastFour = lastFour
         self.settlementKey = Transaction.generateUUID()
         self.id = Transaction.generateUUID()
+        self.authCode = "\(Int.random(in: 100000..<900000))"
     }
     
     private static func generateUUID() -> String {
