@@ -29,7 +29,7 @@ struct VOPTransactionProvider: Provider {
 
     // MARK: - Properties
 
-    var defaultFileName = "visa-vop-settled.json"
+    var defaultFileName: String
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -56,5 +56,12 @@ struct VOPTransactionProvider: Provider {
     
     init(transactionType type: TransactionType) {
         self.type = type
+        
+        switch type {
+        case .auth:
+            defaultFileName = "visa-vop-auth.json"
+        case .settlement:
+            defaultFileName = "visa-vop-settled.json"
+        }
     }
 }

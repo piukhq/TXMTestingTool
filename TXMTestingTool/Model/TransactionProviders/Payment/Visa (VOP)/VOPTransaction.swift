@@ -65,21 +65,21 @@ struct VOPTransaction: Codable {
         */
         
         messageElementsCollection = [
-            VOPElement("Transaction.MerchantCardAcceptorId", transaction.mid),          // AKA MID, assigned by the Acquirer for every individual merchant outlets
+            VOPElement("Transaction.MerchantCardAcceptorId", transaction.mid),          // AKA MID, assigned by Acquirer for every merchant outlet
             VOPElement("Transaction.MerchantAcquirerBin", "3423432"),                   // 6 digit BIN assigned by the acquirer to the merchant
             VOPElement("Transaction.TransactionAmount", transactionAmount),             // Value in transaction currency with a dot delimiter
             VOPElement("Transaction.VipTransactionId", transaction.id),                 // IMPORTANT - Provides a numeric ID linking AUTH and SETTLE
-            VOPElement("Transaction.VisaMerchantName", ""),                             // Visa assigned name of merchant. Note: Do not use this field for now
-            VOPElement("Transaction.VisaMerchantId", ""),                               // Visa assigned numeric ID of merchant. Note: Do not use this field for now.
-            VOPElement("Transaction.VisaStoreName", ""),                                // Visa assigned ID for the specific outlett. Note: Do not use this field for now
-            VOPElement("Transaction.VisaStoreId", ""),                                  // Visa assigned numeric ID for the outlet. Note: Do not use this field for now.
+            VOPElement("Transaction.VisaMerchantName", ""),                             // Visa assigned name of merchant. Note: Do not use for now
+            VOPElement("Transaction.VisaMerchantId", ""),                               // Visa assigned numeric ID of merchant. Note: Do not use for now
+            VOPElement("Transaction.VisaStoreName", ""),                                // Visa assigned ID for the specific outlet. Note: Do not use for now
+            VOPElement("Transaction.VisaStoreId", ""),                                  // Visa assigned numeric ID for the outlet. Note: Do not use for now
             VOPElement("Transaction.CurrencyCodeNumeric", "840"),                       // Numeric ISO 4217 code for the currency
             VOPElement("Transaction.BillingCurrencyCode", "840"),                       // Numeric ISO 4217 code for the currency
             VOPElement("Transaction.USDAmount", transactionAmount),                     // IMPORTANT - Referenced in example but not documented
             VOPElement("Transaction.MerchantLocalPurchaseDate", merchantDate),          // The local date (no time) of the transaction.
             VOPElement("Transaction.MerchantGroup.0.ame", merchant.slug.uppercased()),  // Merchant name, during the merchant on-boarding process.
-            VOPElement("Transaction.MerchantGroup.0.xternalId", merchant.prettyName),   // External Merchant ID or a name, during the merchant on-boarding process.
-            VOPElement("Transaction.AuthCode", transaction.settlementKey),              // Auth Code is an issuer generated value upon approving a transaction
+            VOPElement("Transaction.MerchantGroup.0.xternalId", merchant.prettyName),   // External MID or a name, during the merchant on-boarding process.
+            VOPElement("Transaction.AuthCode", transaction.settlementKey),              // An issuer generated value upon approving a transaction
             VOPElement("Transaction.PanLastFour", transaction.lastFour),                // The last 4 characters of the user’s card number
             VOPElement("Transaction.MerchantDateTimeGMT", transactionDate)              // The date time of the transaction in GMT
         ]
@@ -111,7 +111,7 @@ struct VOPTransaction: Codable {
                 VOPElement("Transaction.SettlementCurrencyCodeNumeric", "826"),         // Numeric ISO 4217 code for the currency
                 VOPElement("Transaction.SettlementBillingAmount", transactionAmount),   // Amount the cardholder is billed for with a dot delimiter
                 VOPElement("Transaction.SettlementBillingCurrency", "826"),             // Numeric ISO 4217 code for the currency
-                VOPElement("Transaction.SettlementUSDAmount", transactionAmount),       // Value of the transaction in USD, regardless of the billed/settled amount
+                VOPElement("Transaction.SettlementUSDAmount", transactionAmount),       // Value of the transaction in USD
             ])
             transactionTypeValue = "SETTLE"
         }
