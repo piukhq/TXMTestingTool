@@ -1300,7 +1300,6 @@ Gw
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="anotherButton" destination="Cug-w5-6cH" id="0Vh-J3-M77"/>
                         <outlet property="footerSegment" destination="ccN-dw-bqf" id="8iV-mh-dqy"/>
                         <outlet property="tableView" destination="CZ8-7G-90i" id="P8V-Tw-7NX"/>
                     </connections>
