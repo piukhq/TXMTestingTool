@@ -22,27 +22,58 @@ class AppMainWindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        buildMenu(merchantMenu, from: AgentController.shared.merchants)
-        buildMenu(paymentMenu, from: AgentController.shared.paymentProviders)
+        buildMerchantMenu()
+        buildPaymentMenu()
     }
     
     // MARK: - Menu
     
-    private func buildMenu(_ menu: NSMenu, from objects: [PrettyNamedObject]) {
-        menu.removeAllItems()
+    private func buildMerchantMenu() {
+        merchantMenu.autoenablesItems = false
+        merchantMenu.removeAllItems()
         
-        for object in objects {
-            let item = NSMenuItem(title: object.prettyName, action: nil, keyEquivalent: "")
-            item.representedObject = object
-            menu.items.append(item)
-        }
+        let merchants = AgentController.shared.merchants
+        let pll = merchants.filter { $0.type == .pll }
+        let plr = merchants.filter { $0.type == .plr }
+        
+        addMenuTitle("Select a merchant", inMenu: merchantMenu)
+        addSeperator(inMenu: merchantMenu)
+        addMenuTitle("PLL Merchants", inMenu: merchantMenu)
+        _ = pll.map { addMenuItem($0, inMenu: merchantMenu) }
+        addSeperator(inMenu: merchantMenu)
+        addMenuTitle("PLR Merchants", inMenu: merchantMenu)
+        _ = plr.map { addMenuItem($0, inMenu: merchantMenu) }
+    }
+    
+    private func buildPaymentMenu() {
+        paymentMenu.autoenablesItems = false
+        paymentMenu.removeAllItems()
+        addMenuTitle("Select a payment scheme", inMenu: paymentMenu)
+        addSeperator(inMenu: paymentMenu)
+        _ = AgentController.shared.paymentProviders.map { addMenuItem($0, inMenu: paymentMenu) }
+    }
+    
+    private func addMenuItem(_ object: PrettyNamedObject, inMenu menu: NSMenu) {
+        let item = NSMenuItem(title: object.prettyName, action: nil, keyEquivalent: "")
+        item.representedObject = object
+        menu.addItem(item)
+    }
+    
+    private func addMenuTitle(_ title: String, inMenu menu: NSMenu) {
+        let item = NSMenuItem(title: title, action: nil, keyEquivalent: "")
+        item.isEnabled = false
+        menu.addItem(item)
+    }
+    
+    private func addSeperator(inMenu menu: NSMenu) {
+        menu.addItem(NSMenuItem.separator())
     }
     
     // MARK: - IBActions
     
     @IBAction func generateButtonWasPressed(_ sender: Any) {
         guard let appVC = window?.contentViewController as? MainViewController else { return }
-        guard let merchant = merchantPopUp.selectedItem?.representedObject as? Agent else { return }
+        guard let merchant = merchantPopUp.selectedItem?.representedObject as? MerchantAgent else { return }
         guard let paymentProvider = paymentPopUp.selectedItem?.representedObject as? PaymentAgent else { return }
         appVC.generateFilesFor(merchant: merchant, paymentProvider: paymentProvider)
     }

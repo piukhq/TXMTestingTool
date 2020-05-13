@@ -1,5 +1,5 @@
 //
-//  AmexAuthTransactionProvider.swift
+//  AmexAuthProvider.swift
 //  TXMTestingTool
 //
 //  Created by Jack Rostron on 11/05/2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct AmexAuthTransactionProvider: Provider {
+struct AmexAuthProvider: Provider {
 
     // MARK: - Protocol Implementation
 
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         let amexTransactions = transactions.map {
             AmexAuthTransaction(
                 approvalCode: randomApprovalCode,

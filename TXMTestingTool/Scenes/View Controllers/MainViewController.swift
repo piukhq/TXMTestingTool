@@ -12,6 +12,10 @@ class MainViewController: NSViewController {
     
     // MARK: - Helpers
     
+    private struct Constants {
+        static let defaultsKey = "transactions"
+    }
+    
     enum SegmentButtons: Int {
         case add
         case remove
@@ -24,7 +28,16 @@ class MainViewController: NSViewController {
 
     // MARK: - Properties
     
-    var transactions = [Transaction]()
+    var transactions: [Transaction] = {
+        guard
+            let transactionData = UserDefaults.standard.object(forKey: Constants.defaultsKey) as? Data,
+            let transactions = try? PropertyListDecoder().decode([Transaction].self, from: transactionData)
+        else {
+            return [Transaction]()
+        }
+        
+        return transactions
+    }()
 
     // MARK: - View Lifecycle
     
@@ -50,7 +63,7 @@ class MainViewController: NSViewController {
 
     // MARK: - General
     
-    func generateFilesFor(merchant: Agent, paymentProvider: PaymentAgent) {
+    func generateFilesFor(merchant: MerchantAgent, paymentProvider: PaymentAgent) {
         guard let destination = NSStoryboard.fromMain(loadController: GenerateOutputViewController.self) else {
             fatalError("Unable to load our view controller from the storyboard")
         }
@@ -76,7 +89,14 @@ class MainViewController: NSViewController {
     private func removeTransaction() {
         guard case let row = tableView.selectedRow, row >= 0 else { return }
         transactions.remove(at: row)
+        persistTransactions()
         tableView.reloadData()
+    }
+    
+    private func persistTransactions() {
+        if let transactionData = try? PropertyListEncoder().encode(transactions) {
+            UserDefaults.standard.set(transactionData, forKey: Constants.defaultsKey)
+        }
     }
 }
 
@@ -123,7 +143,7 @@ extension MainViewController: NSTableViewDelegate {
 extension MainViewController: AddTransactionsViewControllerDelegate {
     func didAddTransaction(_ transaction: Transaction) {
         transactions.append(transaction)
-        
+        persistTransactions()
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }

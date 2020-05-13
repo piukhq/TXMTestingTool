@@ -12,43 +12,35 @@ class AgentController {
     static let shared = AgentController()
 
     let merchants = [
-        Agent(
-            slug: "harvey-nichols-rewards",
-            prettyName: "Harvey Nichols",
-            transactionProvider: HarveyNicholsTransactionProvider()
-        ),
-        Agent(
-            slug: "iceland-bonus-card",
-            prettyName: "Iceland",
-            transactionProvider: IcelandTransactionProvider()
-        ),
-        Agent(
-            slug: "burger-king-rewards",
-            prettyName: "Burger King"
-        ),
-        Agent(
-            slug: "fatface",
-            prettyName: "FatFace"
-        )
+        MerchantAgent("Burger King", slug: "burger-king-rewards", type: .plr),
+        MerchantAgent("FatFace", slug: "fatface", type: .plr),
+        MerchantAgent("Harvey Nichols", slug: "harvey-nichols-rewards", type: .pll, provider: HarveyNicholsTransactionProvider()),
+        MerchantAgent("Iceland", slug: "iceland-bonus-card", type: .pll, provider: IcelandTransactionProvider()),
     ]
 
     let paymentProviders = [
         PaymentAgent(
             slug: "amex",
             prettyName: "Amex",
-            settledTransactionProvider: AmexTransactionProvider(),
-            authTransactionProvider: AmexAuthTransactionProvider()
+            settledTransactionProvider: AmexSettlementProvider(),
+            authTransactionProvider: AmexAuthProvider()
         ),
         PaymentAgent(
             slug: "mastercard",
             prettyName: "Mastercard",
-            settledTransactionProvider: MastercardTransactionProvider(),
-            authTransactionProvider: MastercardAuthTransactionProvider()
+            settledTransactionProvider: MastercardSettlementProvider(),
+            authTransactionProvider: MastercardAuthProvider()
         ),
         PaymentAgent(
             slug: "visa",
-            prettyName: "Visa",
-            settledTransactionProvider: VisaTransactionProvider()
+            prettyName: "Visa (Classic)",
+            settledTransactionProvider: VisaClassicSettlementProvider()
+        ),
+        PaymentAgent(
+            slug: "visa",
+            prettyName: "Visa (VOP)",
+            settledTransactionProvider: VOPTransactionProvider(transactionType: .settlement),
+            authTransactionProvider: VOPTransactionProvider(transactionType: .auth)
         )
     ]
 }
