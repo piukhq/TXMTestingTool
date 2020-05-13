@@ -13,7 +13,7 @@ struct IcelandTransactionProvider: Provider {
     
     // MARK: - Protocol Implementation
     
-    func provide(_ transactions: [Transaction], merchant: Agent, paymentProvider: PaymentAgent) throws -> String {
+    func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         let csv = try CSVWriter(stream: .toMemory())
         try csv.write(row: columnHeadings)
         for transaction in transactions {

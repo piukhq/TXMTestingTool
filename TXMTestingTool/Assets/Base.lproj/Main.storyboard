@@ -698,8 +698,10 @@
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="zK7-J0-4Ob"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="yfZ-IF-1np"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="7ed-TG-5mN"/>
-                                <toolbarItem implicitItemIdentifier="229F1C2C-E6E0-4E45-873F-79C609ED23A2" label="Merchant" paletteLabel="Merchant" sizingBehavior="auto" id="SiG-rD-YrP">
+                                <toolbarItem implicitItemIdentifier="229F1C2C-E6E0-4E45-873F-79C609ED23A2" label="Merchant" paletteLabel="Merchant" id="SiG-rD-YrP">
                                     <nil key="toolTip"/>
+                                    <size key="minSize" width="206" height="24"/>
+                                    <size key="maxSize" width="206" height="24"/>
                                     <popUpButton key="view" verticalHuggingPriority="750" id="1l2-0a-MeV">
                                         <rect key="frame" x="0.0" y="14" width="206" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -714,8 +716,10 @@
                                         </popUpButtonCell>
                                     </popUpButton>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="1E017105-FBE6-4D48-95D4-45C2709DC2E9" label="Payment Scheme" paletteLabel="Payment Scheme" sizingBehavior="auto" id="bfT-6g-xVc">
+                                <toolbarItem implicitItemIdentifier="1E017105-FBE6-4D48-95D4-45C2709DC2E9" label="Payment Scheme" paletteLabel="Payment Scheme" id="bfT-6g-xVc">
                                     <nil key="toolTip"/>
+                                    <size key="minSize" width="206" height="24"/>
+                                    <size key="maxSize" width="206" height="24"/>
                                     <popUpButton key="view" verticalHuggingPriority="750" id="Fj7-bf-Cix">
                                         <rect key="frame" x="0.0" y="14" width="206" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1296,7 +1300,6 @@ Gw
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="anotherButton" destination="Cug-w5-6cH" id="0Vh-J3-M77"/>
                         <outlet property="footerSegment" destination="ccN-dw-bqf" id="8iV-mh-dqy"/>
                         <outlet property="tableView" destination="CZ8-7G-90i" id="P8V-Tw-7NX"/>
                     </connections>
@@ -1530,6 +1533,7 @@ Gw
                         <outlet property="paymentProviderOutput" destination="zAf-Tv-NCD" id="Y9S-AI-JgZ"/>
                         <outlet property="saveAuthFileButton" destination="8vN-aO-b93" id="jDn-s9-eKD"/>
                         <outlet property="saveMerchantFileButton" destination="RlI-8S-ubM" id="pYn-rZ-wJy"/>
+                        <outlet property="saveSettleFileButton" destination="5tT-cT-8h8" id="Hrj-JG-EQI"/>
                     </connections>
                 </viewController>
                 <customObject id="4l4-ZL-8GQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

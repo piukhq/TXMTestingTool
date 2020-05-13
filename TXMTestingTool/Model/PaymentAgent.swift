@@ -6,33 +6,17 @@
 //  Copyright © 2020 Bink. All rights reserved.
 //
 
-struct PaymentAgent: PrettyNamedObject {
+struct PaymentAgent: Agent {
     let slug: String
     let prettyName: String
-    let settled: Agent
-    let auth: Agent?
+    
+    let settled: Provider
+    let auth: Provider?
 
-    init(
-        slug: String,
-        prettyName: String,
-        settledTransactionProvider: Provider,
-        authTransactionProvider: Provider? = nil
-    ) {
+    init(slug: String, prettyName: String, settledTransactionProvider: Provider, authTransactionProvider: Provider? = nil) {
         self.slug = slug
         self.prettyName = prettyName
-        settled = Agent(
-            slug: slug,
-            prettyName: prettyName,
-            transactionProvider: settledTransactionProvider
-        )
-        if let authTransactionProvider = authTransactionProvider {
-            auth = Agent(
-                slug: slug,
-                prettyName: prettyName,
-                transactionProvider: authTransactionProvider
-            )
-        } else {
-            auth = nil
-        }
+        self.settled = settledTransactionProvider
+        self.auth = authTransactionProvider
     }
 }
