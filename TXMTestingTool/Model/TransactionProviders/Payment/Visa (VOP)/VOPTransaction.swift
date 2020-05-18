@@ -115,4 +115,14 @@ struct VOPTransaction: Codable {
             VOPElement("TransactionType", transactionTypeValue)
         ]
     }
+    
+    private enum CodingKeys: String, CodingKey {
+        case cardId = "CardId"
+        case externalUserId = "ExternalUserId"
+        case messageElementsCollection = "MessageElementsCollection"
+        case messageId = "MessageId"
+        case messageName = "MessageName"
+        case userDefinedFieldsCollection = "UserDefinedFieldsCollection"
+        case userProfileId = "UserProfileId"
+    }
 }
