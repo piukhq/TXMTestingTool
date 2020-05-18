@@ -22,6 +22,11 @@ struct VOPTransaction: Codable {
             self.key = key
             self.value = value
         }
+        
+        private enum CodingKeys: String, CodingKey {
+            case key = "Key"
+            case value = "Value"
+        }
     }
     
     // MARK: - Properties
