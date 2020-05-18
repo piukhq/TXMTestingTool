@@ -45,7 +45,6 @@ struct VOPTransactionProvider: Provider {
     
     private let jsonEncoder: JSONEncoder = {
         let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         return encoder
     }()

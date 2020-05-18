@@ -22,6 +22,11 @@ struct VOPTransaction: Codable {
             self.key = key
             self.value = value
         }
+        
+        private enum CodingKeys: String, CodingKey {
+            case key = "Key"
+            case value = "Value"
+        }
     }
     
     // MARK: - Properties
@@ -114,5 +119,15 @@ struct VOPTransaction: Codable {
         userDefinedFieldsCollection = [
             VOPElement("TransactionType", transactionTypeValue)
         ]
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case cardId = "CardId"
+        case externalUserId = "ExternalUserId"
+        case messageElementsCollection = "MessageElementsCollection"
+        case messageId = "MessageId"
+        case messageName = "MessageName"
+        case userDefinedFieldsCollection = "UserDefinedFieldsCollection"
+        case userProfileId = "UserProfileId"
     }
 }
