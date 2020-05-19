@@ -98,7 +98,7 @@ struct VOPTransaction: Codable {
                 VOPElement("Transaction.SettlementBillingCurrency", ""),                // Not used in AUTH
                 VOPElement("Transaction.SettlementUSDAmount", "0"),                     // Not used in AUTH
             ])
-            transactionTypeValue = "AUTH"
+            transactionTypeValue = "Auth"
             
         case .settlement:
             let settlementDate = transactionDateFormatter.string(from: Date())
@@ -113,7 +113,7 @@ struct VOPTransaction: Codable {
                 VOPElement("Transaction.SettlementBillingCurrency", "826"),             // Numeric ISO 4217 code for the currency
                 VOPElement("Transaction.SettlementUSDAmount", transactionAmount),       // Value of the transaction in USD
             ])
-            transactionTypeValue = "SETTLE"
+            transactionTypeValue = "Settle"
         }
         
         userDefinedFieldsCollection = [
