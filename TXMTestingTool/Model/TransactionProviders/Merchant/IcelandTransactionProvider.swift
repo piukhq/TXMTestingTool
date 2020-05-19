@@ -109,7 +109,7 @@ struct IcelandTransactionProvider: Provider {
             ".00",
             "GBP",
             UUID().uuidString,
-            String.randomDigits(length: 6)
+            transaction.authCode
         ]
     }
 }
