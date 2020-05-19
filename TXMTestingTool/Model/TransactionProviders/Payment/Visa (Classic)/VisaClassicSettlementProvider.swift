@@ -96,7 +96,7 @@ struct VisaClassicSettlementProvider: Provider {
             ("", 44),                                           // filler
             (String.randomDigits(length: 15), 15),              // transaction ID
             ("", 22),                                           // filler
-            (String.randomDigits(length: 6), 6),                // auth code
+            transaction.authCode,                               // auth code
             ("", 89),                                           // filler
             (transaction.cardToken, 25),
             (timestamp, 4),

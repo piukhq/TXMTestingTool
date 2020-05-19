@@ -15,7 +15,7 @@ struct AmexAuthProvider: Provider {
     func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         let amexTransactions = transactions.map {
             AmexAuthTransaction(
-                approvalCode: randomApprovalCode,
+                approvalCode: $0.authCode,
                 cmAlias: $0.cardToken,
                 merchantNumber: $0.mid,
                 offerID: "0",
@@ -46,11 +46,6 @@ struct AmexAuthProvider: Provider {
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         return encoder
     }()
-    
-    private var randomApprovalCode: String {
-        let randomInt = Int.random(in: 100000..<900000)
-        return "\(randomInt)"
-    }
 }
 
 // MARK: - JSON Codables
