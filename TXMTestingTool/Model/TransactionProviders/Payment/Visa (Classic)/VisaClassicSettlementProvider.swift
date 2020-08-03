@@ -32,7 +32,7 @@ struct VisaClassicSettlementProvider: Provider {
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "hhmm"
+        formatter.dateFormat = "HHmm"
         return formatter
     }()
 
