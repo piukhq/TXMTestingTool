@@ -105,12 +105,25 @@ class GenerateOutputViewController: NSViewController {
     
     func provideContent(provider: Provider?, into textView: NSTextView) {
         guard let provider = provider else { return } // No provider, nothing to do
-        
-        do {
-            let content = try provider.provide(transactions, merchant: merchantAgent, paymentProvider: paymentAgent)
-            textView.string = content
-        } catch {
-            textView.string = "Failed to generate output: \(error)"
+
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else { return }
+            let output: String
+            do {
+                let content = try provider.provide(
+                    self.transactions,
+                    merchant: self.merchantAgent,
+                    paymentProvider: self.paymentAgent
+                )
+
+                output = content
+            } catch {
+                output = "Failed to generate output: \(error)"
+            }
+
+            DispatchQueue.main.async {
+                textView.string = output
+            }
         }
     }
 
