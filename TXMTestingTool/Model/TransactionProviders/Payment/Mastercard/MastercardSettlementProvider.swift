@@ -32,7 +32,7 @@ struct MastercardSettlementProvider: Provider {
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "hhmmss"
+        formatter.dateFormat = "HHmmss"
         return formatter
     }()
     
