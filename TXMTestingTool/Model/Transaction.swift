@@ -11,6 +11,7 @@ import Foundation
 class Transaction: Codable {
     static var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return dateFormatter
     }
