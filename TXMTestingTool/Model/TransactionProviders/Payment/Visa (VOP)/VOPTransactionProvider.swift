@@ -40,7 +40,7 @@ struct VOPTransactionProvider: Provider {
     
     private let localPurchaseDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-DD"
+        formatter.dateFormat = "YYYY-MM-dd"
         return formatter
     }()
     

@@ -33,6 +33,7 @@ struct VisaClassicSettlementProvider: Provider {
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "GMT")
         formatter.dateFormat = "HHmm"
         return formatter
     }()
