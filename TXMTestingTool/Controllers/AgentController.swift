@@ -16,6 +16,7 @@ class AgentController {
         MerchantAgent("FatFace", slug: "fatface", type: .plr),
         MerchantAgent("Harvey Nichols", slug: "harvey-nichols-rewards", type: .pll, provider: HarveyNicholsTransactionProvider()),
         MerchantAgent("Iceland", slug: "iceland-bonus-card", type: .pll, provider: IcelandTransactionProvider()),
+        MerchantAgent("Wasabi", slug: "wasabi-club", type: .plr, provider: WasabiTransactionProvider())
     ]
 
     let paymentProviders = [
