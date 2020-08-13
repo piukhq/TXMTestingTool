@@ -23,15 +23,17 @@ struct VisaClassicSettlementProvider: Provider {
     // MARK: - Properties
 
     var defaultFileName = "visa-classic-settled.txt"
-    
+
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "GMT")
         formatter.dateFormat = "yyyyMMdd"
         return formatter
     }()
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "GMT")
         formatter.dateFormat = "HHmm"
         return formatter
     }()

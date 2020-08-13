@@ -38,6 +38,7 @@ class AddTransactionViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareValidators()
+        dateField.timeZone = TimeZone(abbreviation: "UTC")
         dateField.dateValue = Date()
         addButton.becomeFirstResponder()
     }

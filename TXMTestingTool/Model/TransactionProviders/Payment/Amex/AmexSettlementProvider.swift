@@ -26,12 +26,14 @@ struct AmexSettlementProvider: Provider {
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
 
     private let dateTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "yyyy-MM-dd-HH.mm.ss"
         return formatter
     }()

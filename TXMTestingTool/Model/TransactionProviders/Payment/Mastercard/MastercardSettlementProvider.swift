@@ -26,6 +26,7 @@ struct MastercardSettlementProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "GMT")
         formatter.dateFormat = "yyyyMMdd"
         return formatter
     }()

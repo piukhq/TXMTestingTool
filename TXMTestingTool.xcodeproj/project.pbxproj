@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830BCE6E24E3DC6000D79F45 /* WasabiTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830BCE6D24E3DC6000D79F45 /* WasabiTransactionProvider.swift */; };
 		830C7F11243B70EE00689718 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 830C7F10243B70EE00689718 /* CSV */; };
 		83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83357D28246050440092E240 /* PrettyNamedObject.swift */; };
 		833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		830BCE6D24E3DC6000D79F45 /* WasabiTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasabiTransactionProvider.swift; sourceTree = "<group>"; };
 		83357D28246050440092E240 /* PrettyNamedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyNamedObject.swift; sourceTree = "<group>"; };
 		833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardAuthProvider.swift; sourceTree = "<group>"; };
 		833845F12459BFCD0040BBB5 /* PaymentAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAgent.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */,
 				83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */,
+				830BCE6D24E3DC6000D79F45 /* WasabiTransactionProvider.swift */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */,
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */,
+				830BCE6E24E3DC6000D79F45 /* WasabiTransactionProvider.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
 				E26E1A8C2469E26700AE1255 /* Agent.swift in Sources */,
 				E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */,
@@ -589,7 +593,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.4.3;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.txmtestingtool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "TXM Testing Tool";
@@ -613,7 +617,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.4.3;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.txmtestingtool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "TXM Testing Tool";
