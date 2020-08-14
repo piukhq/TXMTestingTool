@@ -102,9 +102,8 @@ struct WasabiTransactionProvider: Provider {
             dateFormatter.string(from: transaction.date),
             timeFormatter.string(from: transaction.date),
             transaction.mid,
-            transaction.cardToken
+            transaction.id,
         ]
     }
 
 }
-
