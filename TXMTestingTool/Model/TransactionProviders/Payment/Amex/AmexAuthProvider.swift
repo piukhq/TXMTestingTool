@@ -36,7 +36,7 @@ struct AmexAuthProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(identifier: "America/Denver")
+        formatter.timeZone = TimeZone(secondsFromGMT: -25200)  // UTC-7
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()

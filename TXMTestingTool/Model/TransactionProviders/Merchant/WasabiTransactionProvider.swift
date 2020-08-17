@@ -54,14 +54,14 @@ struct WasabiTransactionProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "dd/MM/yyyy"
         return formatter
     }()
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "HH:mm:ss"
         return formatter
     }()
