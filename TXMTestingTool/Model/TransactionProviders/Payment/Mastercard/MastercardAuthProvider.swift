@@ -34,7 +34,7 @@ struct MastercardAuthProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(identifier: "America/Chicago")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()

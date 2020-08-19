@@ -26,14 +26,14 @@ struct VisaClassicSettlementProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "GMT")
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = "yyyyMMdd"
         return formatter
     }()
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "GMT")
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = "HHmm"
         return formatter
     }()
