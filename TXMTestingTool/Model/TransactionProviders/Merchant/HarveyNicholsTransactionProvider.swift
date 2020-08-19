@@ -13,7 +13,7 @@ struct HarveyNicholsTransactionProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "GMT")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         return formatter
     }()
