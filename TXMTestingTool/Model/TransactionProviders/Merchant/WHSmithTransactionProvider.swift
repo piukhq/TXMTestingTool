@@ -44,7 +44,7 @@ struct WHSmithTransactionProvider: CSVProvider {
             String.randomDigits(length: 19),
             dateFormatter.string(from: transaction.date),
             String(transaction.date.timeIntervalSince1970),
-            transaction.mid,  // todo: replace with store ID
+            transaction.storeID,
             "WHSmith Reading",
             "",
             "3",

@@ -13,6 +13,7 @@ class AddTransactionViewController: NSViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var midField: ValidatableTextField!
+    @IBOutlet weak var storeIDField: ValidatableTextField!
     @IBOutlet weak var dateField: NSDatePicker!
     @IBOutlet weak var amountField: ValidatableTextField!
     @IBOutlet weak var cardTokenField: ValidatableTextField!
@@ -27,6 +28,7 @@ class AddTransactionViewController: NSViewController {
     
     lazy var validationFields = [
         midField,
+        storeIDField,
         amountField,
         cardTokenField,
         firstSixField,
@@ -45,6 +47,7 @@ class AddTransactionViewController: NSViewController {
     
     func prepareValidators() {
         midField.setup("MID", validation: [.hasContent])
+        storeIDField.setup("store ID", validation: [])
         amountField.setup("amount", validation: [.hasContent, .isNumeric])
         cardTokenField.setup("card token", validation: [.hasContent])
         firstSixField.setup("first six", validation: [.hasContent, .isNumeric, .lengthEquals(6)])
@@ -71,6 +74,7 @@ class AddTransactionViewController: NSViewController {
 
         let transaction = Transaction(
             mid: midField.stringValue,
+            storeID: storeIDField.stringValue,
             date: dateField.dateValue,
             amount: Int(amountField.stringValue)!,
             cardToken: cardTokenField.stringValue,
