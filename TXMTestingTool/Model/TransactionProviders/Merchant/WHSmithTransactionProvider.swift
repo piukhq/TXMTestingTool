@@ -10,15 +10,18 @@ import Foundation
 
 
 struct WHSmithTransactionProvider: CSVProvider {
+
+    // MARK: - Properties
+
     var columnHeadings: [String] = []
 
     var delimiter = "|"
 
     var defaultFileName = "whsmith.csv"
 
-    let dateFormatter: DateFormatter = {
+    private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-DDTHH:mm:ss.SSS"
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         formatter.timeZone = TimeZone(identifier: "BST")
         return formatter
     }()
@@ -29,6 +32,8 @@ struct WHSmithTransactionProvider: CSVProvider {
         "mastercard": "MASTERCARD",
         "bink-payment": "BINK_PAYMENT"
     ]
+
+    // MARK: - Supporting Functions
 
     func getCardScheme(for paymentProvider: PaymentAgent) throws -> String {
         if let cardScheme = cardSchemes[paymentProvider.slug] {
