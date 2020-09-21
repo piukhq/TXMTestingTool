@@ -38,17 +38,10 @@ struct WHSmithTransactionProvider: CSVProvider {
         }
     }
 
-    func getMIDSuffix(mid: String) -> String {
-        guard let fromIndex = mid.index(mid.startIndex, offsetBy: 3, limitedBy: mid.endIndex) else {
-            return "***\(mid)"
-        }
-        return "***\(mid.suffix(from: fromIndex))"
-    }
-
     func transactionToColumns(_ transaction: Transaction, merchant: MerchantAgent, paymentProvider: PaymentAgent, sequenceNumber: Int) throws -> [String] {
         [
             transaction.id,
-            "5842003682292310000",
+            String.randomDigits(length: 19),
             dateFormatter.string(from: transaction.date),
             String(transaction.date.timeIntervalSince1970),
             transaction.mid,  // todo: replace with store ID
@@ -68,7 +61,7 @@ struct WHSmithTransactionProvider: CSVProvider {
             try getCardScheme(for: paymentProvider),
             "",
             transaction.authCode,
-            getMIDSuffix(mid: transaction.mid),
+            "***\(transaction.mid.safeSuffix(from: 3))",
             "",
             "GBP",
             "GB",
