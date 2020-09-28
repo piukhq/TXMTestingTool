@@ -17,6 +17,7 @@ class Transaction: Codable {
     }
 
     let mid: String
+    let storeID: String
     let date: Date
     let amount: Int
     let cardToken: String
@@ -26,8 +27,9 @@ class Transaction: Codable {
     let id: String // UUID that allows us to uniquely identify a transaction
     let authCode: String // 6 digit code that is the same for auth and settle
 
-    init(mid: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String) {
+    init(mid: String, storeID: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String) {
         self.mid = mid
+        self.storeID = storeID
         self.date = date
         self.amount = amount
         self.cardToken = cardToken

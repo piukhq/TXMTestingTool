@@ -103,7 +103,7 @@ class MainViewController: NSViewController {
         generatorQueue.async { [weak self] in
             for _ in 1...1000000 {
                 self?.transactions.append(
-                    Transaction(mid: "a", date: Date(), amount: 0, cardToken: "a", firstSix: "0", lastFour: "0")
+                    Transaction(mid: "a", storeID: "b", date: Date(), amount: 0, cardToken: "a", firstSix: "0", lastFour: "0")
                 )
             }
             DispatchQueue.main.async {
@@ -139,6 +139,8 @@ extension MainViewController: NSTableViewDelegate {
         switch tableColumn?.identifier.rawValue {
         case "mid":
             cell.textField?.stringValue = transaction.mid
+        case "storeID":
+            cell.textField?.stringValue = transaction.storeID
         case "date":
             cell.textField?.stringValue = Transaction.dateFormatter.string(from: transaction.date)
         case "amount":
