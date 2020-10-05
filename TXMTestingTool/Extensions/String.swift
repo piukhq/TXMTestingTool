@@ -25,4 +25,11 @@ extension String  {
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }
+
+    func safeSuffix(from: Int) -> String {
+        guard let fromIndex = self.index(self.startIndex, offsetBy: from, limitedBy: self.endIndex) else {
+            return self
+        }
+        return String(self.suffix(from: fromIndex))
+    }
 }

@@ -9,41 +9,15 @@
 import Foundation
 import CSV
 
-struct IcelandTransactionProvider: Provider {
-    
-    // MARK: - Protocol Implementation
-    
-    func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
-        let csv = try CSVWriter(stream: .toMemory())
-        try csv.write(row: columnHeadings)
-        for transaction in transactions {
-            let columns = try transactionToColumns(transaction, paymentProvider: paymentProvider)
-            try csv.write(row: columns)
-        }
-        csv.stream.close()
+struct IcelandTransactionProvider: CSVProvider {
 
-        return try getCSVString(from: csv)
-    }
-    
     // MARK: - Properties
 
     var defaultFileName = "iceland-bonus-card.csv"
-    
-    private let cardSchemeIds = [
-        "amex": "1",
-        "visa": "2",
-        "mastercard": "3",
-        "bink-payment": "6"
-    ]
 
-    private let cardSchemes = [
-        "amex": "Amex",
-        "visa": "Visa",
-        "mastercard": "MasterCard/MasterCard One",
-        "bink-payment": "Bink-Payment"
-    ]
+    var delimiter = ","
 
-    private let columnHeadings = [
+    var columnHeadings = [
         "TransactionCardFirst6",
         "TransactionCardLast4",
         "TransactionCardExpiry",
@@ -59,6 +33,20 @@ struct IcelandTransactionProvider: Provider {
         "TransactionAuthCode"
     ]
 
+    private let cardSchemeIds = [
+        "amex": "1",
+        "visa": "2",
+        "mastercard": "3",
+        "bink-payment": "6"
+    ]
+
+    private let cardSchemes = [
+        "amex": "Amex",
+        "visa": "Visa",
+        "mastercard": "MasterCard/MasterCard One",
+        "bink-payment": "Bink-Payment"
+    ]
+
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "BST")
@@ -67,18 +55,6 @@ struct IcelandTransactionProvider: Provider {
     }()
     
     // MARK: - Supporting Functions
-
-    func getCSVString(from csv: CSVWriter) throws -> String {
-        guard let csvData = csv.stream.property(forKey: .dataWrittenToMemoryStreamKey) as? Data else {
-            throw ProviderError.memoryStreamReadError
-        }
-
-        guard let csvString = String(data: csvData, encoding: .utf8) else {
-            throw ProviderError.csvDecodeError
-        }
-
-        return csvString
-    }
 
     func getCardSchemeId(for paymentProvider: PaymentAgent) throws -> String {
         if let cardSchemeId = cardSchemeIds[paymentProvider.slug] {
@@ -96,7 +72,7 @@ struct IcelandTransactionProvider: Provider {
         }
     }
 
-    func transactionToColumns(_ transaction: Transaction, paymentProvider: PaymentAgent) throws -> [String] {
+    func transactionToColumns(_ transaction: Transaction, merchant: MerchantAgent, paymentProvider: PaymentAgent, sequenceNumber: Int) throws -> [String] {
         [
             transaction.firstSix,
             transaction.lastFour,
