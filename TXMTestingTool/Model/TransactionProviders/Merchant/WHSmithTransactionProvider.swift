@@ -22,7 +22,7 @@ struct WHSmithTransactionProvider: CSVProvider {
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-        formatter.timeZone = TimeZone(identifier: "BST")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         return formatter
     }()
 
@@ -47,7 +47,7 @@ struct WHSmithTransactionProvider: CSVProvider {
         [
             transaction.id,
             String.randomDigits(length: 19),
-            dateFormatter.string(from: transaction.date),
+            dateFormatter.string(from: transaction.date.nearestMinute),
             String(transaction.date.timeIntervalSince1970),
             transaction.storeID,
             "WHSmith Reading",

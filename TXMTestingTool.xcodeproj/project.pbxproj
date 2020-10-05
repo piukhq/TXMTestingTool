@@ -22,6 +22,7 @@
 		83AAD1FC2518D5630051E009 /* WHSmithTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAD1FB2518D5630051E009 /* WHSmithTransactionProvider.swift */; };
 		83C9A6672434E77C0085278A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6662434E77C0085278A /* Provider.swift */; };
 		83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */; };
+		83D75FCE252B3116003813A4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D75FCD252B3116003813A4 /* Date.swift */; };
 		83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */; };
 		83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C89243355DD00C948B4 /* AppDelegate.swift */; };
 		83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C8B243355DD00C948B4 /* MainViewController.swift */; };
@@ -65,6 +66,7 @@
 		83AAD1FB2518D5630051E009 /* WHSmithTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHSmithTransactionProvider.swift; sourceTree = "<group>"; };
 		83C9A6662434E77C0085278A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarveyNicholsTransactionProvider.swift; sourceTree = "<group>"; };
+		83D75FCD252B3116003813A4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateOutputViewController.swift; sourceTree = "<group>"; };
 		83FF8C86243355DD00C948B4 /* TXMTestingTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXMTestingTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF8C89243355DD00C948B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				E27EE958243D249200D2EF58 /* NSStoryboard.swift */,
 				E293EFFE243CDECA00BA83E6 /* String.swift */,
+				83D75FCD252B3116003813A4 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */,
 				830BCE6E24E3DC6000D79F45 /* WasabiTransactionProvider.swift in Sources */,
 				839745472510C73200D8C27D /* CSVProvider.swift in Sources */,
+				83D75FCE252B3116003813A4 /* Date.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
 				E26E1A8C2469E26700AE1255 /* Agent.swift in Sources */,
 				E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */,
