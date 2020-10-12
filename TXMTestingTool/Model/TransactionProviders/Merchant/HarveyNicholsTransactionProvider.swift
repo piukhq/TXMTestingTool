@@ -38,7 +38,7 @@ struct HarveyNicholsTransactionProvider: Provider {
                     storeId: transaction.mid,   // TODO: can we simulate HN store IDs properly?
                     timestamp: dateFormatter.string(from: transaction.date),
                     id: UUID().uuidString,
-                    authCode: transaction.authCode
+                    authCode: "00\(transaction.authCode)"
                 )
             )
         }
