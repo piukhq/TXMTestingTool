@@ -26,18 +26,25 @@ struct MastercardSettlementProvider: Provider {
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "yyyyMMdd"
         return formatter
     }()
 
     private let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.timeZone = TimeZone(abbreviation: "BST")
+        formatter.dateFormat = "HHmm"
+        return formatter
+    }()
+
+    private let headerTimeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "HHmmss"
         return formatter
     }()
-    
+
     // MARK: - Supporting Functions
 
     private func join(_ parts: WidthField...) -> String {
@@ -50,7 +57,7 @@ struct MastercardSettlementProvider: Provider {
         return join(
             ("H", 1),                               // header record
             (dateFormatter.string(from: now), 8),
-            (timeFormatter.string(from: now), 6),
+            (headerTimeFormatter.string(from: now), 6),
             ("00000017597", 11),                    // member ICA
             ("", 174)                               // filler
         )
@@ -67,7 +74,7 @@ struct MastercardSettlementProvider: Provider {
             (transaction.mid, 22),
             (String(format: "%09d", 1), 9),                                     // location ID
             (String(format: "%06d", 1), 6),                                     // issuer ICA code
-            ("0000", 4),                                                        // transaction time
+            (timeFormatter.string(from: transaction.date), 4),                  // transaction time
             // TODO: settlement key goes here
             (String(transaction.settlementKey.prefix(9)), 9),                   // banknet ref number
             (transaction.cardToken, 30),                                        // bank customer number
