@@ -14,12 +14,13 @@
 		833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845F12459BFCD0040BBB5 /* PaymentAgent.swift */; };
 		83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83564B4A243CCCFB00B718AA /* VisaClassicSettlementProvider.swift */; };
 		837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* MerchantAgent.swift */; };
-		83765A0124361F7000B71BC2 /* AmexSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexSettlementProvider.swift */; };
+		83765A0124361F7000B71BC2 /* AmexLegacySettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */; };
 		83765A0324361F8100B71BC2 /* MastercardSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */; };
 		83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */; };
 		83765A0724362D0E00B71BC2 /* AgentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0624362D0E00B71BC2 /* AgentController.swift */; };
 		839745472510C73200D8C27D /* CSVProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839745462510C73200D8C27D /* CSVProvider.swift */; };
 		83AAD1FC2518D5630051E009 /* WHSmithTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAD1FB2518D5630051E009 /* WHSmithTransactionProvider.swift */; };
+		83B4667F260A358200DD8630 /* AmexSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B4667E260A358200DD8630 /* AmexSettlementProvider.swift */; };
 		83C9A6672434E77C0085278A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6662434E77C0085278A /* Provider.swift */; };
 		83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */; };
 		83D75FCE252B3116003813A4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D75FCD252B3116003813A4 /* Date.swift */; };
@@ -58,12 +59,13 @@
 		833845F12459BFCD0040BBB5 /* PaymentAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAgent.swift; sourceTree = "<group>"; };
 		83564B4A243CCCFB00B718AA /* VisaClassicSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaClassicSettlementProvider.swift; sourceTree = "<group>"; };
 		837659FC24361DF900B71BC2 /* MerchantAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantAgent.swift; sourceTree = "<group>"; };
-		83765A0024361F7000B71BC2 /* AmexSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexSettlementProvider.swift; sourceTree = "<group>"; };
+		83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexLegacySettlementProvider.swift; sourceTree = "<group>"; };
 		83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardSettlementProvider.swift; sourceTree = "<group>"; };
 		83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcelandTransactionProvider.swift; sourceTree = "<group>"; };
 		83765A0624362D0E00B71BC2 /* AgentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentController.swift; sourceTree = "<group>"; };
 		839745462510C73200D8C27D /* CSVProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVProvider.swift; sourceTree = "<group>"; };
 		83AAD1FB2518D5630051E009 /* WHSmithTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHSmithTransactionProvider.swift; sourceTree = "<group>"; };
+		83B4667E260A358200DD8630 /* AmexSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexSettlementProvider.swift; sourceTree = "<group>"; };
 		83C9A6662434E77C0085278A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarveyNicholsTransactionProvider.swift; sourceTree = "<group>"; };
 		83D75FCD252B3116003813A4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -227,7 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */,
-				83765A0024361F7000B71BC2 /* AmexSettlementProvider.swift */,
+				83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */,
+				83B4667E260A358200DD8630 /* AmexSettlementProvider.swift */,
 			);
 			path = Amex;
 			sourceTree = "<group>";
@@ -421,7 +424,7 @@
 				E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */,
 				833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
-				83765A0124361F7000B71BC2 /* AmexSettlementProvider.swift in Sources */,
+				83765A0124361F7000B71BC2 /* AmexLegacySettlementProvider.swift in Sources */,
 				837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */,
 				83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */,
 				E26E1A8124693EDA00AE1255 /* AmexAuthProvider.swift in Sources */,
@@ -433,6 +436,7 @@
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
 				E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */,
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
+				83B4667F260A358200DD8630 /* AmexSettlementProvider.swift in Sources */,
 				83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */,
 				830BCE6E24E3DC6000D79F45 /* WasabiTransactionProvider.swift in Sources */,
 				839745472510C73200D8C27D /* CSVProvider.swift in Sources */,
