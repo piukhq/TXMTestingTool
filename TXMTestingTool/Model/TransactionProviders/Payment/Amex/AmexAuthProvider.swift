@@ -21,7 +21,7 @@ struct AmexAuthProvider: Provider {
                 offerID: "0",
                 transactionAmount: String(format: "%.02f", Double($0.amount) / 100.0),
                 transactionCurrency: "UKL",
-                transactionID: UUID().uuidString,
+                transactionID: $0.id,
                 transactionTime: dateFormatter.string(from: $0.date)
             )
         }
