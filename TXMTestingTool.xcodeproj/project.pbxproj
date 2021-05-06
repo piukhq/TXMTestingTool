@@ -15,7 +15,7 @@
 		83564B4B243CCCFB00B718AA /* VisaClassicSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83564B4A243CCCFB00B718AA /* VisaClassicSettlementProvider.swift */; };
 		837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* MerchantAgent.swift */; };
 		83765A0124361F7000B71BC2 /* AmexLegacySettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */; };
-		83765A0324361F8100B71BC2 /* MastercardSettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */; };
+		83765A0324361F8100B71BC2 /* MastercardTS44SettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0224361F8100B71BC2 /* MastercardTS44SettlementProvider.swift */; };
 		83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */; };
 		83765A0724362D0E00B71BC2 /* AgentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0624362D0E00B71BC2 /* AgentController.swift */; };
 		839745472510C73200D8C27D /* CSVProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839745462510C73200D8C27D /* CSVProvider.swift */; };
@@ -24,6 +24,7 @@
 		83C9A6672434E77C0085278A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6662434E77C0085278A /* Provider.swift */; };
 		83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */; };
 		83D75FCE252B3116003813A4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D75FCD252B3116003813A4 /* Date.swift */; };
+		83DB2FAF2642D664001728A2 /* MastercardTGX2SettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB2FAE2642D664001728A2 /* MastercardTGX2SettlementProvider.swift */; };
 		83F75AC82434A2FB009125A4 /* GenerateOutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */; };
 		83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C89243355DD00C948B4 /* AppDelegate.swift */; };
 		83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF8C8B243355DD00C948B4 /* MainViewController.swift */; };
@@ -60,7 +61,7 @@
 		83564B4A243CCCFB00B718AA /* VisaClassicSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaClassicSettlementProvider.swift; sourceTree = "<group>"; };
 		837659FC24361DF900B71BC2 /* MerchantAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantAgent.swift; sourceTree = "<group>"; };
 		83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexLegacySettlementProvider.swift; sourceTree = "<group>"; };
-		83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardSettlementProvider.swift; sourceTree = "<group>"; };
+		83765A0224361F8100B71BC2 /* MastercardTS44SettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardTS44SettlementProvider.swift; sourceTree = "<group>"; };
 		83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcelandTransactionProvider.swift; sourceTree = "<group>"; };
 		83765A0624362D0E00B71BC2 /* AgentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentController.swift; sourceTree = "<group>"; };
 		839745462510C73200D8C27D /* CSVProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVProvider.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		83C9A6662434E77C0085278A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		83C9A6682434E7C30085278A /* HarveyNicholsTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarveyNicholsTransactionProvider.swift; sourceTree = "<group>"; };
 		83D75FCD252B3116003813A4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		83DB2FAE2642D664001728A2 /* MastercardTGX2SettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardTGX2SettlementProvider.swift; sourceTree = "<group>"; };
 		83F75AC72434A2FB009125A4 /* GenerateOutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateOutputViewController.swift; sourceTree = "<group>"; };
 		83FF8C86243355DD00C948B4 /* TXMTestingTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXMTestingTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF8C89243355DD00C948B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -239,7 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */,
-				83765A0224361F8100B71BC2 /* MastercardSettlementProvider.swift */,
+				83765A0224361F8100B71BC2 /* MastercardTS44SettlementProvider.swift */,
+				83DB2FAE2642D664001728A2 /* MastercardTGX2SettlementProvider.swift */,
 			);
 			path = Mastercard;
 			sourceTree = "<group>";
@@ -430,9 +433,10 @@
 				E26E1A8124693EDA00AE1255 /* AmexAuthProvider.swift in Sources */,
 				83FF8CB0243373F500C948B4 /* Transaction.swift in Sources */,
 				E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */,
+				83DB2FAF2642D664001728A2 /* MastercardTGX2SettlementProvider.swift in Sources */,
 				83AAD1FC2518D5630051E009 /* WHSmithTransactionProvider.swift in Sources */,
 				83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */,
-				83765A0324361F8100B71BC2 /* MastercardSettlementProvider.swift in Sources */,
+				83765A0324361F8100B71BC2 /* MastercardTS44SettlementProvider.swift in Sources */,
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
 				E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */,
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
@@ -612,7 +616,7 @@
 				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.txmtestingtool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "TXM Testing Tool";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -636,7 +640,7 @@
 				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bink.txmtestingtool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "TXM Testing Tool";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
