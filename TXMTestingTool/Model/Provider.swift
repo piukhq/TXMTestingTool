@@ -22,4 +22,12 @@ enum ProviderError: Error {
     case csvDecodeError
 }
 
+// Legacy fixed-width file field system used in legacy Visa and MC providers. Will be removed when they are.
 typealias WidthField = (String, Int)
+
+// Newer fixed-width file field system used in TGX2 MC provider. Will become the only option when the above is removed.
+struct FixedWidthField {
+    var name: String
+    var start: Int
+    var length: Int
+}
