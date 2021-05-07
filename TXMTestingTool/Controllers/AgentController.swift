@@ -35,8 +35,14 @@ class AgentController {
         ),
         PaymentAgent(
             slug: "mastercard",
-            prettyName: "Mastercard",
-            settledTransactionProvider: MastercardSettlementProvider(),
+            prettyName: "Mastercard (TS44)",
+            settledTransactionProvider: MastercardTS44SettlementProvider(),
+            authTransactionProvider: MastercardAuthProvider()
+        ),
+        PaymentAgent(
+            slug: "mastercard",
+            prettyName: "Mastercard (TGX2)",
+            settledTransactionProvider: MastercardTGX2SettlementProvider(),
             authTransactionProvider: MastercardAuthProvider()
         ),
         PaymentAgent(

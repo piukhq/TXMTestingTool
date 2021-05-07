@@ -9,7 +9,16 @@
 import Foundation
 
 struct HarveyNicholsTransactionProvider: Provider {
+
+    // MARK: - Properties
+
     var defaultFileName = "harvey-nichols-rewards.json"
+
+    private let cardSchemes = [
+        "amex": "AMEX",
+        "visa": "VISA",
+        "mastercard": "MASTERCARD",
+    ]
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -17,6 +26,8 @@ struct HarveyNicholsTransactionProvider: Provider {
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         return formatter
     }()
+
+    // MARK: - Protocol Implementation
 
     func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         var rootObject = HNRootObject(transactions: [])
@@ -29,7 +40,7 @@ struct HarveyNicholsTransactionProvider: Provider {
                         first6: transaction.firstSix,
                         last4: transaction.lastFour,
                         expiry: "0",
-                        scheme: "AMEX"
+                        scheme: try getCardScheme(for: paymentProvider)
                     ),
                     amount: HNAmount(
                         value: Decimal(transaction.amount) / 100,
@@ -49,6 +60,16 @@ struct HarveyNicholsTransactionProvider: Provider {
 
         let data = try encoder.encode(rootObject)
         return String(data: data, encoding: .utf8)!
+    }
+
+    // MARK: - Supporting Functions
+
+    func getCardScheme(for paymentProvider: PaymentAgent) throws -> String {
+        if let cardScheme = cardSchemes[paymentProvider.slug] {
+            return cardScheme
+        } else {
+            throw ProviderError.unsupportedPaymentProvider(paymentProvider)
+        }
     }
 }
 

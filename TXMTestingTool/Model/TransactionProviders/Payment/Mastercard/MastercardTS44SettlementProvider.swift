@@ -1,5 +1,5 @@
 //
-//  MastercardSettlementProvider.swift
+//  MastercardTS44SettlementProvider.swift
 //  TXMTestingTool
 //
 //  Created by Chris Latham on 02/04/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MastercardSettlementProvider: Provider {
+struct MastercardTS44SettlementProvider: Provider {
     
     // MARK: - Protocol Implementation
     
@@ -22,7 +22,7 @@ struct MastercardSettlementProvider: Provider {
     
     // MARK: - Properties
 
-    var defaultFileName = "mastercard-settled.txt"
+    var defaultFileName = "mastercard-ts44-settlement.txt"
 
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
