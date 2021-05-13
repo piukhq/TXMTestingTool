@@ -127,7 +127,7 @@ struct MastercardTGX2SettlementProvider: Provider {
         "transaction_date": formatDate,
         "transaction_time": formatTime,
         "bank_customer_number": formatToken,
-        "banknet_reference_number": formatTransactionID,
+        "banknet_reference_number": formatReferenceNumber,
         "authorization_code": formatAuthCode,
     ]
 
@@ -215,7 +215,7 @@ struct MastercardTGX2SettlementProvider: Provider {
 
 extension MastercardTGX2SettlementProvider {
     private func formatHeaderRecordType() -> String {
-        return "1"
+        return "H"
     }
 
     private func formatHeaderDate() -> String {
@@ -235,7 +235,7 @@ extension MastercardTGX2SettlementProvider {
 
 extension MastercardTGX2SettlementProvider {
     private func formatDetailRecordType(_: Transaction) -> String {
-        return "2"
+        return "D"
     }
 
     private func formatMerchantID(_ tx: Transaction) -> String {
@@ -258,8 +258,8 @@ extension MastercardTGX2SettlementProvider {
         return tx.cardToken
     }
 
-    private func formatTransactionID(_ tx: Transaction) -> String {
-        return tx.id
+    private func formatReferenceNumber(_ tx: Transaction) -> String {
+        return String(tx.settlementKey.prefix(9))
     }
 
     private func formatAuthCode(_ tx: Transaction) -> String {
@@ -271,7 +271,7 @@ extension MastercardTGX2SettlementProvider {
 
 extension MastercardTGX2SettlementProvider {
     private func formatTrailerRecordType() -> String {
-        return "3"
+        return "T"
     }
 }
 
