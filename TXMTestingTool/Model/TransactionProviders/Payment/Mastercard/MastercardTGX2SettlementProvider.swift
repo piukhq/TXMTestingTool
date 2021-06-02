@@ -243,7 +243,7 @@ extension MastercardTGX2SettlementProvider {
     }
 
     private func formatAmount(_ tx: Transaction) -> String {
-        return String(format: "%012.2f", Double(tx.amount) / 100)
+        return String(format: "%012d", tx.amount)
     }
 
     private func formatDate(_ tx: Transaction) -> String {
