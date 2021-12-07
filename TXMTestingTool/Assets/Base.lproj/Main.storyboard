@@ -737,7 +737,7 @@
                                 <toolbarItem implicitItemIdentifier="3CE85ED9-02A9-41C7-A18A-4E44BC07239E" label="" paletteLabel="" title="Generate" sizingBehavior="auto" id="a1y-4M-F8p">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="Jxb-MQ-3K9">
-                                        <rect key="frame" x="0.0" y="14" width="108" height="43"/>
+                                        <rect key="frame" x="0.0" y="14" width="90" height="32"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YxU-Ar-YvK">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1015,18 +1015,15 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <segmentedControl verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ccN-dw-bqf">
-                                <rect key="frame" x="0.0" y="-1" width="85" height="23"/>
+                                <rect key="frame" x="0.0" y="-1" width="58" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="MFj-Oc-fuz"/>
+                                    <constraint firstAttribute="width" constant="58" id="MFj-Oc-fuz"/>
                                 </constraints>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="smallSquare" trackingMode="momentary" id="Cug-w5-6cH">
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="smallSquare" trackingMode="momentary" id="Cug-w5-6cH" userLabel="NSAddTemplate, NSRemoveTemplate">
                                     <font key="font" metaFont="system"/>
                                     <segments>
                                         <segment image="NSAddTemplate" width="27"/>
                                         <segment image="NSRemoveTemplate" width="27" tag="1"/>
-                                        <segment image="NSRefreshTemplate" tag="2">
-                                            <nil key="label"/>
-                                        </segment>
                                     </segments>
                                 </segmentedCell>
                                 <connections>
@@ -1324,7 +1321,7 @@ Gw
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b10-tm-rwr">
-                                <rect key="frame" x="85" y="-1" width="692" height="23"/>
+                                <rect key="frame" x="58" y="-1" width="719" height="23"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" refusesFirstResponder="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K2f-M2-6uP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1351,7 +1348,7 @@ Gw
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1036.5"/>
+            <point key="canvasLocation" x="74.5" y="1036.5"/>
         </scene>
         <!--Generated Files-->
         <scene sceneID="YUp-W3-AYa">
@@ -1520,18 +1517,18 @@ Gw
                                     <action selector="savePaymentAuthProviderFileWasPressed:" target="SGV-ys-913" id="32B-9g-QF9"/>
                                 </connections>
                             </button>
-                            <scrollView ambiguous="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-0g-nLK">
-                                <rect key="frame" x="1093" y="93" width="339" height="302"/>
-                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="BKZ-yg-IMe">
-                                    <rect key="frame" x="0.0" y="0.0" width="324" height="302"/>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-0g-nLK">
+                                <rect key="frame" x="1093" y="91" width="339" height="304"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="BKZ-yg-IMe">
+                                    <rect key="frame" x="0.0" y="0.0" width="324" height="304"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="701-L3-Rwj">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="302"/>
+                                        <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="701-L3-Rwj">
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="304"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="324" height="302"/>
+                                            <size key="minSize" width="324" height="304"/>
                                             <size key="maxSize" width="397" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Generating refund file...">
@@ -1551,7 +1548,7 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="iDk-2j-44M">
-                                    <rect key="frame" x="324" y="0.0" width="15" height="302"/>
+                                    <rect key="frame" x="324" y="0.0" width="15" height="304"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -1577,7 +1574,7 @@ Gw
                                     <action selector="dismissController:" target="SGV-ys-913" id="2Q8-lO-iMQ"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="NVb-iy-dqr">
+                            <button verticalHuggingPriority="750" id="NVb-iy-dqr" userLabel="Save Refund File Button">
                                 <rect key="frame" x="1359" y="60" width="64" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UvU-j7-lGZ">
@@ -1585,7 +1582,7 @@ Gw
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="savePaymentAuthProviderFileWasPressed:" target="SGV-ys-913" id="rmf-Tb-41Y"/>
+                                    <action selector="savePaymentRefundProviderFileWasPressed:" target="SGV-ys-913" id="dUf-oT-mrd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1604,6 +1601,7 @@ Gw
                             <constraint firstItem="Ovr-Wp-UZl" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="JO6-6y-7Kk"/>
                             <constraint firstItem="YsB-0g-nLK" firstAttribute="leading" secondItem="Luz-Dt-gPy" secondAttribute="trailing" constant="8" symbolic="YES" id="LoR-fe-6MF"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="NYc-JF-acz"/>
+                            <constraint firstItem="YsB-0g-nLK" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="T3M-Sq-X7K"/>
                             <constraint firstItem="YsB-0g-nLK" firstAttribute="width" secondItem="zDW-IV-Mgr" secondAttribute="width" id="UKr-lW-5da"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="V8p-2m-yHa"/>
                             <constraint firstItem="jNc-zF-Opb" firstAttribute="top" secondItem="Luz-Dt-gPy" secondAttribute="bottom" constant="8" id="YSC-Hl-ehY"/>
@@ -1612,6 +1610,7 @@ Gw
                             <constraint firstItem="Luz-Dt-gPy" firstAttribute="leading" secondItem="5UZ-HO-qHQ" secondAttribute="trailing" constant="8" symbolic="YES" id="cat-K6-GOy"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="width" secondItem="5rW-Za-qHx" secondAttribute="width" id="dSv-4M-1Ai"/>
                             <constraint firstItem="Ovr-Wp-UZl" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="dxn-oX-uKK"/>
+                            <constraint firstItem="Cpl-AN-iva" firstAttribute="top" secondItem="YsB-0g-nLK" secondAttribute="bottom" constant="8" id="fMZ-7h-POb"/>
                             <constraint firstItem="8vN-aO-b93" firstAttribute="trailing" secondItem="zDW-IV-Mgr" secondAttribute="trailing" id="gwB-gw-4b0"/>
                             <constraint firstItem="vN3-7Y-16z" firstAttribute="top" secondItem="fgt-zS-XG1" secondAttribute="bottom" constant="20" symbolic="YES" id="isQ-pe-KIX"/>
                             <constraint firstItem="5tT-cT-8h8" firstAttribute="trailing" secondItem="zAf-Tv-NCD" secondAttribute="trailing" id="kH2-JY-WTb"/>
@@ -1633,8 +1632,11 @@ Gw
                         <outlet property="paymentAuthProviderOutput" destination="zDW-IV-Mgr" id="Yrw-Fj-WTo"/>
                         <outlet property="paymentProviderNameLabel" destination="ra3-vH-pnd" id="uil-aN-Ewx"/>
                         <outlet property="paymentProviderOutput" destination="zAf-Tv-NCD" id="Y9S-AI-JgZ"/>
+                        <outlet property="paymentRefundProviderNameLabel" destination="Cpl-AN-iva" id="2Pc-jI-OaH"/>
+                        <outlet property="paymentRefundProviderOutput" destination="701-L3-Rwj" id="D3Q-Fx-3Z2"/>
                         <outlet property="saveAuthFileButton" destination="8vN-aO-b93" id="jDn-s9-eKD"/>
                         <outlet property="saveMerchantFileButton" destination="RlI-8S-ubM" id="pYn-rZ-wJy"/>
+                        <outlet property="saveRefundFileButton" destination="NVb-iy-dqr" id="jgG-Qp-L6x"/>
                         <outlet property="saveSettleFileButton" destination="5tT-cT-8h8" id="Hrj-JG-EQI"/>
                     </connections>
                 </viewController>
@@ -1645,7 +1647,6 @@ Gw
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="14" height="13"/>
-        <image name="NSRefreshTemplate" width="14" height="16"/>
         <image name="NSRemoveTemplate" width="14" height="4"/>
     </resources>
 </document>
