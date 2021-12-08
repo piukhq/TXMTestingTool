@@ -1355,21 +1355,21 @@ Gw
             <objects>
                 <viewController title="Generated Files" storyboardIdentifier="GenerateOutputViewController" id="SGV-ys-913" customClass="GenerateOutputViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="RIv-DU-4TA">
-                        <rect key="frame" x="0.0" y="0.0" width="1443" height="415"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1444" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovr-Wp-UZl">
-                                <rect key="frame" x="20" y="93" width="355" height="302"/>
+                                <rect key="frame" x="20" y="93" width="347" height="302"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="9dq-sB-iRw">
-                                    <rect key="frame" x="0.0" y="0.0" width="340" height="302"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="332" height="302"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="5rW-Za-qHx">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="302"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="332" height="302"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="340" height="302"/>
+                                            <size key="minSize" width="332" height="302"/>
                                             <size key="maxSize" width="845" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Generating merchant file...">
@@ -1389,7 +1389,7 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="hvc-1j-Yl0">
-                                    <rect key="frame" x="340" y="0.0" width="15" height="302"/>
+                                    <rect key="frame" x="332" y="0.0" width="15" height="302"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -1402,7 +1402,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RlI-8S-ubM">
-                                <rect key="frame" x="303" y="60" width="64" height="32"/>
+                                <rect key="frame" x="295" y="60" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EwF-K0-tnf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1412,17 +1412,17 @@ Gw
                                 </connections>
                             </button>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-HO-qHQ">
-                                <rect key="frame" x="383" y="93" width="339" height="302"/>
+                                <rect key="frame" x="375" y="93" width="348" height="302"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="6IY-QG-KGJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="324" height="302"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="333" height="302"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="zAf-Tv-NCD">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="302"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="302"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="324" height="302"/>
+                                            <size key="minSize" width="333" height="302"/>
                                             <size key="maxSize" width="829" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Generating settlement file...">
@@ -1442,12 +1442,12 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="rcO-Fh-O1L">
-                                    <rect key="frame" x="324" y="0.0" width="15" height="302"/>
+                                    <rect key="frame" x="333" y="0.0" width="15" height="302"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ra3-vH-pnd">
-                                <rect key="frame" x="381" y="69" width="129" height="16"/>
+                                <rect key="frame" x="373" y="69" width="129" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Settled Transactions" id="heN-bb-tMk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1455,7 +1455,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5tT-cT-8h8">
-                                <rect key="frame" x="650" y="60" width="64" height="32"/>
+                                <rect key="frame" x="651" y="60" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uPN-W9-trr">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1465,17 +1465,17 @@ Gw
                                 </connections>
                             </button>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luz-Dt-gPy">
-                                <rect key="frame" x="730" y="93" width="355" height="302"/>
+                                <rect key="frame" x="731" y="93" width="347" height="302"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="R5T-Mv-GU3">
-                                    <rect key="frame" x="0.0" y="0.0" width="340" height="302"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="332" height="302"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="zDW-IV-Mgr">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="302"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="332" height="302"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="340" height="302"/>
+                                            <size key="minSize" width="332" height="302"/>
                                             <size key="maxSize" width="845" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Generating auth file...">
@@ -1495,12 +1495,12 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="XKZ-bv-A2J">
-                                    <rect key="frame" x="340" y="0.0" width="15" height="302"/>
+                                    <rect key="frame" x="332" y="0.0" width="15" height="302"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jNc-zF-Opb">
-                                <rect key="frame" x="728" y="69" width="114" height="16"/>
+                                <rect key="frame" x="729" y="69" width="114" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Auth Transactions" id="aFJ-pf-qVO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1508,7 +1508,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8vN-aO-b93">
-                                <rect key="frame" x="1013" y="60" width="64" height="32"/>
+                                <rect key="frame" x="1006" y="60" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="804-EJ-jTU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1518,17 +1518,17 @@ Gw
                                 </connections>
                             </button>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-0g-nLK">
-                                <rect key="frame" x="1093" y="91" width="339" height="304"/>
+                                <rect key="frame" x="1086" y="93" width="347" height="302"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="BKZ-yg-IMe">
-                                    <rect key="frame" x="0.0" y="0.0" width="324" height="304"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="332" height="302"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="701-L3-Rwj">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="304"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="332" height="302"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="324" height="304"/>
+                                            <size key="minSize" width="332" height="302"/>
                                             <size key="maxSize" width="397" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Generating refund file...">
@@ -1548,13 +1548,12 @@ Gw
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="iDk-2j-44M">
-                                    <rect key="frame" x="324" y="0.0" width="15" height="304"/>
+                                    <rect key="frame" x="332" y="0.0" width="15" height="302"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Cpl-AN-iva" userLabel="Refund Transactions">
-                                <rect key="frame" x="1091" y="67" width="129" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-AN-iva" userLabel="Refund Transactions">
+                                <rect key="frame" x="1084" y="69" width="129" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Refund Transactions" id="f76-wl-9K1" userLabel="Refund Transactions">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1562,10 +1561,10 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-zS-XG1">
-                                <rect key="frame" x="20" y="58" width="1403" height="5"/>
+                                <rect key="frame" x="20" y="58" width="1404" height="5"/>
                             </box>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vN3-7Y-16z">
-                                <rect key="frame" x="681" y="13" width="81" height="32"/>
+                                <rect key="frame" x="682" y="13" width="81" height="32"/>
                                 <buttonCell key="cell" type="push" title="Dismiss" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tjb-tC-uXQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1574,9 +1573,8 @@ Gw
                                     <action selector="dismissController:" target="SGV-ys-913" id="2Q8-lO-iMQ"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="NVb-iy-dqr" userLabel="Save Refund File Button">
-                                <rect key="frame" x="1359" y="60" width="64" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-iy-dqr" userLabel="Save Refund File Button">
+                                <rect key="frame" x="1376" y="60" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UvU-j7-lGZ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1591,24 +1589,26 @@ Gw
                             <constraint firstItem="5tT-cT-8h8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ra3-vH-pnd" secondAttribute="trailing" constant="8" symbolic="YES" id="0wL-Kh-RZx"/>
                             <constraint firstAttribute="bottom" secondItem="vN3-7Y-16z" secondAttribute="bottom" constant="20" symbolic="YES" id="2J8-fA-yb5"/>
                             <constraint firstAttribute="trailing" secondItem="fgt-zS-XG1" secondAttribute="trailing" constant="20" symbolic="YES" id="2xJ-GF-P0k"/>
+                            <constraint firstItem="Luz-Dt-gPy" firstAttribute="width" secondItem="Ovr-Wp-UZl" secondAttribute="width" id="49T-Ai-qBP"/>
                             <constraint firstItem="ra3-vH-pnd" firstAttribute="top" secondItem="5UZ-HO-qHQ" secondAttribute="bottom" constant="8" id="7n4-5g-RCN"/>
+                            <constraint firstItem="NVb-iy-dqr" firstAttribute="centerY" secondItem="Cpl-AN-iva" secondAttribute="centerY" id="9hr-I8-yg9"/>
                             <constraint firstItem="8vN-aO-b93" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="ANO-jh-9LD"/>
                             <constraint firstItem="8vN-aO-b93" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jNc-zF-Opb" secondAttribute="trailing" constant="8" symbolic="YES" id="Etb-N0-Z6D"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="top" secondItem="Ovr-Wp-UZl" secondAttribute="bottom" constant="8" symbolic="YES" id="FP0-Yb-D9e"/>
-                            <constraint firstItem="Luz-Dt-gPy" firstAttribute="width" secondItem="Ovr-Wp-UZl" secondAttribute="width" id="Gke-SW-Jwo"/>
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="we7-aV-7ep" secondAttribute="trailing" constant="8" symbolic="YES" id="I4g-nN-oeI"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="leading" secondItem="Ovr-Wp-UZl" secondAttribute="trailing" constant="8" symbolic="YES" id="Iig-gw-93K"/>
                             <constraint firstItem="Ovr-Wp-UZl" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="JO6-6y-7Kk"/>
                             <constraint firstItem="YsB-0g-nLK" firstAttribute="leading" secondItem="Luz-Dt-gPy" secondAttribute="trailing" constant="8" symbolic="YES" id="LoR-fe-6MF"/>
                             <constraint firstItem="we7-aV-7ep" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="NYc-JF-acz"/>
+                            <constraint firstItem="5UZ-HO-qHQ" firstAttribute="width" secondItem="Ovr-Wp-UZl" secondAttribute="width" id="Pd5-9Q-ML7"/>
                             <constraint firstItem="YsB-0g-nLK" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="T3M-Sq-X7K"/>
-                            <constraint firstItem="YsB-0g-nLK" firstAttribute="width" secondItem="zDW-IV-Mgr" secondAttribute="width" id="UKr-lW-5da"/>
+                            <constraint firstItem="Cpl-AN-iva" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="TG9-pV-fhz"/>
                             <constraint firstItem="5UZ-HO-qHQ" firstAttribute="top" secondItem="RIv-DU-4TA" secondAttribute="top" constant="20" symbolic="YES" id="V8p-2m-yHa"/>
+                            <constraint firstItem="NVb-iy-dqr" firstAttribute="trailing" secondItem="YsB-0g-nLK" secondAttribute="trailing" id="WOC-qM-t2t"/>
                             <constraint firstItem="jNc-zF-Opb" firstAttribute="top" secondItem="Luz-Dt-gPy" secondAttribute="bottom" constant="8" id="YSC-Hl-ehY"/>
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="trailing" secondItem="5rW-Za-qHx" secondAttribute="trailing" id="Yi0-1z-vtY"/>
                             <constraint firstAttribute="trailing" secondItem="YsB-0g-nLK" secondAttribute="trailing" constant="11" id="YmQ-Eo-eyF"/>
                             <constraint firstItem="Luz-Dt-gPy" firstAttribute="leading" secondItem="5UZ-HO-qHQ" secondAttribute="trailing" constant="8" symbolic="YES" id="cat-K6-GOy"/>
-                            <constraint firstItem="5UZ-HO-qHQ" firstAttribute="width" secondItem="5rW-Za-qHx" secondAttribute="width" id="dSv-4M-1Ai"/>
                             <constraint firstItem="Ovr-Wp-UZl" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="dxn-oX-uKK"/>
                             <constraint firstItem="Cpl-AN-iva" firstAttribute="top" secondItem="YsB-0g-nLK" secondAttribute="bottom" constant="8" id="fMZ-7h-POb"/>
                             <constraint firstItem="8vN-aO-b93" firstAttribute="trailing" secondItem="zDW-IV-Mgr" secondAttribute="trailing" id="gwB-gw-4b0"/>
@@ -1618,9 +1618,12 @@ Gw
                             <constraint firstItem="fgt-zS-XG1" firstAttribute="leading" secondItem="RIv-DU-4TA" secondAttribute="leading" constant="20" symbolic="YES" id="mSw-Ji-KfK"/>
                             <constraint firstItem="ra3-vH-pnd" firstAttribute="leading" secondItem="zAf-Tv-NCD" secondAttribute="leading" id="oAQ-Wq-C0c"/>
                             <constraint firstItem="jNc-zF-Opb" firstAttribute="leading" secondItem="zDW-IV-Mgr" secondAttribute="leading" id="pLU-V1-Zvi"/>
+                            <constraint firstItem="YsB-0g-nLK" firstAttribute="leading" secondItem="Cpl-AN-iva" secondAttribute="leading" id="pRg-KZ-k6m"/>
                             <constraint firstItem="ra3-vH-pnd" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="rQ1-c0-KlD"/>
                             <constraint firstItem="jNc-zF-Opb" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="rxv-Gf-DHt"/>
                             <constraint firstItem="fgt-zS-XG1" firstAttribute="top" secondItem="we7-aV-7ep" secondAttribute="bottom" constant="8" symbolic="YES" id="shh-iJ-zyv"/>
+                            <constraint firstItem="YsB-0g-nLK" firstAttribute="width" secondItem="Ovr-Wp-UZl" secondAttribute="width" id="uu7-yR-SkS"/>
+                            <constraint firstItem="NVb-iy-dqr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cpl-AN-iva" secondAttribute="trailing" constant="20" id="vKg-18-eCV"/>
                             <constraint firstItem="vN3-7Y-16z" firstAttribute="centerX" secondItem="RIv-DU-4TA" secondAttribute="centerX" id="y3m-0K-BVJ"/>
                             <constraint firstItem="RlI-8S-ubM" firstAttribute="centerY" secondItem="we7-aV-7ep" secondAttribute="centerY" id="yX0-Y5-xvS"/>
                         </constraints>
