@@ -12,11 +12,13 @@ struct PaymentAgent: Agent {
     
     let settled: Provider
     let auth: Provider?
+    let refund: Provider?
 
-    init(slug: String, prettyName: String, settledTransactionProvider: Provider, authTransactionProvider: Provider? = nil) {
+    init(slug: String, prettyName: String, settledTransactionProvider: Provider, authTransactionProvider: Provider? = nil, refundTransactionProvider: Provider? = nil) {
         self.slug = slug
         self.prettyName = prettyName
         self.settled = settledTransactionProvider
         self.auth = authTransactionProvider
+        self.refund = refundTransactionProvider
     }
 }
