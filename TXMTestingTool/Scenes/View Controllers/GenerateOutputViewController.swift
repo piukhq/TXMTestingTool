@@ -16,19 +16,23 @@ class GenerateOutputViewController: NSViewController {
         case merchant
         case settle
         case auth
+        case refund
     }
 
     // MARK: - IBOutlets
-    
     @IBOutlet weak var merchantOutput: NSTextView!
     @IBOutlet weak var paymentProviderOutput: NSTextView!
     @IBOutlet weak var paymentAuthProviderOutput: NSTextView!
+    @IBOutlet weak var paymentRefundProviderOutput: NSTextView!
     @IBOutlet weak var merchantNameLabel: NSTextField!
     @IBOutlet weak var paymentProviderNameLabel: NSTextField!
     @IBOutlet weak var paymentAuthProviderNameLabel: NSTextField!
+    @IBOutlet weak var paymentRefundProviderNameLabel: NSTextField!
     @IBOutlet weak var saveMerchantFileButton: NSButton!
     @IBOutlet weak var saveSettleFileButton: NSButton!
     @IBOutlet weak var saveAuthFileButton: NSButton!
+    @IBOutlet weak var saveRefundFileButton: NSButton!
+
 
     // MARK: - Properties
     
@@ -57,6 +61,7 @@ class GenerateOutputViewController: NSViewController {
         updateUI(for: merchantAgent.transactionProvider, outputType: .merchant)
         updateUI(for: paymentAgent.settled, outputType: .settle)
         updateUI(for: paymentAgent.auth, outputType: .auth)
+        updateUI(for: paymentAgent.refund, outputType: .refund)
     }
 
     // MARK: - IBActions
@@ -74,7 +79,14 @@ class GenerateOutputViewController: NSViewController {
             saveFile(paymentAuthProviderOutput.string, provider: authAgent)
         }
     }
+    
+    @IBAction func savePaymentRefundProviderFileWasPressed(_ sender: Any) {
+        if let refundAgent = paymentAgent.refund {
+            saveFile(paymentRefundProviderOutput.string, provider: refundAgent)
+        }
 
+    }
+    
     // MARK: - General
     
     func saveFile(_ content: String, provider: Provider?) {
@@ -151,6 +163,10 @@ class GenerateOutputViewController: NSViewController {
         case .auth:
             paymentAuthProviderNameLabel.stringValue = "\(paymentAgent.prettyName) Auth Transactions"
             provideContent(provider: provider, into: paymentAuthProviderOutput)
+        case .refund:
+            paymentRefundProviderNameLabel.stringValue = "\(paymentAgent.prettyName) Refund Transactions"
+            provideContent(provider: provider, into: paymentRefundProviderOutput)
+
         }
     }
     
@@ -162,6 +178,8 @@ class GenerateOutputViewController: NSViewController {
             disableElements(label: paymentProviderNameLabel, outputBox: paymentProviderOutput, button: saveSettleFileButton)
         case .auth:
             disableElements(label: paymentAuthProviderNameLabel, outputBox: paymentAuthProviderOutput, button: saveAuthFileButton)
+        case .refund:
+            disableElements(label: paymentRefundProviderNameLabel, outputBox: paymentRefundProviderOutput, button: saveRefundFileButton)
         }
     }
 }

@@ -15,7 +15,6 @@ class AgentController {
         MerchantAgent("Harvey Nichols", slug: "harvey-nichols-rewards", type: .pll, provider: HarveyNicholsTransactionProvider()),
         MerchantAgent("Iceland", slug: "iceland-bonus-card", type: .pll, provider: IcelandTransactionProvider()),
         MerchantAgent("Wasabi", slug: "wasabi-club", type: .plr, provider: WasabiTransactionProvider()),
-        MerchantAgent("WHSmith", slug: "whsmith-rewards", type: .plr, provider: WHSmithTransactionProvider()),
         MerchantAgent("Spotting Merchant", slug: "spotting-merchant", type: .plr),
     ]
 
@@ -46,14 +45,10 @@ class AgentController {
         ),
         PaymentAgent(
             slug: "visa",
-            prettyName: "Visa (Classic)",
-            settledTransactionProvider: VisaClassicSettlementProvider()
-        ),
-        PaymentAgent(
-            slug: "visa",
-            prettyName: "Visa (VOP)",
+            prettyName: "Visa",
             settledTransactionProvider: VOPTransactionProvider(transactionType: .settlement),
-            authTransactionProvider: VOPTransactionProvider(transactionType: .auth)
+            authTransactionProvider: VOPTransactionProvider(transactionType: .auth),
+            refundTransactionProvider: VOPRefundProvider()
         )
     ]
 }

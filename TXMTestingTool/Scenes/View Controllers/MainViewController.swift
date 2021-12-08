@@ -19,7 +19,6 @@ class MainViewController: NSViewController {
     enum SegmentButtons: Int {
         case add
         case remove
-        case randomize
     }
 
     // MARK: - IBOutlets
@@ -59,8 +58,6 @@ class MainViewController: NSViewController {
             addNewTransaction()
         case .remove:
             removeTransaction()
-        case .randomize:
-            randomizeTransactions()
         }
     }
 
@@ -94,22 +91,6 @@ class MainViewController: NSViewController {
         transactions.remove(at: row)
         persistTransactions()
         tableView.reloadData()
-    }
-
-    private func randomizeTransactions() {
-        transactions.removeAll()
-
-        let generatorQueue = DispatchQueue(label: "transactions", attributes: .concurrent)
-        generatorQueue.async { [weak self] in
-            for _ in 1...1000000 {
-                self?.transactions.append(
-                    Transaction(mid: "a", storeID: "b", date: Date(), amount: 0, cardToken: "a", firstSix: "0", lastFour: "0")
-                )
-            }
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
     }
     
     private func persistTransactions() {
