@@ -110,7 +110,7 @@ struct VOPRefundTransaction: Codable {
         ]
         
         userDefinedFieldsCollection = [
-            VOPElement("TransactionType", "refund")
+            VOPElement("TransactionType", "return")
         ]
     }
     
