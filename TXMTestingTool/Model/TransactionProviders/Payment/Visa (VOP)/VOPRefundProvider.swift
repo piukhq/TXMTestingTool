@@ -32,7 +32,7 @@ struct VOPRefundProvider: Provider {
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "UTC")
-        formatter.dateFormat = "d/M/YYYY h:m:s a"
+        formatter.dateFormat = "M/d/YYYY h:m:s a"
         formatter.amSymbol = "AM"
         formatter.pmSymbol = "PM"
         return formatter
