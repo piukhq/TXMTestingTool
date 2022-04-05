@@ -14,7 +14,6 @@
 		833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833845F12459BFCD0040BBB5 /* PaymentAgent.swift */; };
 		837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837659FC24361DF900B71BC2 /* MerchantAgent.swift */; };
 		83765A0124361F7000B71BC2 /* AmexLegacySettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */; };
-		83765A0324361F8100B71BC2 /* MastercardTS44SettlementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0224361F8100B71BC2 /* MastercardTS44SettlementProvider.swift */; };
 		83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */; };
 		83765A0724362D0E00B71BC2 /* AgentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83765A0624362D0E00B71BC2 /* AgentController.swift */; };
 		839745472510C73200D8C27D /* CSVProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839745462510C73200D8C27D /* CSVProvider.swift */; };
@@ -59,7 +58,6 @@
 		833845F12459BFCD0040BBB5 /* PaymentAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAgent.swift; sourceTree = "<group>"; };
 		837659FC24361DF900B71BC2 /* MerchantAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantAgent.swift; sourceTree = "<group>"; };
 		83765A0024361F7000B71BC2 /* AmexLegacySettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexLegacySettlementProvider.swift; sourceTree = "<group>"; };
-		83765A0224361F8100B71BC2 /* MastercardTS44SettlementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardTS44SettlementProvider.swift; sourceTree = "<group>"; };
 		83765A0424361F9200B71BC2 /* IcelandTransactionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcelandTransactionProvider.swift; sourceTree = "<group>"; };
 		83765A0624362D0E00B71BC2 /* AgentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentController.swift; sourceTree = "<group>"; };
 		839745462510C73200D8C27D /* CSVProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVProvider.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */,
-				83765A0224361F8100B71BC2 /* MastercardTS44SettlementProvider.swift */,
 				83DB2FAE2642D664001728A2 /* MastercardTGX2SettlementProvider.swift */,
 			);
 			path = Mastercard;
@@ -424,7 +421,6 @@
 				E27EE959243D249200D2EF58 /* NSStoryboard.swift in Sources */,
 				83DB2FAF2642D664001728A2 /* MastercardTGX2SettlementProvider.swift in Sources */,
 				83765A0524361F9200B71BC2 /* IcelandTransactionProvider.swift in Sources */,
-				83765A0324361F8100B71BC2 /* MastercardTS44SettlementProvider.swift in Sources */,
 				83C9A6692434E7C30085278A /* HarveyNicholsTransactionProvider.swift in Sources */,
 				E26E1A8A2469B32300AE1255 /* VOPTransaction.swift in Sources */,
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
