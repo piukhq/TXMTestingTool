@@ -65,7 +65,7 @@ struct VOPRefundTransaction: Codable {
             case value = "Value"
         }
     }
-    
+
     // MARK: - Properties
     
     let cardId: String
@@ -93,7 +93,7 @@ struct VOPRefundTransaction: Codable {
             VOPElement("ReturnTransaction.CardAcceptorIdCode", transaction.mid),   // AKA MID, assigned by Acquirer for every merchant outlet
             VOPElement("ReturnTransaction.AcquirerBIN", "3423432"),                // 6 digit BIN assigned by the acquirer to the merchant
             VOPElement("ReturnTransaction.Amount", transactionAmount),             // Value in transaction currency with a dot delimiter
-            VOPElement("ReturnTransaction.VipTransactionId", transaction.id),      // IMPORTANT - Provides a numeric ID linking AUTH and SETTLE
+            VOPElement("ReturnTransaction.VipTransactionId", UUID().base64uuid),      // Unique identifier for refund transaction
             VOPElement("ReturnTransaction.SettlementId", transaction.id),          // IMPORTANT - Provides a numeric ID linking AUTH and SETTLE
             VOPElement("ReturnTransaction.VisaMerchantName", ""),                  // Visa assigned name of merchant. Note: Do not use for now
             VOPElement("ReturnTransaction.VisaMerchantId", ""),                    // Visa assigned numeric ID of merchant. Note: Do not use for now

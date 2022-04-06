@@ -21,21 +21,9 @@ class AgentController {
     let paymentProviders = [
         PaymentAgent(
             slug: "amex",
-            prettyName: "Amex (SFTP)",
-            settledTransactionProvider: AmexLegacySettlementProvider(),
-            authTransactionProvider: AmexAuthProvider()
-        ),
-        PaymentAgent(
-            slug: "amex",
             prettyName: "Amex (API)",
             settledTransactionProvider: AmexSettlementProvider(),
             authTransactionProvider: AmexAuthProvider()
-        ),
-        PaymentAgent(
-            slug: "mastercard",
-            prettyName: "Mastercard (TS44)",
-            settledTransactionProvider: MastercardTS44SettlementProvider(),
-            authTransactionProvider: MastercardAuthProvider()
         ),
         PaymentAgent(
             slug: "mastercard",
