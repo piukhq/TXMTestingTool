@@ -64,9 +64,8 @@ struct VOPRefundTransaction: Codable {
             case key = "Key"
             case value = "Value"
         }
-        
     }
-    
+
     // MARK: - Properties
     
     let cardId: String
