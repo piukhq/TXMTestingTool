@@ -38,6 +38,7 @@
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
 		E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */; };
+		F9A2147927FDBE5F008B0045 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2147827FDBE5F008B0045 /* UUID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = TXMTestingTool/Extensions/String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
 		E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainWindowController.swift; sourceTree = "<group>"; };
+		F9A2147827FDBE5F008B0045 /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				E27EE958243D249200D2EF58 /* NSStoryboard.swift */,
 				E293EFFE243CDECA00BA83E6 /* String.swift */,
 				83D75FCD252B3116003813A4 /* Date.swift */,
+				F9A2147827FDBE5F008B0045 /* UUID.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				833845F02459B1BE0040BBB5 /* MastercardAuthProvider.swift in Sources */,
 				83B4667F260A358200DD8630 /* AmexSettlementProvider.swift in Sources */,
 				830BCE6E24E3DC6000D79F45 /* WasabiTransactionProvider.swift in Sources */,
+				F9A2147927FDBE5F008B0045 /* UUID.swift in Sources */,
 				9778CDA82758CB7B002F2284 /* VOPRefundProvider.swift in Sources */,
 				839745472510C73200D8C27D /* CSVProvider.swift in Sources */,
 				83D75FCE252B3116003813A4 /* Date.swift in Sources */,

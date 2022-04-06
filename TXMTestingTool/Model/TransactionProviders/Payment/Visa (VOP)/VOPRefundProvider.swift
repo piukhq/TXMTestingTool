@@ -93,7 +93,7 @@ struct VOPRefundTransaction: Codable {
             VOPElement("ReturnTransaction.CardAcceptorIdCode", transaction.mid),   // AKA MID, assigned by Acquirer for every merchant outlet
             VOPElement("ReturnTransaction.AcquirerBIN", "3423432"),                // 6 digit BIN assigned by the acquirer to the merchant
             VOPElement("ReturnTransaction.Amount", transactionAmount),             // Value in transaction currency with a dot delimiter
-            VOPElement("ReturnTransaction.VipTransactionId", VOPRefundTransaction.generateUUID()),      // Unique identifier for refund transaction
+            VOPElement("ReturnTransaction.VipTransactionId", UUID().base64uuid),      // Unique identifier for refund transaction
             VOPElement("ReturnTransaction.SettlementId", transaction.id),          // IMPORTANT - Provides a numeric ID linking AUTH and SETTLE
             VOPElement("ReturnTransaction.VisaMerchantName", ""),                  // Visa assigned name of merchant. Note: Do not use for now
             VOPElement("ReturnTransaction.VisaMerchantId", ""),                    // Visa assigned numeric ID of merchant. Note: Do not use for now
@@ -112,14 +112,6 @@ struct VOPRefundTransaction: Codable {
         userDefinedFieldsCollection = [
             VOPElement("TransactionType", "return")
         ]
-    }
-    
-    private static func generateUUID() -> String {
-        guard let uuid = UUID().uuidString.data(using: .utf8)?.base64EncodedString() else {
-            // This should never happen as we trust .uuidString to always return a valid utf8 string.
-            fatalError("Failed to generate base64-encoded UUID string")
-        }
-        return uuid
     }
     
     private enum CodingKeys: String, CodingKey {

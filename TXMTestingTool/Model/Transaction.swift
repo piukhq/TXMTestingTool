@@ -35,18 +35,11 @@ class Transaction: Codable {
         self.cardToken = cardToken
         self.firstSix = firstSix
         self.lastFour = lastFour
-        self.settlementKey = Transaction.generateUUID()
-        self.id = Transaction.generateUUID()
+        self.settlementKey = UUID().base64uuid
+        self.id = UUID().base64uuid
         self.authCode = "\(Int.random(in: 100000..<900000))"
     }
-    
-    private static func generateUUID() -> String {
-        guard let uuid = UUID().uuidString.data(using: .utf8)?.base64EncodedString() else {
-            // This should never happen as we trust .uuidString to always return a valid utf8 string.
-            fatalError("Failed to generate base64-encoded UUID string")
-        }
-        return uuid
-    }
+
 }
 
 enum TransactionType {
