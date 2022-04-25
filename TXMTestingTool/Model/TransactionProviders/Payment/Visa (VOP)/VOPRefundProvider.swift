@@ -22,7 +22,7 @@ struct VOPRefundProvider: Provider {
         }
 
         let data = try jsonEncoder.encode(visaTransactions)
-        return String(data: data, encoding: .utf8)!
+        return String(data: data, encoding: .utf8)!.replacingOccurrences(of: "\\/", with: "/")
     }
 
     // MARK: - Properties
@@ -110,7 +110,7 @@ struct VOPRefundTransaction: Codable {
         ]
         
         userDefinedFieldsCollection = [
-            VOPElement("TransactionType", "return")
+            VOPElement("TransactionType", "RETURN")
         ]
     }
     

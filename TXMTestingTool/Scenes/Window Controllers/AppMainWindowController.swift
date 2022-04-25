@@ -33,16 +33,11 @@ class AppMainWindowController: NSWindowController {
         merchantMenu.removeAllItems()
         
         let merchants = AgentController.shared.merchants
-        let pll = merchants.filter { $0.type == .pll }
-        let plr = merchants.filter { $0.type == .plr }
-        
+        let sortedMerchants = merchants.sorted { $0.slug < $1.slug }
+
         addMenuTitle("Select a merchant", inMenu: merchantMenu)
         addSeperator(inMenu: merchantMenu)
-        addMenuTitle("PLL Merchants", inMenu: merchantMenu)
-        _ = pll.map { addMenuItem($0, inMenu: merchantMenu) }
-        addSeperator(inMenu: merchantMenu)
-        addMenuTitle("PLR Merchants", inMenu: merchantMenu)
-        _ = plr.map { addMenuItem($0, inMenu: merchantMenu) }
+        _ = sortedMerchants.map { addMenuItem($0, inMenu: merchantMenu)}
     }
     
     private func buildPaymentMenu() {
