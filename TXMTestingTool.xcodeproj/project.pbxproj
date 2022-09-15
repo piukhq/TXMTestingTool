@@ -38,6 +38,9 @@
 		E293EFFF243CDECA00BA83E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293EFFE243CDECA00BA83E6 /* String.swift */; };
 		E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F003243CE62100BA83E6 /* ValidatableTextField.swift */; };
 		E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */; };
+		F9128A0928D0CF9E0096BAC8 /* AmexRefundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9128A0828D0CF9E0096BAC8 /* AmexRefundProvider.swift */; };
+		F9128A0B28D35F9A0096BAC8 /* MastercardRefundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9128A0A28D35F9A0096BAC8 /* MastercardRefundProvider.swift */; };
+		F9128A0D28D3607B0096BAC8 /* AmexTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9128A0C28D3607B0096BAC8 /* AmexTransaction.swift */; };
 		F9A2147927FDBE5F008B0045 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2147827FDBE5F008B0045 /* UUID.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,9 @@
 		E293EFFE243CDECA00BA83E6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = TXMTestingTool/Extensions/String.swift; sourceTree = SOURCE_ROOT; };
 		E293F003243CE62100BA83E6 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
 		E293F007243D0B4A00BA83E6 /* AppMainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainWindowController.swift; sourceTree = "<group>"; };
+		F9128A0828D0CF9E0096BAC8 /* AmexRefundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexRefundProvider.swift; sourceTree = "<group>"; };
+		F9128A0A28D35F9A0096BAC8 /* MastercardRefundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastercardRefundProvider.swift; sourceTree = "<group>"; };
+		F9128A0C28D3607B0096BAC8 /* AmexTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmexTransaction.swift; sourceTree = "<group>"; };
 		F9A2147827FDBE5F008B0045 /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +235,8 @@
 			children = (
 				E26E1A8024693EDA00AE1255 /* AmexAuthProvider.swift */,
 				83B4667E260A358200DD8630 /* AmexSettlementProvider.swift */,
+				F9128A0828D0CF9E0096BAC8 /* AmexRefundProvider.swift */,
+				F9128A0C28D3607B0096BAC8 /* AmexTransaction.swift */,
 			);
 			path = Amex;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			children = (
 				833845EF2459B1BE0040BBB5 /* MastercardAuthProvider.swift */,
 				83DB2FAE2642D664001728A2 /* MastercardTGX2SettlementProvider.swift */,
+				F9128A0A28D35F9A0096BAC8 /* MastercardRefundProvider.swift */,
 			);
 			path = Mastercard;
 			sourceTree = "<group>";
@@ -411,8 +420,10 @@
 				83C9A6672434E77C0085278A /* Provider.swift in Sources */,
 				83FF8C8C243355DD00C948B4 /* MainViewController.swift in Sources */,
 				E293F008243D0B4A00BA83E6 /* AppMainWindowController.swift in Sources */,
+				F9128A0B28D35F9A0096BAC8 /* MastercardRefundProvider.swift in Sources */,
 				833845F22459BFCD0040BBB5 /* PaymentAgent.swift in Sources */,
 				83FF8C8A243355DD00C948B4 /* AppDelegate.swift in Sources */,
+				F9128A0D28D3607B0096BAC8 /* AmexTransaction.swift in Sources */,
 				837659FD24361DF900B71BC2 /* MerchantAgent.swift in Sources */,
 				83357D29246050440092E240 /* PrettyNamedObject.swift in Sources */,
 				E26E1A8124693EDA00AE1255 /* AmexAuthProvider.swift in Sources */,
@@ -431,6 +442,7 @@
 				83D75FCE252B3116003813A4 /* Date.swift in Sources */,
 				E293EFFF243CDECA00BA83E6 /* String.swift in Sources */,
 				E26E1A8C2469E26700AE1255 /* Agent.swift in Sources */,
+				F9128A0928D0CF9E0096BAC8 /* AmexRefundProvider.swift in Sources */,
 				E293F004243CE62100BA83E6 /* ValidatableTextField.swift in Sources */,
 				83FF8CB22433953B00C948B4 /* AddTransactionViewController.swift in Sources */,
 			);

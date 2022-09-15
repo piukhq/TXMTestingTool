@@ -1,21 +1,22 @@
 //
-//  AmexSettlementProvider.swift
+//  VOPRefund.swift
 //  TXMTestingTool
 //
-//  Created by Chris Latham on 23/03/2021.
+//  Created by Mick Latham on 02/12/2021.
 //  Copyright © 2021 Bink. All rights reserved.
 //
 
 import Foundation
 
-struct AmexSettlementProvider: Provider {
+
+struct AmexRefundProvider: Provider {
     func provide(_ transactions: [Transaction], merchant: MerchantAgent, paymentProvider: PaymentAgent) throws -> String {
         let amexTransactions = transactions.map {
             AmexTransaction(
                 approvalCode: $0.authCode,
                 merchantNumber: $0.mid,
                 offerId: "0",
-                transactionAmount: String(format: "%.02f", Double($0.amount) / 100.0),
+                transactionAmount: String(format: "%.02f", -abs(Double($0.amount)) / 100.0),
                 transactionId: $0.id,
                 transactionDate: dateFormatter.string(from: $0.date),
                 
@@ -26,27 +27,19 @@ struct AmexSettlementProvider: Provider {
                 dpan: "\($0.firstSix)XXXXX\($0.lastFour)"
             )
         }
-
-        let data = try jsonEncoder.encode(amexTransactions)
+        
+        let data = try AmexSettlementProvider().jsonEncoder.encode(amexTransactions)
         return String(data: data, encoding: .utf8)!
     }
-
+    
     // MARK: - Properties
-
-    var defaultFileName = "amex-settlement.json"
+    
+    var defaultFileName = "amex-refund.json"
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "BST")
+        formatter.timeZone = TimeZone(secondsFromGMT: +25200)  // UTC +7
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
-
-    let jsonEncoder: JSONEncoder = {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-        return encoder
-    }()
-    
 }
-
