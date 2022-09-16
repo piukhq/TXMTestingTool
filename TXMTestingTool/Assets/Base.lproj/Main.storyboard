@@ -778,11 +778,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddTransactionViewController" id="36D-qQ-G80" customClass="AddTransactionViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="T0h-cI-ena">
-                        <rect key="frame" x="0.0" y="0.0" width="523" height="337"/>
+                        <rect key="frame" x="0.0" y="0.0" width="523" height="357"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqu-UL-6ph">
-                                <rect key="frame" x="83" y="301" width="422" height="16"/>
+                                <rect key="frame" x="83" y="321" width="422" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Add a new transaction." id="3oS-o0-gLs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -790,15 +790,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-63-ScO">
-                                <rect key="frame" x="83" y="275" width="82" height="16"/>
+                                <rect key="frame" x="83" y="295" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Merchant ID:" id="l50-bd-iR7">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-B6-47J" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="272" width="162" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-B6-47J" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="292" width="162" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9aF-vg-S51"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="kEN-qw-RJu"/>
@@ -809,8 +809,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-0X-Zfs" userLabel="StoreIDField" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="341" y="272" width="162" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-0X-Zfs" userLabel="StoreIDField" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="341" y="292" width="162" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Store ID (Optional)" drawsBackground="YES" id="pmk-lJ-U1B">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -818,15 +818,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-HR-Xmb">
-                                <rect key="frame" x="83" y="244" width="82" height="16"/>
+                                <rect key="frame" x="83" y="264" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Date:" id="q27-sU-rnZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <datePicker verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-go-BwS">
-                                <rect key="frame" x="171" y="240" width="335" height="28"/>
+                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-go-BwS">
+                                <rect key="frame" x="171" y="260" width="335" height="28"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="oQS-ed-G1w">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -838,15 +838,15 @@
                                 </datePickerCell>
                             </datePicker>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XS1-jZ-SFc">
-                                <rect key="frame" x="83" y="214" width="82" height="16"/>
+                                <rect key="frame" x="83" y="234" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Amount:" id="Yyp-R1-Klp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rso-4G-ezS" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="211" width="332" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rso-4G-ezS" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="231" width="332" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="In pennies (e.g. 1600 = £16.00)" drawsBackground="YES" id="4k0-V3-v6f">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -854,15 +854,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCc-XB-g88">
-                                <rect key="frame" x="83" y="183" width="82" height="16"/>
+                                <rect key="frame" x="83" y="203" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Card Token:" id="d8I-Aw-vA2">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-AG-1QC" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="180" width="332" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-AG-1QC" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="200" width="332" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Payment card token from Hermes" drawsBackground="YES" id="gNd-rB-cQG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -870,15 +870,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QxY-QK-BbJ">
-                                <rect key="frame" x="83" y="152" width="82" height="16"/>
+                                <rect key="frame" x="83" y="172" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="First Six:" id="cyF-iK-fPE">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-66-jwd" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="149" width="332" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-66-jwd" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="169" width="332" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="First six digits of PAN" drawsBackground="YES" id="XiX-Ey-Xk4">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -886,47 +886,47 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jk-in-IA6">
-                                <rect key="frame" x="83" y="121" width="82" height="16"/>
+                                <rect key="frame" x="83" y="141" width="82" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Last Four:" id="WAG-h5-fkg">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-ck-ouB" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="118" width="332" height="21"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-ck-ouB" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="138" width="332" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Last four digits of PAN" drawsBackground="YES" id="7bo-sa-lfs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZjP-7R-1i3">
-                                <rect key="frame" x="83" y="94" width="82" height="16"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZjP-7R-1i3">
+                                <rect key="frame" x="122" y="112" width="43" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="PSIMI:" id="eOq-nT-fvF">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2K-RW-ohC" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="89" width="332" height="21"/>
+                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2K-RW-ohC" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="107" width="332" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="PSIMI" drawsBackground="YES" id="Xb4-qc-UaN">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBe-6Q-gME">
-                                <rect key="frame" x="18" y="65" width="147" height="16"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FBe-6Q-gME">
+                                <rect key="frame" x="18" y="81" width="147" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Secondary Merchant ID" id="4Rh-zM-IOY">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzo-Xg-BLL" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
-                                <rect key="frame" x="171" y="60" width="332" height="21"/>
+                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzo-Xg-BLL" customClass="ValidatableTextField" customModule="TXMTestingTool" customModuleProvider="target">
+                                <rect key="frame" x="171" y="76" width="332" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Secondary Merchant ID" drawsBackground="YES" id="e99-CB-mcE">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -934,7 +934,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="URq-ql-H2b">
-                                <rect key="frame" x="83" y="41" width="422" height="16"/>
+                                <rect key="frame" x="18" y="46" width="422" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="validation errors" id="KMa-hT-AZB">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
@@ -942,7 +942,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbQ-P9-Jud">
-                                <rect key="frame" x="360" y="6" width="76" height="32"/>
+                                <rect key="frame" x="360" y="11" width="76" height="32"/>
                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="c1c-vh-e87">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -955,7 +955,7 @@ Gw
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HJ-EZ-8bU">
-                                <rect key="frame" x="434" y="6" width="76" height="32"/>
+                                <rect key="frame" x="434" y="11" width="76" height="32"/>
                                 <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="isQ-S4-7IW">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -976,15 +976,19 @@ Gw
                             <constraint firstItem="5jk-in-IA6" firstAttribute="leading" secondItem="T0h-cI-ena" secondAttribute="leading" constant="20" symbolic="YES" id="64W-bq-mux"/>
                             <constraint firstItem="rso-4G-ezS" firstAttribute="top" secondItem="Oag-go-BwS" secondAttribute="bottom" constant="8" symbolic="YES" id="8Ks-It-RmT"/>
                             <constraint firstItem="lnD-ck-ouB" firstAttribute="leading" secondItem="5jk-in-IA6" secondAttribute="trailing" constant="8" symbolic="YES" id="9PI-AM-4kb"/>
-                            <constraint firstItem="9HJ-EZ-8bU" firstAttribute="trailing" secondItem="lnD-ck-ouB" secondAttribute="trailing" id="9Y1-an-nlK"/>
+                            <constraint firstItem="9HJ-EZ-8bU" firstAttribute="trailing" secondItem="FBe-6Q-gME" secondAttribute="trailing" constant="340" id="9Y1-an-nlK"/>
                             <constraint firstItem="Qez-HR-Xmb" firstAttribute="centerY" secondItem="Oag-go-BwS" secondAttribute="centerY" id="A1f-66-yFM"/>
                             <constraint firstAttribute="bottom" secondItem="9HJ-EZ-8bU" secondAttribute="bottom" constant="20" symbolic="YES" id="BlG-xH-Ylt"/>
                             <constraint firstAttribute="trailing" secondItem="Gl5-AG-1QC" secondAttribute="trailing" constant="20" symbolic="YES" id="C14-CO-dPK"/>
                             <constraint firstAttribute="trailing" secondItem="Oag-go-BwS" secondAttribute="trailing" constant="20" symbolic="YES" id="Dfj-qS-zJe"/>
                             <constraint firstItem="xbQ-P9-Jud" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T0h-cI-ena" secondAttribute="leading" constant="20" symbolic="YES" id="E4a-GP-vaU"/>
                             <constraint firstItem="Gl5-AG-1QC" firstAttribute="top" secondItem="rso-4G-ezS" secondAttribute="bottom" constant="10" symbolic="YES" id="ED9-ip-Wf5"/>
-                            <constraint firstItem="URq-ql-H2b" firstAttribute="top" secondItem="lnD-ck-ouB" secondAttribute="bottom" constant="8" symbolic="YES" id="EJ7-tD-Bda"/>
+                            <constraint firstItem="FBe-6Q-gME" firstAttribute="top" secondItem="lnD-ck-ouB" secondAttribute="bottom" constant="41" id="EJ7-tD-Bda"/>
+                            <constraint firstItem="FBe-6Q-gME" firstAttribute="leading" secondItem="URq-ql-H2b" secondAttribute="leading" id="ESR-uV-MLg"/>
+                            <constraint firstItem="W2K-RW-ohC" firstAttribute="leading" secondItem="CMg-B6-47J" secondAttribute="leading" id="G8x-Lz-QTT"/>
+                            <constraint firstItem="URq-ql-H2b" firstAttribute="top" secondItem="lzo-Xg-BLL" secondAttribute="bottom" constant="14" id="GFp-L5-nNh"/>
                             <constraint firstItem="zAf-0X-Zfs" firstAttribute="leading" secondItem="CMg-B6-47J" secondAttribute="trailing" constant="8" symbolic="YES" id="GiP-Lc-0Ga"/>
+                            <constraint firstItem="lzo-Xg-BLL" firstAttribute="leading" secondItem="CMg-B6-47J" secondAttribute="leading" id="I8Q-fB-4ek"/>
                             <constraint firstAttribute="trailing" secondItem="tqu-UL-6ph" secondAttribute="trailing" constant="20" symbolic="YES" id="Kn7-wI-A8c"/>
                             <constraint firstItem="h7Y-66-jwd" firstAttribute="top" secondItem="Gl5-AG-1QC" secondAttribute="bottom" constant="10" symbolic="YES" id="LTK-0R-lGr"/>
                             <constraint firstItem="CMg-B6-47J" firstAttribute="leading" secondItem="Gl5-AG-1QC" secondAttribute="leading" id="LwF-eG-TTM"/>
@@ -1004,6 +1008,7 @@ Gw
                             <constraint firstAttribute="bottom" secondItem="xbQ-P9-Jud" secondAttribute="bottom" constant="20" symbolic="YES" id="cDz-ik-Ggd"/>
                             <constraint firstItem="CMg-B6-47J" firstAttribute="top" secondItem="tqu-UL-6ph" secondAttribute="bottom" constant="8" symbolic="YES" id="cHv-Zi-7Rc"/>
                             <constraint firstItem="zAf-0X-Zfs" firstAttribute="centerY" secondItem="CMg-B6-47J" secondAttribute="centerY" id="cI1-kI-8ZG"/>
+                            <constraint firstItem="lzo-Xg-BLL" firstAttribute="trailing" secondItem="W2K-RW-ohC" secondAttribute="trailing" id="d78-oH-TUE"/>
                             <constraint firstAttribute="trailing" secondItem="zAf-0X-Zfs" secondAttribute="trailing" constant="20" symbolic="YES" id="fPT-M2-rr7"/>
                             <constraint firstItem="CMg-B6-47J" firstAttribute="leading" secondItem="Oag-go-BwS" secondAttribute="leading" id="gRB-YL-maW"/>
                             <constraint firstItem="rso-4G-ezS" firstAttribute="leading" secondItem="XS1-jZ-SFc" secondAttribute="trailing" constant="8" symbolic="YES" id="ggY-db-hKd"/>
@@ -1016,14 +1021,18 @@ Gw
                             <constraint firstItem="Oag-go-BwS" firstAttribute="top" secondItem="CMg-B6-47J" secondAttribute="bottom" constant="8" symbolic="YES" id="kug-Eg-982"/>
                             <constraint firstItem="URq-ql-H2b" firstAttribute="leading" secondItem="T0h-cI-ena" secondAttribute="leading" constant="20" symbolic="YES" id="kyz-QK-Nnt"/>
                             <constraint firstItem="CMg-B6-47J" firstAttribute="leading" secondItem="ODO-63-ScO" secondAttribute="trailing" constant="8" symbolic="YES" id="lW7-TD-OO4"/>
+                            <constraint firstAttribute="trailing" secondItem="W2K-RW-ohC" secondAttribute="trailing" constant="20" symbolic="YES" id="mVa-Fe-xfd"/>
                             <constraint firstItem="RCc-XB-g88" firstAttribute="leading" secondItem="T0h-cI-ena" secondAttribute="leading" constant="20" symbolic="YES" id="mhX-P8-XQ7"/>
                             <constraint firstItem="ODO-63-ScO" firstAttribute="centerY" secondItem="CMg-B6-47J" secondAttribute="centerY" id="ncl-zF-nOW"/>
                             <constraint firstItem="Gl5-AG-1QC" firstAttribute="leading" secondItem="RCc-XB-g88" secondAttribute="trailing" constant="8" symbolic="YES" id="pAK-ql-7vp"/>
                             <constraint firstItem="Oag-go-BwS" firstAttribute="leading" secondItem="Qez-HR-Xmb" secondAttribute="trailing" constant="8" symbolic="YES" id="pjq-gM-pg4"/>
                             <constraint firstItem="FBe-6Q-gME" firstAttribute="centerY" secondItem="lzo-Xg-BLL" secondAttribute="centerY" id="pzU-ko-zm3"/>
                             <constraint firstItem="QxY-QK-BbJ" firstAttribute="centerY" secondItem="h7Y-66-jwd" secondAttribute="centerY" id="rSR-qP-N6T"/>
+                            <constraint firstItem="lzo-Xg-BLL" firstAttribute="top" secondItem="W2K-RW-ohC" secondAttribute="bottom" constant="8" id="td7-bw-ZSL"/>
                             <constraint firstItem="lnD-ck-ouB" firstAttribute="top" secondItem="h7Y-66-jwd" secondAttribute="bottom" constant="10" symbolic="YES" id="vco-jl-eI2"/>
+                            <constraint firstItem="CMg-B6-47J" firstAttribute="leading" secondItem="lnD-ck-ouB" secondAttribute="leading" id="xkd-yV-MIX"/>
                             <constraint firstItem="tqu-UL-6ph" firstAttribute="leading" secondItem="T0h-cI-ena" secondAttribute="leading" constant="20" symbolic="YES" id="yr1-06-Obh"/>
+                            <constraint firstItem="W2K-RW-ohC" firstAttribute="top" secondItem="lnD-ck-ouB" secondAttribute="bottom" constant="8" id="zSp-Yx-yf1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1042,13 +1051,13 @@ Gw
                 </viewController>
                 <customObject id="lfO-38-XGg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="1058"/>
+            <point key="canvasLocation" x="1123.5" y="1105"/>
         </scene>
         <!--Transactions List-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="Transactions List" id="XfG-lQ-9wD" customClass="MainViewController" customModule="TXMTestingTool" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="181"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
