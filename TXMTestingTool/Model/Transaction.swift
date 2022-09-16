@@ -29,7 +29,7 @@ class Transaction: Codable {
     let psimi: String
     let secondaryMerchantId: String
 
-        init(mid: String, storeID: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String, psimi: String, secondaryMerchantId: String) {
+    init(mid: String, storeID: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String, psimi: String, secondaryMerchantId: String) {
         self.mid = mid
         self.storeID = storeID
         self.date = date
