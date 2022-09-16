@@ -1,8 +1,8 @@
 //
-//  VOPRefund.swift
+//  AmexRefundProvider.swift
 //  TXMTestingTool
 //
-//  Created by Mick Latham on 02/12/2021.
+//  Created by Michal Jozwiak on 14/12/2021.
 //  Copyright © 2021 Bink. All rights reserved.
 //
 
