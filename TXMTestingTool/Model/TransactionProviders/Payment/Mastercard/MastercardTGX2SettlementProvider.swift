@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MastercardTGX2SettlementProvider: Provider {
+class MastercardTGX2SettlementProvider: Provider {
 
     // MARK: - Protocol Implementation
 
@@ -148,14 +148,14 @@ struct MastercardTGX2SettlementProvider: Provider {
         return formatter
     }()
 
-    private let timeFormatter: DateFormatter = {
+    var timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "HHmm"
         return formatter
     }()
 
-    private let headerTimeFormatter: DateFormatter = {
+    var headerTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "BST")
         formatter.dateFormat = "HHmmss"
@@ -274,4 +274,3 @@ extension MastercardTGX2SettlementProvider {
         return "T"
     }
 }
-

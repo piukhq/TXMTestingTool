@@ -26,8 +26,10 @@ class Transaction: Codable {
     let settlementKey: String
     let id: String // UUID that allows us to uniquely identify a transaction
     let authCode: String // 6 digit code that is the same for auth and settle
+    let psimi: String
+    let secondaryMerchantId: String
 
-    init(mid: String, storeID: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String) {
+    init(mid: String, storeID: String, date: Date, amount: Int, cardToken: String, firstSix: String, lastFour: String, psimi: String, secondaryMerchantId: String) {
         self.mid = mid
         self.storeID = storeID
         self.date = date
@@ -38,6 +40,8 @@ class Transaction: Codable {
         self.settlementKey = UUID().base64uuid
         self.id = UUID().base64uuid
         self.authCode = "\(Int.random(in: 100000..<900000))"
+        self.psimi = psimi
+        self.secondaryMerchantId = secondaryMerchantId
     }
 
 }

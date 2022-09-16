@@ -19,6 +19,8 @@ class AddTransactionViewController: NSViewController {
     @IBOutlet weak var cardTokenField: ValidatableTextField!
     @IBOutlet weak var firstSixField: ValidatableTextField!
     @IBOutlet weak var lastFourField: ValidatableTextField!
+    @IBOutlet weak var psimiField: ValidatableTextField!
+    @IBOutlet weak var secondaryMerchantIdField: ValidatableTextField!
     @IBOutlet weak var validationErrorsLabel: NSTextField!
     @IBOutlet weak var addButton: NSButton!
 
@@ -32,7 +34,9 @@ class AddTransactionViewController: NSViewController {
         amountField,
         cardTokenField,
         firstSixField,
-        lastFourField
+        lastFourField,
+        secondaryMerchantIdField,
+        psimiField,
     ]
 
     // MARK: - View Lifecycle
@@ -79,7 +83,9 @@ class AddTransactionViewController: NSViewController {
             amount: Int(amountField.stringValue)!,
             cardToken: cardTokenField.stringValue,
             firstSix: firstSixField.stringValue,
-            lastFour: lastFourField.stringValue
+            lastFour: lastFourField.stringValue,
+            psimi: psimiField.stringValue,
+            secondaryMerchantId: secondaryMerchantIdField.stringValue
         )
 
         delegate?.didAddTransaction(transaction)
