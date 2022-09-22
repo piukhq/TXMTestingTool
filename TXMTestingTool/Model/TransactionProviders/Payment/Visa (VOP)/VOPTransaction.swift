@@ -70,9 +70,9 @@ struct VOPTransaction: Codable {
             VOPElement("Transaction.TransactionAmount", transactionAmount),             // Value in transaction currency with a dot delimiter
             VOPElement("Transaction.VipTransactionId", transaction.id),                 // IMPORTANT - Provides a numeric ID linking AUTH and SETTLE
             VOPElement("Transaction.VisaMerchantName", ""),                             // Visa assigned name of merchant. Note: Do not use for now
-            VOPElement("Transaction.VisaMerchantId", ""),                               // Visa assigned numeric ID of merchant. Note: Do not use for now
+            VOPElement("Transaction.VisaMerchantId", transaction.psimi),                // Visa assigned numeric ID of merchant.
             VOPElement("Transaction.VisaStoreName", ""),                                // Visa assigned ID for the specific outlet. Note: Do not use for now
-            VOPElement("Transaction.VisaStoreId", ""),                                  // Visa assigned numeric ID for the outlet. Note: Do not use for now
+            VOPElement("Transaction.VisaStoreId", transaction.secondaryMerchantId),     // Visa assigned numeric ID for the outlet.
             VOPElement("Transaction.CurrencyCodeNumeric", "840"),                       // Numeric ISO 4217 code for the currency
             VOPElement("Transaction.BillingCurrencyCode", "840"),                       // Numeric ISO 4217 code for the currency
             VOPElement("Transaction.USDAmount", transactionAmount),                     // IMPORTANT - Referenced in example but not documented

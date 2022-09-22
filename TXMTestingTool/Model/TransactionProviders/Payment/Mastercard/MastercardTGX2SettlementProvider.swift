@@ -123,6 +123,8 @@ class MastercardTGX2SettlementProvider: Provider {
     private let detailFieldGenerators = [
         "record_type": formatDetailRecordType,
         "merchant_id": formatMerchantID,
+        "location_id": formatLocationID,
+        "aggregate_merchant_id": formatAggregateMerchantID,
         "de_4_transaction_amount": formatAmount,
         "transaction_date": formatDate,
         "transaction_time": formatTime,
@@ -240,6 +242,14 @@ extension MastercardTGX2SettlementProvider {
 
     private func formatMerchantID(_ tx: Transaction) -> String {
         return tx.mid
+    }
+
+    private func formatLocationID(_ tx: Transaction) -> String {
+        return tx.secondaryMerchantId
+    }
+
+    private func formatAggregateMerchantID(_ tx: Transaction) -> String {
+        return tx.psimi
     }
 
     private func formatAmount(_ tx: Transaction) -> String {
