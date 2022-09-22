@@ -96,9 +96,9 @@ struct VOPRefundTransaction: Codable {
             VOPElement("ReturnTransaction.VipTransactionId", UUID().base64uuid),      // Unique identifier for refund transaction
             VOPElement("ReturnTransaction.SettlementId", transaction.id),          // IMPORTANT - Provides a numeric ID linking AUTH and SETTLE
             VOPElement("ReturnTransaction.VisaMerchantName", ""),                  // Visa assigned name of merchant. Note: Do not use for now
-            VOPElement("ReturnTransaction.VisaMerchantId", ""),                    // Visa assigned numeric ID of merchant. Note: Do not use for now
+            VOPElement("ReturnTransaction.VisaMerchantId", transaction.psimi),     // Visa assigned numeric ID of merchant.
             VOPElement("ReturnTransaction.VisaStoreName", ""),                     // Visa assigned ID for the specific outlet. Note: Do not use for now
-            VOPElement("ReturnTransaction.VisaStoreId", ""),                       // Visa assigned numeric ID for the outlet. Note: Do not use for now
+            VOPElement("ReturnTransaction.VisaStoreId", transaction.secondaryMerchantId), // Visa assigned numeric ID for the outlet.
             VOPElement("ReturnTransaction.AcquirerAmount", transactionAmount),     // Visa assigned numeric ID for the outlet. Note: Do not use for now
             VOPElement("ReturnTransaction.AcquirerCurrencyCode", "840"),           // Visa assigned numeric ID for the outlet. Note: Do not use for now
             VOPElement("ReturnTransaction.CurrencyCode", "840"),                       // Numeric ISO 4217 code for the currency
