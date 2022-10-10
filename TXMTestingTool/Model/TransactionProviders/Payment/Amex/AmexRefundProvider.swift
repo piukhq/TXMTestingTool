@@ -17,7 +17,7 @@ struct AmexRefundProvider: Provider {
                 merchantNumber: $0.mid,
                 offerId: "0",
                 transactionAmount: String(format: "-%.02f", Double($0.amount) / 100.0),
-                transactionId: $0.id,
+                transactionId: UUID().base64uuid,
                 transactionDate: dateFormatter.string(from: $0.date),
                 
                 currencyCode: "840",
