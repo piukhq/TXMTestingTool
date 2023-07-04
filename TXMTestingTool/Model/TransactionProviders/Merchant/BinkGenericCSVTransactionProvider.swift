@@ -12,6 +12,9 @@ import CSV
 struct BinkGenericCSVTransactionProvider: CSVProvider {
 
     // MARK: - Properties
+    
+    var hasMID: Bool
+    var hasFirstSix: Bool
 
     var defaultFileName = "transactions.csv"
 
@@ -40,14 +43,14 @@ struct BinkGenericCSVTransactionProvider: CSVProvider {
         [
             transaction.id,
             paymentProvider.slug,
-            transaction.firstSix,
+            hasFirstSix ? transaction.firstSix : "",
             transaction.lastFour,
             "\(Double(transaction.amount) / 100)",
             "GBP",
             transaction.authCode,
             dateFormatter.string(from: transaction.date),
-            transaction.mid,
-            "86",  // location ID
+            hasMID ? transaction.mid : "",
+            transaction.storeID,
             "",  // transaction data
             "",  // customer ID
         ]
