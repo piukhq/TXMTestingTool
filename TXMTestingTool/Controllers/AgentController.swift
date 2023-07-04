@@ -15,7 +15,7 @@ class AgentController {
         MerchantAgent("Harvey Nichols", slug: "harvey-nichols-rewards", type: .pll, provider: HarveyNicholsTransactionProvider()),
         MerchantAgent("Iceland", slug: "iceland-bonus-card", type: .pll, provider: IcelandTransactionProvider()),
         MerchantAgent("Wasabi", slug: "wasabi-club", type: .plr, provider: WasabiTransactionProvider()),
-        MerchantAgent("Itsu", slug: "itsu", type: .pll, provider: BinkGenericCSVTransactionProvider()),
+        MerchantAgent("Itsu", slug: "itsu", type: .pll, provider: BinkGenericCSVTransactionProvider(hasMID: false, hasFirstSix: false)),
         MerchantAgent("Spotting Merchant", slug: "spotting-merchant", type: .plr),
     ]
 
